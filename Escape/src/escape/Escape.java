@@ -16,7 +16,8 @@ public class Escape {
     public static void main(String[] args) {
         // TODO code application logic here
 
-    System.out.println("ηελλο");
+        System.out.println("ηελλο");
+        System.out.println("ARXONTHS");
     }
     
 }
