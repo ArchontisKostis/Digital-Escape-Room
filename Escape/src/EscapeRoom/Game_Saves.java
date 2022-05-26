@@ -3,12 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package EscapeRoom;
-
+import java.io.Serializable;
 /**
  *
  * @author Christos
  */
-public class Game_Saves {
+public class Game_Saves implements Serializable{
     
     private Player aplayer;
     private Room: aroom;
