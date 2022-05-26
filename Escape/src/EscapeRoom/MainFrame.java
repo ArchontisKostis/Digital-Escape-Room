@@ -4,17 +4,26 @@
  */
 package EscapeRoom;
 
+import java.awt.Cursor;
+import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
 /**
  *
  * @author Archontis
  */
 public class MainFrame extends javax.swing.JFrame {
-
-    /**
-     * Creates new form MainFrame
-     */
+    // Variable Declaration
+    private String state = "none";
+    
+    
     public MainFrame() {
         initComponents();
+        this.makeCustomCursor();
+        this.addKeyListener(new myKeyListener());
     }
 
     /**
@@ -35,29 +44,79 @@ public class MainFrame extends javax.swing.JFrame {
         bgImage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/assets/tutorialIcon.png"))); // NOI18N
+        tutorialLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                tutorialLabelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                tutorialLabelMouseExited(evt);
+            }
+        });
         mainPanel.add(tutorialLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 110, 110));
 
+        startLabel.setBackground(new java.awt.Color(255, 255, 255));
         startLabel.setFont(new java.awt.Font("DPComic", 0, 52)); // NOI18N
+        startLabel.setForeground(new java.awt.Color(255, 255, 255));
         startLabel.setText("START");
+        startLabel.setEnabled(false);
+        startLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                startLabelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                startLabelMouseExited(evt);
+            }
+        });
         mainPanel.add(startLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 140, -1));
 
+        settingsLabel.setBackground(new java.awt.Color(255, 255, 255));
         settingsLabel.setFont(new java.awt.Font("DPComic", 0, 52)); // NOI18N
+        settingsLabel.setForeground(new java.awt.Color(255, 255, 255));
         settingsLabel.setText("SETTINGS");
         settingsLabel.setEnabled(false);
+        settingsLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                settingsLabelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                settingsLabelMouseExited(evt);
+            }
+        });
         mainPanel.add(settingsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, 200, 60));
 
+        creditsLabel.setBackground(new java.awt.Color(255, 255, 255));
         creditsLabel.setFont(new java.awt.Font("DPComic", 0, 52)); // NOI18N
+        creditsLabel.setForeground(new java.awt.Color(255, 255, 255));
         creditsLabel.setText("CREDITS");
         creditsLabel.setEnabled(false);
+        creditsLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                creditsLabelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                creditsLabelMouseExited(evt);
+            }
+        });
         mainPanel.add(creditsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, 180, -1));
 
+        exitLabel.setBackground(new java.awt.Color(255, 255, 255));
         exitLabel.setFont(new java.awt.Font("DPComic", 0, 52)); // NOI18N
+        exitLabel.setForeground(new java.awt.Color(255, 255, 255));
         exitLabel.setText("EXIT");
         exitLabel.setEnabled(false);
+        exitLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                exitLabelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                exitLabelMouseExited(evt);
+            }
+        });
         mainPanel.add(exitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, 100, -1));
 
         bgImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/assets/mainMenuBg.png"))); // NOI18N
@@ -75,7 +134,97 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+    
+    
+    private void makeCustomCursor(){
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Image img = toolkit.getImage("C:\\Users\\Archontis\\Documents\\GitHub\\Digital-Escape-Room\\Escape\\src\\EscapeRoom\\assets\\cursor.png");
+        Point point = new Point(0, 0);
+        Cursor cursor = toolkit.createCustomCursor(img, point, "cursor"); 
+        setCursor(cursor);        
+    }
+    
+    // Provides Visual feedback to the user when the mouse enters the Tutorial Label
+    private void tutorialLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tutorialLabelMouseEntered
+        try {
+            tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/assets/tutorialIconHover.png")));
+        }
+        catch(Exception e){
+            e.printStackTrace(System.out);
+        }
+    }//GEN-LAST:event_tutorialLabelMouseEntered
+
+    private void tutorialLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tutorialLabelMouseExited
+        try {
+            tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/assets/tutorialIcon.png")));
+        }
+        catch(Exception e){
+            e.printStackTrace(System.out);
+        }
+    }//GEN-LAST:event_tutorialLabelMouseExited
+
+    private void startLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_startLabelMouseEntered
+       // Change the state
+       state = "start";
+       // Disable all other labels and Enable Start Label
+       startLabel.setEnabled(true);
+       settingsLabel.setEnabled(false);
+       creditsLabel.setEnabled(false);
+       exitLabel.setEnabled(false);
+       
+    }//GEN-LAST:event_startLabelMouseEntered
+
+    private void startLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_startLabelMouseExited
+        state = "none";
+        this.disableAllLabels();
+    }//GEN-LAST:event_startLabelMouseExited
+
+    private void settingsLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsLabelMouseEntered
+        // Change the state
+        state = "settings";
+        // Disable all other labels and Enable Start Label
+        startLabel.setEnabled(false);
+        settingsLabel.setEnabled(true);
+        creditsLabel.setEnabled(false);
+        exitLabel.setEnabled(false);
+    }//GEN-LAST:event_settingsLabelMouseEntered
+
+    private void settingsLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsLabelMouseExited
+        state = "none";
+        this.disableAllLabels();
+    }//GEN-LAST:event_settingsLabelMouseExited
+
+    private void creditsLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_creditsLabelMouseEntered
+        // Change the state
+        state = "credits";
+        // Disable all other labels and Enable Start Label
+        startLabel.setEnabled(false);
+        settingsLabel.setEnabled(false);
+        creditsLabel.setEnabled(true);
+        exitLabel.setEnabled(false);
+    }//GEN-LAST:event_creditsLabelMouseEntered
+
+    private void creditsLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_creditsLabelMouseExited
+        state = "none";
+        this.disableAllLabels();
+    }//GEN-LAST:event_creditsLabelMouseExited
+
+    private void exitLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitLabelMouseEntered
+        // Change the state
+        state = "exit";
+        // Disable all other labels and Enable Start Label
+        startLabel.setEnabled(false);
+        settingsLabel.setEnabled(false);
+        creditsLabel.setEnabled(false);
+        exitLabel.setEnabled(true);
+    }//GEN-LAST:event_exitLabelMouseEntered
+
+    private void exitLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitLabelMouseExited
+        state = "none";
+        this.disableAllLabels();
+    }//GEN-LAST:event_exitLabelMouseExited
 
     /**
      * @param args the command line arguments
@@ -107,11 +256,123 @@ public class MainFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainFrame().setVisible(true);
+                MainFrame menuFrame = new MainFrame();
+                menuFrame.setVisible(true);
+                
             }
         });
     }
+    
+    private void disableAllLabels() {
+       startLabel.setEnabled(false);
+       settingsLabel.setEnabled(false);
+       creditsLabel.setEnabled(false);
+       exitLabel.setEnabled(false);
+    }
+    
+    // Action Listener Class
+    class myKeyListener implements KeyListener {
 
+        @Override
+        public void keyTyped(KeyEvent e) {
+            
+        }
+
+        @Override
+        public void keyPressed(KeyEvent e) {
+            // ---- MENU NAVIGATION ----
+            // If UP KEY is pressed
+            if(e.getKeyCode() == java.awt.event.KeyEvent.VK_UP){
+                // Check the pointer state
+                switch (state) {
+                    case "none":
+                        // Change the state
+                        state = "start";
+                        // Disable Start Label and Enable Exit Label
+                        startLabel.setEnabled(true);
+                        break;
+                        
+                    case "start":
+                        // Change the state
+                        state = "exit";
+                        // Disable Start Label and Enable Exit Label
+                        exitLabel.setEnabled(true);
+                        startLabel.setEnabled(false);
+                        break;
+                        
+                    case "settings":
+                        // Change the state
+                        state = "start";
+                        // Disable Credits Label and Enable Start Label
+                        startLabel.setEnabled(true);
+                        settingsLabel.setEnabled(false);
+                        break;
+                        
+                    case "credits":
+                        // Change the state
+                        state = "settings";
+                        // Disable Credits Label and Enable Start Label
+                        settingsLabel.setEnabled(true);
+                        creditsLabel.setEnabled(false);
+                        break;
+                    case "exit":
+                        // Change the state
+                        state = "credits";
+                        // Disable Credits Label and Enable Start Label
+                        creditsLabel.setEnabled(true);
+                        exitLabel.setEnabled(false);
+                        break;
+                }
+            }
+            
+            // If DOWN KEY is pressed
+            if(e.getKeyCode() == java.awt.event.KeyEvent.VK_DOWN){
+                switch (state) {
+                    case "none":
+                        state="start";
+                        startLabel.setEnabled(true);
+                        break;
+                
+                    case "start":
+                        // Change the state
+                        state = "settings";
+                        // Disable Start Label and Enable Credits Label
+                        settingsLabel.setEnabled(true);
+                        startLabel.setEnabled(false);
+                        break;
+                    
+                    case "settings":
+                        // Change the state
+                        state = "credits";
+                        // Disable Settings Label and Enable Credits Label
+                        creditsLabel.setEnabled(true);
+                        settingsLabel.setEnabled(false);
+                        break;
+                
+                    case "credits":
+                        // Change the state
+                        state = "exit";
+                        // Disable Start Label and Enable Exit Label
+                        exitLabel.setEnabled(true);
+                        creditsLabel.setEnabled(false);
+                        break;
+                
+                    case "exit":
+                        // Change the state
+                        state = "start";
+                        // Disable Start Label and Enable Exit Label
+                        startLabel.setEnabled(true);
+                        exitLabel.setEnabled(false);     
+                } 
+            }
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e){}
+        
+    }
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bgImage;
     private javax.swing.JLabel creditsLabel;
