@@ -19,6 +19,12 @@ public class Game {
         SplashScreen = new SplashScreenFrame();
         SplashScreen.setVisible(true);
         startSplashScreen(SplashScreen);
+        SplashScreen.setVisible(false);
+        
+        // Show Main Menu Screem
+        MainFrame MainMenu = new MainFrame();
+        MainMenu.setVisible(true);
+        
     }
     
       
