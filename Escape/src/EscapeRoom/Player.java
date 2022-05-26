@@ -9,41 +9,47 @@ package EscapeRoom;
  * @author Christos
  */
 public class Player {
-    
+    // Variable Declaration
     private String playerName;
     private int saveLevel;
     private int lives;
     
-    public Player(String playerName, int saveLevel, int lives){
-        this.playerName = playerName;
-        this.saveLevel = saveLevel;
+    // Constructor
+    public Player(String Name, int saveLevel, int lives){
+        this.playerName = Name;
         this.lives = lives;
     }
     
-    public String getplayerName(){
-        return playerName;
+    /* GETTERS AND SETTERS */
+    // Player Name
+    public String getPlayerName(){
+        return this.playerName;
     }
     
-     public void setsaveLevel(String p){
-        playerName = p;
+    public void setPlayerName(String name){
+        this.playerName = name;
     } 
     
-
-    public int getsaveLevel(){
+    // Save Level
+    public int getSaveLevel(){
         return saveLevel;
     }
       
-    public void setsaveLevel(int s){
-        saveLevel = s;
+    public void setSaveLevel(int level){
+        this.saveLevel = level;
     }
     
-    public int getlives(){
+    // Lives
+    public int getLives(){
         return lives;
     }
       
-    public void setlives(int l){
-        lives = l;
+    public void setLives(int livesNum){
+        this.lives = livesNum;
     } 
+
+    /*
+    ΤΟ DO:
     
     public void searchClue(Items anItem){
         
@@ -51,5 +57,6 @@ public class Player {
     
     public void Get_help(Storyteller aStoryteller){
     }
+    */
     
 }
