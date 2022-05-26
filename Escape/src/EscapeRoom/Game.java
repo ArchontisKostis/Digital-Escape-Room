@@ -12,9 +12,8 @@ public class Game {
     // Properties Declaration
     private static SplashScreenFrame SplashScreen;
     
-    /**
-     * @param args the command line arguments
-     */
+    
+    // MAIN method
     public static void main(String[] args) {
         // Splash Screen Load
         SplashScreen = new SplashScreenFrame();
@@ -22,8 +21,12 @@ public class Game {
         startSplashScreen(SplashScreen);
     }
     
-    
-    
+      
+    /*
+    * NAME: startSplashScreen
+    * INPUT: A SplashScreenFrame Instance
+    * ACTION: Starts loading the splash screen (sets the JProgressbar & JLabel for loading values)
+    */
     public static void startSplashScreen(SplashScreenFrame sp){
         try{
             for(int i=0; i<=100; i++){
@@ -61,7 +64,6 @@ public class Game {
                 }
                 sp.setProgressValue(i);
             }
-            
         }
         catch(Exception e){
             e.printStackTrace(System.out);
