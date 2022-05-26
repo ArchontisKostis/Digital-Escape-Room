@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package EscapeRoom;
-
+import java.util.ArrayList;
 /**
  *
  * @author Archontis
@@ -16,11 +16,17 @@ public class Game {
     public static void main(String[] args) {
         // TODO code application logic here
 
-        System.out.println("ηελλο");
-        System.out.println("ARXONTHS");
-        System.out.println("Christaras");
-        System.out.println("GEIA");
-        System.out.println("δφξγνειγξδνλξγ");
-    }
+        Player player1 = new Player("aname",0,3);
+        ArrayList<Room> rooms = new ArrayList<Room>;
+        ArrayList<Game_Saves> saves = new ArrayList<Game_Saves>;
+        boolean musicOn;
+        boolean soundOn;
+        
+        public void start_new_game(Player player1,  ArrayList<Room> rooms ){
+        }
+        
+        public void load_game(ArrayList<Game_Saves> saves){       
+        }
+       
     
 }
