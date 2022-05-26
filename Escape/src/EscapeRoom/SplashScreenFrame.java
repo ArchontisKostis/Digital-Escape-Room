@@ -26,22 +26,46 @@ public class SplashScreenFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        loadingLabel = new javax.swing.JLabel();
+        progressBar = new javax.swing.JProgressBar();
+        backgroundImage = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+
+        jPanel1.setBackground(new java.awt.Color(255, 204, 102));
+        jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        loadingLabel.setFont(new java.awt.Font("DPComic", 0, 24)); // NOI18N
+        loadingLabel.setForeground(new java.awt.Color(255, 255, 255));
+        loadingLabel.setText("Loading...");
+        jPanel1.add(loadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 490, 530, 50));
+
+        progressBar.setBackground(new java.awt.Color(255, 230, 213));
+        progressBar.setForeground(new java.awt.Color(224, 151, 34));
+        jPanel1.add(progressBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 1000, 20));
+
+        backgroundImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/assets/splashScreenBg.png"))); // NOI18N
+        jPanel1.add(backgroundImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 550));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 556, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+ 
     //This Main Method is used for Development Testing and will be removed
     public static void main(String args[]) {
         /* Set the Nimbus look and feel (Generated automatically by NetBeans) */
@@ -70,11 +94,26 @@ public class SplashScreenFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new SplashScreenFrame().setVisible(true);
+                SplashScreenFrame sp = new SplashScreenFrame();
+                sp.setVisible(true);
             }
         });
     }
+    
+    // This function sets the LoadingLabel text
+    public void setLoadingText(String text){
+        this.loadingLabel.setText(text);
+    }
+    
+    // This function sets the progressbar value
+    public void setProgressValue(int value) {
+        this.progressBar.setValue(value);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel backgroundImage;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel loadingLabel;
+    private javax.swing.JProgressBar progressBar;
     // End of variables declaration//GEN-END:variables
 }
