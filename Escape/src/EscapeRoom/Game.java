@@ -51,7 +51,7 @@ public class Game {
                     sp.setLoadingText("99 bottles of beer on the wall...");
                 }
                 if(i==70){
-                    sp.setLoadingText("Computing the secret to life, the universe, and everything...");
+                    sp.setLoadingText("Computing the secret to life and universe...");
                 }
                 if(i==85){
                     sp.setLoadingText("Are we there yet?");
@@ -60,7 +60,7 @@ public class Game {
                     sp.setLoadingText("Don't panic...");
                 }
                 if(i==100){
-                    sp.setLoadingText("YES!!!");
+                    sp.setLoadingText("See? Its done!");
                 }
                 sp.setProgressValue(i);
             }

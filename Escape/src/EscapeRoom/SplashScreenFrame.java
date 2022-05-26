@@ -41,7 +41,7 @@ public class SplashScreenFrame extends javax.swing.JFrame {
         loadingLabel.setFont(new java.awt.Font("DPComic", 0, 24)); // NOI18N
         loadingLabel.setForeground(new java.awt.Color(255, 255, 255));
         loadingLabel.setText("Loading...");
-        jPanel1.add(loadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 490, 530, 50));
+        jPanel1.add(loadingLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 490, 490, 50));
 
         progressBar.setBackground(new java.awt.Color(255, 230, 213));
         progressBar.setForeground(new java.awt.Color(224, 151, 34));
