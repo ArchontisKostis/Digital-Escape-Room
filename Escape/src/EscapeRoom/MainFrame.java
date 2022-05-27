@@ -19,6 +19,7 @@ public class MainFrame extends javax.swing.JFrame {
     // Variable Declaration
     private String state = "none";
     private CreditsFrame creditsFrame;
+    private SettingsFrame settingsFrame;
     
     
     public MainFrame() {
@@ -144,7 +145,7 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void makeCustomCursor(){
         Toolkit toolkit = Toolkit.getDefaultToolkit();
-        Image img = toolkit.getImage("C:\\Users\\Archontis\\Documents\\GitHub\\Digital-Escape-Room\\Escape\\src\\EscapeRoom\\assets\\cursor.png");
+        Image img = toolkit.getImage(getClass().getResource("/EscapeRoom/guiAssets/cursor.png"));
         Point point = new Point(0, 0);
         Cursor cursor = toolkit.createCustomCursor(img, point, "cursor"); 
         setCursor(cursor);        
@@ -384,6 +385,8 @@ public class MainFrame extends javax.swing.JFrame {
                         break;
                     case "settings":
                         System.out.println("SETTINGS CLICKED\n--------------");
+                        settingsFrame = new SettingsFrame();
+                        settingsFrame.setVisible(true);
                         break;
                     case "credits":
                         System.out.println("CREDITS CLICKED\n--------------");
