@@ -45,7 +45,7 @@ public class CreditsFrame extends javax.swing.JFrame {
         escText.setText("Use ESC to go back to MAIN MENU");
         mainPanel.add(escText, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
-        creditsBg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/assets/creditsbg.png"))); // NOI18N
+        creditsBg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/creditsbg.png"))); // NOI18N
         mainPanel.add(creditsBg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

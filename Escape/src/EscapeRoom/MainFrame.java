@@ -50,7 +50,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/assets/tutorialIcon.png"))); // NOI18N
+        tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/tutorialIcon.png"))); // NOI18N
         tutorialLabel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 tutorialLabelMouseEntered(evt);
@@ -124,7 +124,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
         mainPanel.add(exitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, 100, -1));
 
-        bgImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/assets/mainMenuBg.png"))); // NOI18N
+        bgImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/mainMenuBg.png"))); // NOI18N
         mainPanel.add(bgImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
