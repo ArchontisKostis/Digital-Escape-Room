@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class Game_Saves implements Serializable{
     
     private Player aplayer;
-    private Room: aroom;
+    private Room aroom;
     
     public Game_Saves(Player aplayer,Room aroom){
         this.aplayer = aplayer;
