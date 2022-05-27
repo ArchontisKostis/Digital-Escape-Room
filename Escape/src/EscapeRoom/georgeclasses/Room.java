@@ -10,13 +10,17 @@ package EscapeRoom.georgeclasses;
  */
 import java.util.ArrayList;
 
-public class room {
-	String roomName;
-	int SolvedRiddles;
+public class Room {
+	private String roomName;
+	private int SolvedRiddles;
+
+public void Room(String roomName, int SolvedRiddles){
+    this.roomName = roomName;
+    this.SolvedRiddles = SolvedRiddles;
+}
 
 
-
-public String getRoomName() {
+public String getroomName() {
 	return roomName;
 }
 
