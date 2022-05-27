@@ -11,12 +11,19 @@ package EscapeRoom.georgeclasses;
 import java.awt.Image;
 
 public class Items {
-	String itemName;
-	int itemId;
-	Image itemImage;
-	Image itemImageHvered;
+    
+    private String itemName;
+    private int itemId;
+    private Image itemImage;
+    private Image itemImageHovered;
 
 
+ public void Items(String itemName, int itemId,Image itemImage,Image itemImageHovered){
+     this.itemName = itemName;
+     this.itemId  = itemId;
+     this.itemImage = itemImage;
+     this.itemImageHovered = itemImageHovered;
+ }
 //help with images
 
 public String getItemName() {
