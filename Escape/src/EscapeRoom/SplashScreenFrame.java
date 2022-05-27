@@ -45,6 +45,8 @@ public class SplashScreenFrame extends javax.swing.JFrame {
 
         progressBar.setBackground(new java.awt.Color(255, 230, 213));
         progressBar.setForeground(new java.awt.Color(224, 151, 34));
+        progressBar.setAlignmentX(0.0F);
+        progressBar.setBorder(null);
         jPanel1.add(progressBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 1000, 20));
 
         backgroundImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/assets/splashScreenBg.png"))); // NOI18N

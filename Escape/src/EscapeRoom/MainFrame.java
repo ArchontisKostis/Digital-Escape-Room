@@ -18,6 +18,7 @@ import java.awt.event.KeyListener;
 public class MainFrame extends javax.swing.JFrame {
     // Variable Declaration
     private String state = "none";
+    private CreditsFrame creditsFrame;
     
     
     public MainFrame() {
@@ -95,6 +96,9 @@ public class MainFrame extends javax.swing.JFrame {
         creditsLabel.setText("CREDITS");
         creditsLabel.setEnabled(false);
         creditsLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                creditsLabelMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 creditsLabelMouseEntered(evt);
             }
@@ -225,6 +229,11 @@ public class MainFrame extends javax.swing.JFrame {
         state = "none";
         this.disableAllLabels();
     }//GEN-LAST:event_exitLabelMouseExited
+
+    private void creditsLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_creditsLabelMouseClicked
+        creditsFrame = new CreditsFrame();
+        creditsFrame.setVisible(true);
+    }//GEN-LAST:event_creditsLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -363,7 +372,28 @@ public class MainFrame extends javax.swing.JFrame {
                         // Disable Start Label and Enable Exit Label
                         startLabel.setEnabled(true);
                         exitLabel.setEnabled(false);     
+                        break;
                 } 
+            }
+            
+            // ---- USER CONFIRMATION ACTION ----
+            if(e.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
+                switch (state) {
+                    case "start":
+                        System.out.println("START CLICKED\n--------------");
+                        break;
+                    case "settings":
+                        System.out.println("SETTINGS CLICKED\n--------------");
+                        break;
+                    case "credits":
+                        System.out.println("CREDITS CLICKED\n--------------");
+                        creditsFrame = new CreditsFrame();
+                        creditsFrame.setVisible(true);
+                        break;
+                    case "exit":
+                        System.out.println("EXIT CLICKED\n--------------");
+                        break;
+                }
             }
         }
 

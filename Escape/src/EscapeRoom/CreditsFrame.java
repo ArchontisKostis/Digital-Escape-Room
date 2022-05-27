@@ -4,6 +4,9 @@
  */
 package EscapeRoom;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
 /**
  *
  * @author Archontis
@@ -15,6 +18,7 @@ public class CreditsFrame extends javax.swing.JFrame {
      */
     public CreditsFrame() {
         initComponents();
+        this.addKeyListener(new CreditsFrame.myKeyListener());
     }
 
     /**
@@ -26,20 +30,37 @@ public class CreditsFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        mainPanel = new javax.swing.JPanel();
+        escText = new javax.swing.JLabel();
+        creditsBg = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName("creditsFrame"); // NOI18N
+        setUndecorated(true);
+
+        mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        escText.setFont(new java.awt.Font("DPComic", 0, 18)); // NOI18N
+        escText.setForeground(new java.awt.Color(255, 255, 255));
+        escText.setText("Use ESC to go back to MAIN MENU");
+        mainPanel.add(escText, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        creditsBg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/assets/creditsbg.png"))); // NOI18N
+        mainPanel.add(creditsBg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -76,7 +97,31 @@ public class CreditsFrame extends javax.swing.JFrame {
             }
         });
     }
+    
+    class myKeyListener implements KeyListener { 
+
+        @Override
+        public void keyTyped(KeyEvent e) {
+            
+        }
+
+        @Override
+        public void keyPressed(KeyEvent e) {
+            if(e.getKeyCode() == java.awt.event.KeyEvent.VK_ESCAPE){
+                setVisible(false);
+            }
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {
+            
+        }
+    
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel creditsBg;
+    private javax.swing.JLabel escText;
+    private javax.swing.JPanel mainPanel;
     // End of variables declaration//GEN-END:variables
 }
