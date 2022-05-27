@@ -73,12 +73,11 @@ public class Game {
         
     }
 
-        public void start_new_game(Player player1,  ArrayList<Room> rooms ){
-        }
+    public void start_new_game(Player player1,  ArrayList<Room> rooms ){
+    }
         
-        public void load_game(ArrayList<Game_Saves> saves){      
-        }
-       
+    public void load_game(ArrayList<Game_Saves> saves){      
+    }
 
     
 }
