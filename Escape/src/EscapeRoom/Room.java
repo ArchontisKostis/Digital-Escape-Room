@@ -11,7 +11,7 @@ public class Room {
 	private int SolvedRiddles;
 
 
-public void Room(String roomName, int SolvedRiddles){
+public Room(String roomName, int SolvedRiddles){
     this.roomName = roomName;
     this.SolvedRiddles = SolvedRiddles;
 }

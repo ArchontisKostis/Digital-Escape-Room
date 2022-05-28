@@ -6,4 +6,8 @@ package EscapeRoom;
  */
 public class Assets extends Items{
     
+    public Assets(String itemName, int itemId, int itemRiddle) {
+            super(itemName, itemId);        
+	}
+    
 }
