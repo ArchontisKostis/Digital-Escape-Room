@@ -10,12 +10,12 @@ package EscapeRoom;
  */
 import java.util.ArrayList;
 
-public class room {
+public class Room {
 	private String roomName;
 	private int SolvedRiddles;
 
 
-public void room(String roomName, int SolvedRiddles){
+public void Room(String roomName, int SolvedRiddles){
     this.roomName = roomName;
     this.SolvedRiddles = SolvedRiddles;
 }
