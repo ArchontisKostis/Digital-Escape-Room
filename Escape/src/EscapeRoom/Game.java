@@ -25,6 +25,7 @@ public class Game {
         this.musicOn = true;
         this.soundOn = true;
 
+
     }
     
     /* GETTERS AND SETTERS */
