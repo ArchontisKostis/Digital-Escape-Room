@@ -38,6 +38,11 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
+        startGamePanel = new javax.swing.JPanel();
+        headerLabel = new javax.swing.JLabel();
+        newGameButton = new javax.swing.JButton();
+        loadButton = new javax.swing.JButton();
+        closeLabel = new javax.swing.JLabel();
         tutorialLabel = new javax.swing.JLabel();
         startLabel = new javax.swing.JLabel();
         settingsLabel = new javax.swing.JLabel();
@@ -49,6 +54,59 @@ public class MainFrame extends javax.swing.JFrame {
         setUndecorated(true);
 
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        startGamePanel.setBackground(new java.awt.Color(0, 0, 0));
+        startGamePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        headerLabel.setBackground(new java.awt.Color(255, 255, 255));
+        headerLabel.setFont(new java.awt.Font("DPComic", 0, 48)); // NOI18N
+        headerLabel.setForeground(new java.awt.Color(255, 255, 255));
+        headerLabel.setText("SELECT ONE TO CONTINUE");
+        startGamePanel.add(headerLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, -1, -1));
+
+        newGameButton.setBackground(new java.awt.Color(224, 151, 34));
+        newGameButton.setFont(new java.awt.Font("DPComic", 0, 48)); // NOI18N
+        newGameButton.setForeground(new java.awt.Color(255, 255, 255));
+        newGameButton.setText("NEW GAME");
+        newGameButton.setAlignmentY(0.0F);
+        newGameButton.setBorder(null);
+        newGameButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        newGameButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        newGameButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newGameButtonActionPerformed(evt);
+            }
+        });
+        startGamePanel.add(newGameButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 360, 90));
+
+        loadButton.setBackground(new java.awt.Color(224, 151, 34));
+        loadButton.setFont(new java.awt.Font("DPComic", 0, 48)); // NOI18N
+        loadButton.setForeground(new java.awt.Color(255, 255, 255));
+        loadButton.setText("LOAD GAME");
+        loadButton.setAlignmentY(0.0F);
+        loadButton.setBorder(null);
+        loadButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        loadButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        loadButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loadButtonActionPerformed(evt);
+            }
+        });
+        startGamePanel.add(loadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 360, 90));
+
+        closeLabel.setBackground(new java.awt.Color(255, 255, 255));
+        closeLabel.setFont(new java.awt.Font("DPComic", 0, 36)); // NOI18N
+        closeLabel.setForeground(new java.awt.Color(255, 255, 255));
+        closeLabel.setText("X");
+        closeLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                closeLabelMouseClicked(evt);
+            }
+        });
+        startGamePanel.add(closeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, 20, 30));
+
+        mainPanel.add(startGamePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 680, 470));
+        startGamePanel.setVisible(false);
 
         tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/tutorialIcon.png"))); // NOI18N
         tutorialLabel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -131,11 +189,11 @@ public class MainFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -235,6 +293,18 @@ public class MainFrame extends javax.swing.JFrame {
         creditsFrame = new CreditsFrame();
         creditsFrame.setVisible(true);
     }//GEN-LAST:event_creditsLabelMouseClicked
+
+    private void loadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loadButtonActionPerformed
+
+    private void newGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newGameButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_newGameButtonActionPerformed
+
+    private void closeLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeLabelMouseClicked
+        startGamePanel.setVisible(false);
+    }//GEN-LAST:event_closeLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -382,6 +452,7 @@ public class MainFrame extends javax.swing.JFrame {
                 switch (state) {
                     case "start":
                         System.out.println("START CLICKED\n--------------");
+                        startGamePanel.setVisible(true);
                         break;
                     case "settings":
                         System.out.println("SETTINGS CLICKED\n--------------");
@@ -408,10 +479,15 @@ public class MainFrame extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bgImage;
+    private javax.swing.JLabel closeLabel;
     private javax.swing.JLabel creditsLabel;
     private javax.swing.JLabel exitLabel;
+    private javax.swing.JLabel headerLabel;
+    private javax.swing.JButton loadButton;
     private javax.swing.JPanel mainPanel;
+    private javax.swing.JButton newGameButton;
     private javax.swing.JLabel settingsLabel;
+    private javax.swing.JPanel startGamePanel;
     private javax.swing.JLabel startLabel;
     private javax.swing.JLabel tutorialLabel;
     // End of variables declaration//GEN-END:variables
