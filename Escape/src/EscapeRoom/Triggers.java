@@ -9,7 +9,12 @@ package EscapeRoom;
  * @author giorg
  */
 public class Triggers extends Items{
-   private int itemRiddle;
+        private int itemRiddle;
+        
+        public Triggers(String itemName, int itemId, int itemRiddle) {
+            super(itemName, itemId);
+            this.itemRiddle = itemRiddle;        
+	}
 
 	
 	public int getItemRiddle() {
@@ -20,10 +25,5 @@ public class Triggers extends Items{
 		this.itemRiddle = itemRiddle;
 	}
 
-
-public Triggers(String itemName, int itemId) {
-		super(itemName, itemId);
-		// TODO Auto-generated constructor stub
-}
 
 }
