@@ -10,7 +10,7 @@ package EscapeRoom;
  */
 import java.awt.Image;
 
-public class Items {
+public abstract class Items {
     
     private String itemName;
     private int itemId;
