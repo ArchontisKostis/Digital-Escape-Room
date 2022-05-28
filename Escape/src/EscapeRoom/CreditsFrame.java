@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package EscapeRoom.GUI;
+package EscapeRoom;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -32,7 +32,7 @@ public class CreditsFrame extends javax.swing.JFrame {
 
         mainPanel = new javax.swing.JPanel();
         escText = new javax.swing.JLabel();
-        creditsBg = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setName("creditsFrame"); // NOI18N
@@ -45,8 +45,8 @@ public class CreditsFrame extends javax.swing.JFrame {
         escText.setText("Use ESC to go back to MAIN MENU");
         mainPanel.add(escText, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
-        creditsBg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/creditsbg.png"))); // NOI18N
-        mainPanel.add(creditsBg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/GUI/creditsbg.png"))); // NOI18N
+        mainPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -120,8 +120,8 @@ public class CreditsFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel creditsBg;
     private javax.swing.JLabel escText;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel mainPanel;
     // End of variables declaration//GEN-END:variables
 }

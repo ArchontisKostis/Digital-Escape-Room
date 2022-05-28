@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package EscapeRoom.GUI;
+package EscapeRoom;
 
 /**
  *
@@ -49,7 +49,7 @@ public class SplashScreenFrame extends javax.swing.JFrame {
         progressBar.setBorder(null);
         jPanel1.add(progressBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 1000, 20));
 
-        backgroundImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/splashScreenBg.png"))); // NOI18N
+        backgroundImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/GUI/splashScreenBg.png"))); // NOI18N
         jPanel1.add(backgroundImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 550));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
