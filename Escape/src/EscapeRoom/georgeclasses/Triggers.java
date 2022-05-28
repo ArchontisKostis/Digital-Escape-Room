@@ -9,7 +9,7 @@ package EscapeRoom.georgeclasses;
  * @author giorg
  */
 public class Triggers extends Items{
-    int itemRiddle;
+   private int itemRiddle;
 
 	
 	public int getItemRiddle() {
@@ -19,4 +19,11 @@ public class Triggers extends Items{
 	public void setItemRiddle(int itemRiddle) {
 		this.itemRiddle = itemRiddle;
 	}
+
+
+public Triggers(String itemName, int itemId) {
+		super(itemName, itemId);
+		// TODO Auto-generated constructor stub
+}
+
 }
