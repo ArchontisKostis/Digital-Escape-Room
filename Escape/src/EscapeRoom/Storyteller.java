@@ -13,7 +13,8 @@ public class Storyteller {
     private String riddleStory;
     
     public Storyteller(String riddleHelp , String riddleStory){
-        
+        this.riddleHelp = riddleHelp;
+        this.riddleStory = riddleStory;
     }
     
     public void Give_Help(Storyteller storyteller){
