@@ -10,6 +10,7 @@ import java.awt.Point;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -125,6 +126,9 @@ public class MainFrame extends javax.swing.JFrame {
         startLabel.setText("START");
         startLabel.setEnabled(false);
         startLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                startLabelMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 startLabelMouseEntered(evt);
             }
@@ -140,6 +144,9 @@ public class MainFrame extends javax.swing.JFrame {
         settingsLabel.setText("SETTINGS");
         settingsLabel.setEnabled(false);
         settingsLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                settingsLabelMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 settingsLabelMouseEntered(evt);
             }
@@ -173,6 +180,9 @@ public class MainFrame extends javax.swing.JFrame {
         exitLabel.setText("EXIT");
         exitLabel.setEnabled(false);
         exitLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                exitLabelMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 exitLabelMouseEntered(evt);
             }
@@ -183,7 +193,7 @@ public class MainFrame extends javax.swing.JFrame {
         mainPanel.add(exitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, 100, -1));
 
         bgImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/mainMenuBg.png"))); // NOI18N
-        mainPanel.add(bgImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
+        mainPanel.add(bgImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 550));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -212,7 +222,7 @@ public class MainFrame extends javax.swing.JFrame {
     // Provides Visual feedback to the user when the mouse enters the Tutorial Label
     private void tutorialLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tutorialLabelMouseEntered
         try {
-            tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/assets/tutorialIconHover.png")));
+            tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/tutorialIconHover.png")));
         }
         catch(Exception e){
             e.printStackTrace(System.out);
@@ -221,7 +231,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void tutorialLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tutorialLabelMouseExited
         try {
-            tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/assets/tutorialIcon.png")));
+            tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/tutorialIcon.png")));
         }
         catch(Exception e){
             e.printStackTrace(System.out);
@@ -306,6 +316,19 @@ public class MainFrame extends javax.swing.JFrame {
         startGamePanel.setVisible(false);
     }//GEN-LAST:event_closeLabelMouseClicked
 
+    private void startLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_startLabelMouseClicked
+        System.out.println("-------------\n START CLICKED\n -------------\n");
+    }//GEN-LAST:event_startLabelMouseClicked
+
+    private void settingsLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsLabelMouseClicked
+        settingsFrame = new SettingsFrame();
+        settingsFrame.setVisible(true);
+    }//GEN-LAST:event_settingsLabelMouseClicked
+
+    private void exitLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitLabelMouseClicked
+       confirmExit();
+    }//GEN-LAST:event_exitLabelMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -348,6 +371,13 @@ public class MainFrame extends javax.swing.JFrame {
        settingsLabel.setEnabled(false);
        creditsLabel.setEnabled(false);
        exitLabel.setEnabled(false);
+    }
+    
+    // Shows a JOptionPane window to confirm users exit choice
+    private void confirmExit(){
+        int exitOption = JOptionPane.showConfirmDialog(null, "Are you sure you want to exit the game?", "Exit game", JOptionPane.YES_NO_OPTION);
+        if (exitOption == JOptionPane.YES_OPTION)
+            System.exit(0);
     }
     
     // Action Listener Class
@@ -465,7 +495,7 @@ public class MainFrame extends javax.swing.JFrame {
                         creditsFrame.setVisible(true);
                         break;
                     case "exit":
-                        System.out.println("EXIT CLICKED\n--------------");
+                        confirmExit();
                         break;
                 }
             }

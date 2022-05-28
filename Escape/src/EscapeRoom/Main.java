@@ -1,7 +1,7 @@
 package EscapeRoom;
 
-import EscapeRoom.GUI.SplashScreenFrame;
 import EscapeRoom.GUI.MainFrame;
+import EscapeRoom.GUI.SplashScreenFrame;
 
 /**
  *
