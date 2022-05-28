@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package EscapeRoom;
+package EscapeRoom.GUI;
 
 import java.awt.Cursor;
 import java.awt.Image;
@@ -47,6 +47,7 @@ public class SettingsFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
+        escText = new javax.swing.JLabel();
         soundToggle = new javax.swing.JLabel();
         musicToggle = new javax.swing.JLabel();
         settingsBg = new javax.swing.JLabel();
@@ -55,6 +56,11 @@ public class SettingsFrame extends javax.swing.JFrame {
         setUndecorated(true);
 
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        escText.setFont(new java.awt.Font("DPComic", 0, 18)); // NOI18N
+        escText.setForeground(new java.awt.Color(255, 255, 255));
+        escText.setText("Use ESC to go back to MAIN MENU");
+        mainPanel.add(escText, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         soundToggle.setBackground(new java.awt.Color(255, 255, 255));
         soundToggle.setFont(new java.awt.Font("DPComic", 0, 55)); // NOI18N
@@ -247,6 +253,11 @@ public class SettingsFrame extends javax.swing.JFrame {
                 }
             }
             
+            // ---- USER EXITS ----
+            if(e.getKeyCode() == java.awt.event.KeyEvent.VK_ESCAPE){
+                setVisible(false);
+            }
+            
         }
 
         @Override
@@ -257,6 +268,7 @@ public class SettingsFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel escText;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JLabel musicToggle;
     private javax.swing.JLabel settingsBg;

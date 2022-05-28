@@ -57,12 +57,16 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="creditsBg">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/EscapeRoom/GUI/creditsbg.png"/>
+              <Image iconType="3" name="/EscapeRoom/guiAssets/creditsbg.png"/>
             </Property>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="}&#xa;catch(Exception e){&#xa;        System.out.println(&quot;--------------------------&quot;);&#xa;        System.out.println(&quot;getClass().getResource(./)&quot;);&#xa;        System.out.println(getClass().getResource(&quot;././././&quot;));&#xa;        System.out.println(&quot;--------------------------&quot;);&#xa;        System.out.println(&quot;getClass()&quot;);&#xa;        System.out.println(getClass());&#xa;        System.out.println(&quot;--------------------------&quot;);&#xa;}"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="System.out.print(getClass());&#xa;&#xa;try {"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>

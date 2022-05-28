@@ -1,5 +1,8 @@
 package EscapeRoom;
 
+import EscapeRoom.GUI.MainFrame;
+import EscapeRoom.GUI.SplashScreenFrame;
+
 /**
  *
  * @author Archontis
