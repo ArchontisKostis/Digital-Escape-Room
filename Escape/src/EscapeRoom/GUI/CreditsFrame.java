@@ -4,6 +4,10 @@
  */
 package EscapeRoom.GUI;
 
+import java.awt.Cursor;
+import java.awt.Image;
+import java.awt.Point;
+import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -18,6 +22,7 @@ public class CreditsFrame extends javax.swing.JFrame {
      */
     public CreditsFrame() {
         initComponents();
+        this.makeCustomCursor();
         this.addKeyListener(new CreditsFrame.myKeyListener());
     }
 
@@ -62,7 +67,15 @@ public class CreditsFrame extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    
+    private void makeCustomCursor(){
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Image img = toolkit.getImage(getClass().getResource("/EscapeRoom/guiAssets/cursor.png"));
+        Point point = new Point(0, 0);
+        Cursor cursor = toolkit.createCustomCursor(img, point, "cursor"); 
+        setCursor(cursor);        
+    }
     /**
      * @param args the command line arguments
      */
