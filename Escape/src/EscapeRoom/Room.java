@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package EscapeRoom.georgeclasses;
+package EscapeRoom;
 
 /**
  *
@@ -15,13 +15,13 @@ public class room {
 	private int SolvedRiddles;
 
 
-public room(String roomName, int solvedRiddles) {
-		super();
-		this.roomName = roomName;
-		SolvedRiddles = solvedRiddles;
+public void room(String roomName, int SolvedRiddles){
+    this.roomName = roomName;
+    this.SolvedRiddles = SolvedRiddles;
 }
 
-public String getRoomName() {
+
+public String getroomName() {
 	return roomName;
 }
 
