@@ -71,7 +71,7 @@ public class MainFrame extends javax.swing.JFrame {
         newGameButton.setText("NEW GAME");
         newGameButton.setAlignmentY(0.0F);
         newGameButton.setBorder(null);
-        newGameButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        newGameButton.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/cursor.png")), new Point(0, 0), "cursor"));
         newGameButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         newGameButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +86,7 @@ public class MainFrame extends javax.swing.JFrame {
         loadButton.setText("LOAD GAME");
         loadButton.setAlignmentY(0.0F);
         loadButton.setBorder(null);
-        loadButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        loadButton.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/cursor.png")), new Point(0, 0), "cursor"));
         loadButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         loadButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -317,7 +317,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_closeLabelMouseClicked
 
     private void startLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_startLabelMouseClicked
-        System.out.println("-------------\n START CLICKED\n -------------\n");
+        startGamePanel.setVisible(true);
     }//GEN-LAST:event_startLabelMouseClicked
 
     private void settingsLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsLabelMouseClicked
