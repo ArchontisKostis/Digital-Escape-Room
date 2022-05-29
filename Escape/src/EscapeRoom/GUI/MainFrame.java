@@ -39,76 +39,22 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
-        startGamePanel = new javax.swing.JPanel();
-        headerLabel = new javax.swing.JLabel();
-        newGameButton = new javax.swing.JButton();
-        loadButton = new javax.swing.JButton();
-        closeLabel = new javax.swing.JLabel();
         tutorialLabel = new javax.swing.JLabel();
         startLabel = new javax.swing.JLabel();
         settingsLabel = new javax.swing.JLabel();
         creditsLabel = new javax.swing.JLabel();
         exitLabel = new javax.swing.JLabel();
         bgImage = new javax.swing.JLabel();
+        startGamePanel = new javax.swing.JPanel();
+        headerLabel = new javax.swing.JLabel();
+        newGameButton = new javax.swing.JButton();
+        loadButton = new javax.swing.JButton();
+        closeLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        startGamePanel.setBackground(new java.awt.Color(0, 0, 0));
-        startGamePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        headerLabel.setBackground(new java.awt.Color(255, 255, 255));
-        headerLabel.setFont(new java.awt.Font("DPComic", 0, 48)); // NOI18N
-        headerLabel.setForeground(new java.awt.Color(255, 255, 255));
-        headerLabel.setText("SELECT ONE TO CONTINUE");
-        startGamePanel.add(headerLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, -1, -1));
-
-        newGameButton.setBackground(new java.awt.Color(224, 151, 34));
-        newGameButton.setFont(new java.awt.Font("DPComic", 0, 48)); // NOI18N
-        newGameButton.setForeground(new java.awt.Color(255, 255, 255));
-        newGameButton.setText("NEW GAME");
-        newGameButton.setAlignmentY(0.0F);
-        newGameButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(66, 35, 22), 5));
-        newGameButton.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/cursor.png")), new Point(0, 0), "cursor"));
-        newGameButton.setFocusable(false);
-        newGameButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        newGameButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                newGameButtonActionPerformed(evt);
-            }
-        });
-        startGamePanel.add(newGameButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 360, 90));
-
-        loadButton.setBackground(new java.awt.Color(224, 151, 34));
-        loadButton.setFont(new java.awt.Font("DPComic", 0, 48)); // NOI18N
-        loadButton.setForeground(new java.awt.Color(255, 255, 255));
-        loadButton.setText("LOAD GAME");
-        loadButton.setAlignmentY(0.0F);
-        loadButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(66, 35, 22), 5));
-        loadButton.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/cursor.png")), new Point(0, 0), "cursor"));
-        loadButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        loadButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loadButtonActionPerformed(evt);
-            }
-        });
-        startGamePanel.add(loadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 360, 90));
-
-        closeLabel.setBackground(new java.awt.Color(255, 255, 255));
-        closeLabel.setFont(new java.awt.Font("DPComic", 0, 36)); // NOI18N
-        closeLabel.setForeground(new java.awt.Color(255, 255, 255));
-        closeLabel.setText("X");
-        closeLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                closeLabelMouseClicked(evt);
-            }
-        });
-        startGamePanel.add(closeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, 20, 30));
-
-        mainPanel.add(startGamePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 680, 470));
-        startGamePanel.setVisible(false);
 
         tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/tutorialIcon.png"))); // NOI18N
         tutorialLabel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -195,6 +141,60 @@ public class MainFrame extends javax.swing.JFrame {
 
         bgImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/mainMenuBg.png"))); // NOI18N
         mainPanel.add(bgImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 550));
+
+        startGamePanel.setBackground(new java.awt.Color(0, 0, 0));
+        startGamePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        headerLabel.setBackground(new java.awt.Color(255, 255, 255));
+        headerLabel.setFont(new java.awt.Font("DPComic", 0, 48)); // NOI18N
+        headerLabel.setForeground(new java.awt.Color(255, 255, 255));
+        headerLabel.setText("SELECT ONE TO CONTINUE");
+        startGamePanel.add(headerLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, -1, -1));
+
+        newGameButton.setBackground(new java.awt.Color(224, 151, 34));
+        newGameButton.setFont(new java.awt.Font("DPComic", 0, 48)); // NOI18N
+        newGameButton.setForeground(new java.awt.Color(255, 255, 255));
+        newGameButton.setText("NEW GAME");
+        newGameButton.setAlignmentY(0.0F);
+        newGameButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(66, 35, 22), 5));
+        newGameButton.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/cursor.png")), new Point(0, 0), "cursor"));
+        newGameButton.setFocusable(false);
+        newGameButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        newGameButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newGameButtonActionPerformed(evt);
+            }
+        });
+        startGamePanel.add(newGameButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 360, 90));
+
+        loadButton.setBackground(new java.awt.Color(224, 151, 34));
+        loadButton.setFont(new java.awt.Font("DPComic", 0, 48)); // NOI18N
+        loadButton.setForeground(new java.awt.Color(255, 255, 255));
+        loadButton.setText("LOAD GAME");
+        loadButton.setAlignmentY(0.0F);
+        loadButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(66, 35, 22), 5));
+        loadButton.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/cursor.png")), new Point(0, 0), "cursor"));
+        loadButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        loadButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loadButtonActionPerformed(evt);
+            }
+        });
+        startGamePanel.add(loadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 360, 90));
+
+        closeLabel.setBackground(new java.awt.Color(255, 255, 255));
+        closeLabel.setFont(new java.awt.Font("DPComic", 0, 36)); // NOI18N
+        closeLabel.setForeground(new java.awt.Color(255, 255, 255));
+        closeLabel.setText("X");
+        closeLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                closeLabelMouseClicked(evt);
+            }
+        });
+        startGamePanel.add(closeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, 20, 30));
+
+        mainPanel.add(startGamePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 680, 440));
+        startGamePanel.setVisible(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
