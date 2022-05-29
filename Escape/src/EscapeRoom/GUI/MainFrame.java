@@ -384,7 +384,7 @@ public class MainFrame extends javax.swing.JFrame {
        exitLabel.setEnabled(false);
     }
     
-    // Action Listener Class
+    // ---------- Key Listener Class START ----------
     class myKeyListener implements KeyListener {
 
         @Override
@@ -509,6 +509,7 @@ public class MainFrame extends javax.swing.JFrame {
         public void keyReleased(KeyEvent e){}
         
     }
+    // ---------- Key Listener Class END ----------
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
