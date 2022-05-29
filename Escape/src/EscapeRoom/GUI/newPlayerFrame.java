@@ -33,7 +33,7 @@ public class newPlayerFrame extends javax.swing.JFrame {
 
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        newPlayerHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/newPlayerBg.png"))); // NOI18N
+        newPlayerHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/newplayerbg.png"))); // NOI18N
         mainPanel.add(newPlayerHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

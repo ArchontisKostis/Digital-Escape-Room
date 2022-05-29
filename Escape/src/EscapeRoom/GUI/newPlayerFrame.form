@@ -42,7 +42,7 @@
         <Component class="javax.swing.JLabel" name="newPlayerHeader">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/EscapeRoom/guiAssets/newPlayerBg.png"/>
+              <Image iconType="3" name="/EscapeRoom/guiAssets/newplayerbg.png"/>
             </Property>
           </Properties>
           <Constraints>
