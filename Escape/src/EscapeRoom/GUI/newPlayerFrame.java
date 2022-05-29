@@ -27,15 +27,11 @@ public class newPlayerFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
-        playerNameTextfield = new javax.swing.JTextField();
         newPlayerHeader = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        playerNameTextfield.setText("jTextField1");
-        mainPanel.add(playerNameTextfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 380, 60));
 
         newPlayerHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/newPlayerBg.png"))); // NOI18N
         mainPanel.add(newPlayerHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -92,6 +88,5 @@ public class newPlayerFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel mainPanel;
     private javax.swing.JLabel newPlayerHeader;
-    private javax.swing.JTextField playerNameTextfield;
     // End of variables declaration//GEN-END:variables
 }
