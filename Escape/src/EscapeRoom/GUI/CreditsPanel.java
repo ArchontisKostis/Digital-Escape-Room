@@ -4,23 +4,19 @@
  */
 package EscapeRoom.GUI;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
 /**
  *
  * @author Archontis
  */
-public class ExitPanel extends javax.swing.JPanel {
+public class CreditsPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form exitPanel
+     * Creates new form CreditsPanel
      */
-    public ExitPanel() {
+    public CreditsPanel() {
         initComponents();
-        this.yesButton.addActionListener(new ButtonListener());
-        this.noButton.addActionListener(new ButtonListener());
     }
 
     /**
@@ -32,32 +28,31 @@ public class ExitPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        exitPromptLabel = new javax.swing.JLabel();
-        noButton = new javax.swing.JButton();
-        yesButton = new javax.swing.JButton();
+        escText = new javax.swing.JLabel();
+        creditsBg = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(224, 151, 34));
-        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(66, 35, 22), 5));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        exitPromptLabel.setFont(new java.awt.Font("DPComic", 0, 36)); // NOI18N
-        exitPromptLabel.setForeground(new java.awt.Color(255, 255, 255));
-        exitPromptLabel.setText("Are you sure you wanna to exit?");
-        add(exitPromptLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, -1, -1));
+        escText.setFont(new java.awt.Font("DPComic", 0, 18)); // NOI18N
+        escText.setForeground(new java.awt.Color(255, 255, 255));
+        escText.setText("Use ESC to go back to MAIN MENU");
+        add(escText, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
-        noButton.setBackground(new java.awt.Color(229, 55, 55));
-        noButton.setFont(new java.awt.Font("DPComic", 0, 30)); // NOI18N
-        noButton.setForeground(new java.awt.Color(255, 255, 255));
-        noButton.setText("NO");
-        noButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(66, 35, 22), 4));
-        add(noButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, 140, 50));
+        System.out.print(getClass());
 
-        yesButton.setBackground(new java.awt.Color(80, 184, 71));
-        yesButton.setFont(new java.awt.Font("DPComic", 0, 30)); // NOI18N
-        yesButton.setForeground(new java.awt.Color(255, 255, 255));
-        yesButton.setText("YES");
-        yesButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(66, 35, 22), 4));
-        add(yesButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 140, 50));
+        try {
+            creditsBg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/creditsbg.png"))); // NOI18N
+        }
+        catch(Exception e){
+            System.out.println("--------------------------");
+            System.out.println("getClass().getResource(./)");
+            System.out.println(getClass().getResource("././././"));
+            System.out.println("--------------------------");
+            System.out.println("getClass()");
+            System.out.println(getClass());
+            System.out.println("--------------------------");
+        }
+        add(creditsBg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
     
     // --------- WARNING ----------
@@ -89,11 +84,11 @@ public class ExitPanel extends javax.swing.JPanel {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                ExitPanel testPanel = new EscapeRoom.GUI.ExitPanel();
+                CreditsPanel testPanel = new EscapeRoom.GUI.CreditsPanel();
                 
                 // TEST FRAME CREATION
                 JFrame f = new JFrame();
-                f.setSize(696, 220);
+                f.setSize(1000, 556);
                 f.setUndecorated(true);
                 f.setVisible(true);
                 
@@ -104,23 +99,9 @@ public class ExitPanel extends javax.swing.JPanel {
         });
     }
     // -----------------------------------
-    
-    
-    class ButtonListener implements ActionListener {
-
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            if(e.getSource() == yesButton)
-                System.exit(0);
-            if(e.getSource() == noButton)
-                setVisible(false);
-        }
-        
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel exitPromptLabel;
-    private javax.swing.JButton noButton;
-    private javax.swing.JButton yesButton;
+    private javax.swing.JLabel creditsBg;
+    private javax.swing.JLabel escText;
     // End of variables declaration//GEN-END:variables
 }
