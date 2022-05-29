@@ -52,6 +52,8 @@ public class MainFrame extends javax.swing.JFrame {
         setUndecorated(true);
 
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        exitPromptPanel.setVisible(false);
         mainPanel.add(exitPromptPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 700, 180));
 
         loadGamePanel.setVisible(false);
