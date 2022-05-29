@@ -70,8 +70,9 @@ public class MainFrame extends javax.swing.JFrame {
         newGameButton.setForeground(new java.awt.Color(255, 255, 255));
         newGameButton.setText("NEW GAME");
         newGameButton.setAlignmentY(0.0F);
-        newGameButton.setBorder(null);
+        newGameButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(66, 35, 22), 5));
         newGameButton.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/cursor.png")), new Point(0, 0), "cursor"));
+        newGameButton.setFocusable(false);
         newGameButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         newGameButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,7 +86,7 @@ public class MainFrame extends javax.swing.JFrame {
         loadButton.setForeground(new java.awt.Color(255, 255, 255));
         loadButton.setText("LOAD GAME");
         loadButton.setAlignmentY(0.0F);
-        loadButton.setBorder(null);
+        loadButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(66, 35, 22), 5));
         loadButton.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/cursor.png")), new Point(0, 0), "cursor"));
         loadButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         loadButton.addActionListener(new java.awt.event.ActionListener() {
