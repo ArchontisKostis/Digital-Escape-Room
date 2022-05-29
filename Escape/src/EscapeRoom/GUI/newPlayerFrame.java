@@ -4,11 +4,15 @@
  */
 package EscapeRoom.GUI;
 
+import EscapeRoom.*;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Archontis
  */
 public class newPlayerFrame extends javax.swing.JFrame {
+    private Player player;
 
     /**
      * Creates new form newPlayerFrame
@@ -27,11 +31,40 @@ public class newPlayerFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
+        createPlayerButton = new javax.swing.JButton();
+        playerNameField = new javax.swing.JTextField();
         newPlayerHeader = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        createPlayerButton.setBackground(new java.awt.Color(224, 151, 34));
+        createPlayerButton.setFont(new java.awt.Font("DPComic", 0, 36)); // NOI18N
+        createPlayerButton.setForeground(new java.awt.Color(255, 255, 255));
+        createPlayerButton.setText("START");
+        createPlayerButton.setAlignmentY(0.0F);
+        createPlayerButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(66, 35, 22), 5));
+        createPlayerButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        createPlayerButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        createPlayerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createPlayerButtonActionPerformed(evt);
+            }
+        });
+        mainPanel.add(createPlayerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 370, 190, 60));
+
+        playerNameField.setBackground(new java.awt.Color(40, 32, 30));
+        playerNameField.setFont(new java.awt.Font("DPComic", 0, 45)); // NOI18N
+        playerNameField.setForeground(new java.awt.Color(255, 255, 255));
+        playerNameField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        playerNameField.setText("Player 1");
+        playerNameField.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(224, 151, 34), 5));
+        playerNameField.setMargin(new java.awt.Insets(10, 10, 10, 10));
+        playerNameField.setSelectedTextColor(new java.awt.Color(255, 255, 255));
+        playerNameField.setSelectionColor(new java.awt.Color(224, 151, 34));
+        mainPanel.add(playerNameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 430, 70));
 
         newPlayerHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/newplayerbg.png"))); // NOI18N
         mainPanel.add(newPlayerHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -48,7 +81,19 @@ public class newPlayerFrame extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void createPlayerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createPlayerButtonActionPerformed
+        String inputText = this.playerNameField.getText();
+        if(inputText.isBlank()){
+            JOptionPane.showMessageDialog(null, "Please Enter A Name", "Well something went wrong", JOptionPane.ERROR_MESSAGE);
+        }
+        else {
+            this.player = new Player(inputText, 0, 3);
+            System.out.println(this.player.toString());
+        }
+    }//GEN-LAST:event_createPlayerButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -86,7 +131,9 @@ public class newPlayerFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton createPlayerButton;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JLabel newPlayerHeader;
+    private javax.swing.JTextField playerNameField;
     // End of variables declaration//GEN-END:variables
 }

@@ -39,6 +39,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
+        loadGamePanel = new EscapeRoom.GUI.loadGamePanel();
         startGamePanel = new javax.swing.JPanel();
         headerLabel = new javax.swing.JLabel();
         newGameButton = new javax.swing.JButton();
@@ -55,6 +56,9 @@ public class MainFrame extends javax.swing.JFrame {
         setUndecorated(true);
 
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        loadGamePanel.setVisible(false);
+        mainPanel.add(loadGamePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         startGamePanel.setBackground(new java.awt.Color(0, 0, 0));
         startGamePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -306,11 +310,13 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_creditsLabelMouseClicked
 
     private void loadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadButtonActionPerformed
-        // TODO add your handling code here:
+        this.loadGamePanel.setVisible(true);
+        this.startGamePanel.setVisible(false);
     }//GEN-LAST:event_loadButtonActionPerformed
 
     private void newGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newGameButtonActionPerformed
-        // TODO add your handling code here:
+        new newPlayerFrame().setVisible(true);
+        this.startGamePanel.setVisible(false);
     }//GEN-LAST:event_newGameButtonActionPerformed
 
     private void closeLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeLabelMouseClicked
@@ -515,6 +521,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel exitLabel;
     private javax.swing.JLabel headerLabel;
     private javax.swing.JButton loadButton;
+    private EscapeRoom.GUI.loadGamePanel loadGamePanel;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JButton newGameButton;
     private javax.swing.JLabel settingsLabel;
