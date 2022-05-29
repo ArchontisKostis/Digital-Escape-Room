@@ -39,12 +39,13 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
-        loadGamePanel = new EscapeRoom.GUI.loadGamePanel();
+        exitPromptPanel = new EscapeRoom.GUI.exitPanel();
         startGamePanel = new javax.swing.JPanel();
         headerLabel = new javax.swing.JLabel();
         newGameButton = new javax.swing.JButton();
         loadButton = new javax.swing.JButton();
         closeLabel = new javax.swing.JLabel();
+        loadGamePanel = new EscapeRoom.GUI.loadGamePanel();
         tutorialLabel = new javax.swing.JLabel();
         startLabel = new javax.swing.JLabel();
         settingsLabel = new javax.swing.JLabel();
@@ -57,8 +58,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        loadGamePanel.setVisible(false);
-        mainPanel.add(loadGamePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        exitPromptPanel.setVisible(false);
+        mainPanel.add(exitPromptPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, 680, 180));
 
         startGamePanel.setBackground(new java.awt.Color(0, 0, 0));
         startGamePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -110,6 +111,9 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         startGamePanel.add(closeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, 20, 30));
+
+        loadGamePanel.setVisible(false);
+        startGamePanel.add(loadGamePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, -60, -1, -1));
 
         mainPanel.add(startGamePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 680, 440));
         startGamePanel.setVisible(false);
@@ -198,7 +202,7 @@ public class MainFrame extends javax.swing.JFrame {
         mainPanel.add(exitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, 100, -1));
 
         bgImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/mainMenuBg.png"))); // NOI18N
-        mainPanel.add(bgImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 550));
+        mainPanel.add(bgImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -333,7 +337,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_settingsLabelMouseClicked
 
     private void exitLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exitLabelMouseClicked
-       confirmExit();
+       this.exitPromptPanel.setVisible(true);
     }//GEN-LAST:event_exitLabelMouseClicked
 
     /**
@@ -378,13 +382,6 @@ public class MainFrame extends javax.swing.JFrame {
        settingsLabel.setEnabled(false);
        creditsLabel.setEnabled(false);
        exitLabel.setEnabled(false);
-    }
-    
-    // Shows a JOptionPane window to confirm users exit choice
-    private void confirmExit(){
-        int exitOption = JOptionPane.showConfirmDialog(null, "Are you sure you want to exit the game?", "Exit game", JOptionPane.YES_NO_OPTION);
-        if (exitOption == JOptionPane.YES_OPTION)
-            System.exit(0);
     }
     
     // Action Listener Class
@@ -502,7 +499,7 @@ public class MainFrame extends javax.swing.JFrame {
                         creditsFrame.setVisible(true);
                         break;
                     case "exit":
-                        confirmExit();
+                        exitPromptPanel.setVisible(true);
                         break;
                 }
             }
@@ -519,6 +516,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel closeLabel;
     private javax.swing.JLabel creditsLabel;
     private javax.swing.JLabel exitLabel;
+    private EscapeRoom.GUI.exitPanel exitPromptPanel;
     private javax.swing.JLabel headerLabel;
     private javax.swing.JButton loadButton;
     private EscapeRoom.GUI.loadGamePanel loadGamePanel;
