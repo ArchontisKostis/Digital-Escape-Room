@@ -39,12 +39,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
-        exitPromptPanel = new EscapeRoom.GUI.exitPanel();
-        startGamePanel = new javax.swing.JPanel();
-        headerLabel = new javax.swing.JLabel();
-        newGameButton = new javax.swing.JButton();
-        loadButton = new javax.swing.JButton();
-        closeLabel = new javax.swing.JLabel();
+        exitPromptPanel = new EscapeRoom.GUI.ExitPanel();
         loadGamePanel = new EscapeRoom.GUI.loadGamePanel();
         tutorialLabel = new javax.swing.JLabel();
         startLabel = new javax.swing.JLabel();
@@ -57,66 +52,10 @@ public class MainFrame extends javax.swing.JFrame {
         setUndecorated(true);
 
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        exitPromptPanel.setVisible(false);
-        mainPanel.add(exitPromptPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, 680, 180));
-
-        startGamePanel.setBackground(new java.awt.Color(0, 0, 0));
-        startGamePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        headerLabel.setBackground(new java.awt.Color(255, 255, 255));
-        headerLabel.setFont(new java.awt.Font("DPComic", 0, 48)); // NOI18N
-        headerLabel.setForeground(new java.awt.Color(255, 255, 255));
-        headerLabel.setText("SELECT ONE TO CONTINUE");
-        startGamePanel.add(headerLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, -1, -1));
-
-        newGameButton.setBackground(new java.awt.Color(224, 151, 34));
-        newGameButton.setFont(new java.awt.Font("DPComic", 0, 48)); // NOI18N
-        newGameButton.setForeground(new java.awt.Color(255, 255, 255));
-        newGameButton.setText("NEW GAME");
-        newGameButton.setAlignmentY(0.0F);
-        newGameButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(66, 35, 22), 5));
-        newGameButton.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/cursor.png")), new Point(0, 0), "cursor"));
-        newGameButton.setFocusable(false);
-        newGameButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        newGameButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                newGameButtonActionPerformed(evt);
-            }
-        });
-        startGamePanel.add(newGameButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 360, 90));
-
-        loadButton.setBackground(new java.awt.Color(224, 151, 34));
-        loadButton.setFont(new java.awt.Font("DPComic", 0, 48)); // NOI18N
-        loadButton.setForeground(new java.awt.Color(255, 255, 255));
-        loadButton.setText("LOAD GAME");
-        loadButton.setAlignmentY(0.0F);
-        loadButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(66, 35, 22), 5));
-        loadButton.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/cursor.png")), new Point(0, 0), "cursor"));
-        loadButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        loadButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loadButtonActionPerformed(evt);
-            }
-        });
-        startGamePanel.add(loadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 360, 90));
-
-        closeLabel.setBackground(new java.awt.Color(255, 255, 255));
-        closeLabel.setFont(new java.awt.Font("DPComic", 0, 36)); // NOI18N
-        closeLabel.setForeground(new java.awt.Color(255, 255, 255));
-        closeLabel.setText("X");
-        closeLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                closeLabelMouseClicked(evt);
-            }
-        });
-        startGamePanel.add(closeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, 20, 30));
+        mainPanel.add(exitPromptPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 700, 180));
 
         loadGamePanel.setVisible(false);
-        startGamePanel.add(loadGamePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(-170, -60, -1, -1));
-
-        mainPanel.add(startGamePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 680, 440));
-        startGamePanel.setVisible(false);
+        mainPanel.add(loadGamePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/tutorialIcon.png"))); // NOI18N
         tutorialLabel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -313,22 +252,8 @@ public class MainFrame extends javax.swing.JFrame {
         creditsFrame.setVisible(true);
     }//GEN-LAST:event_creditsLabelMouseClicked
 
-    private void loadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadButtonActionPerformed
-        this.loadGamePanel.setVisible(true);
-        this.startGamePanel.setVisible(false);
-    }//GEN-LAST:event_loadButtonActionPerformed
-
-    private void newGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newGameButtonActionPerformed
-        new newPlayerFrame().setVisible(true);
-        this.startGamePanel.setVisible(false);
-    }//GEN-LAST:event_newGameButtonActionPerformed
-
-    private void closeLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeLabelMouseClicked
-        startGamePanel.setVisible(false);
-    }//GEN-LAST:event_closeLabelMouseClicked
-
     private void startLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_startLabelMouseClicked
-        startGamePanel.setVisible(true);
+        //startGamePanel.setVisible(true);
     }//GEN-LAST:event_startLabelMouseClicked
 
     private void settingsLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingsLabelMouseClicked
@@ -486,7 +411,7 @@ public class MainFrame extends javax.swing.JFrame {
                 switch (state) {
                     case "start":
                         System.out.println("START CLICKED\n--------------");
-                        startGamePanel.setVisible(true);
+                        //startGamePanel.setVisible(true);
                         break;
                     case "settings":
                         System.out.println("SETTINGS CLICKED\n--------------");
@@ -514,17 +439,12 @@ public class MainFrame extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bgImage;
-    private javax.swing.JLabel closeLabel;
     private javax.swing.JLabel creditsLabel;
     private javax.swing.JLabel exitLabel;
-    private EscapeRoom.GUI.exitPanel exitPromptPanel;
-    private javax.swing.JLabel headerLabel;
-    private javax.swing.JButton loadButton;
+    private EscapeRoom.GUI.ExitPanel exitPromptPanel;
     private EscapeRoom.GUI.loadGamePanel loadGamePanel;
     private javax.swing.JPanel mainPanel;
-    private javax.swing.JButton newGameButton;
     private javax.swing.JLabel settingsLabel;
-    private javax.swing.JPanel startGamePanel;
     private javax.swing.JLabel startLabel;
     private javax.swing.JLabel tutorialLabel;
     // End of variables declaration//GEN-END:variables

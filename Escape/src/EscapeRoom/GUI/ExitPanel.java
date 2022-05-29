@@ -114,6 +114,7 @@ public class ExitPanel extends javax.swing.JPanel {
                 System.exit(0);
             if(e.getSource() == noButton)
                 setVisible(false);
+                System.out.print("NO");
         }
         
     }
