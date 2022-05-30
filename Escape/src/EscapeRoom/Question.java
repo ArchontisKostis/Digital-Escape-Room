@@ -16,15 +16,15 @@ public class Question {
     private int rightAnswear;
     private ArrayList<String> answear = new ArrayList<String>();
     
-    public Question(String question , int rightAnswear){
+    public Question(String question , int rightAnswear, String choice1 , String choice2 , String choice3 , String choice4 ){
         this.question = question;
         this.rightAnswear = rightAnswear;
+        answear.add(choice1);
+        answear.add(choice2);
+        answear.add(choice3);
+        answear.add(choice4);
     }
     
-    public void addAnswears(String text){
-        answear.add(text);
-    }
-
     public int getRightAnswear() {
         return rightAnswear;
     }
