@@ -101,7 +101,7 @@ public class ExitPanel extends javax.swing.JPanel {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                ExitPanel testPanel = new EscapeRoom.GUI.ExitPanel();
+                ExitPanel testPanel = new ExitPanel();
                 
                 // TEST FRAME CREATION
                 JFrame f = new JFrame();
