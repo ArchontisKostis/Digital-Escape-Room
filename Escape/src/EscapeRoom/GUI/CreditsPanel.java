@@ -4,6 +4,8 @@
  */
 package EscapeRoom.GUI;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 
 /**
@@ -17,6 +19,8 @@ public class CreditsPanel extends javax.swing.JPanel {
      */
     public CreditsPanel() {
         initComponents();
+        this.setFocusable(true);
+        this.addKeyListener(new CreditsPanel.myKeyListener());
     }
 
     /**
@@ -99,6 +103,29 @@ public class CreditsPanel extends javax.swing.JPanel {
         });
     }
     // -----------------------------------
+    
+    /* KEY LISTENER CLASS START */
+    class myKeyListener implements KeyListener {
+
+        @Override
+        public void keyTyped(KeyEvent e) {
+            
+        }
+
+        @Override
+        public void keyPressed(KeyEvent e) {
+            if(e.getKeyCode() == java.awt.event.KeyEvent.VK_ESCAPE){
+                System.out.println("ESC CREDITS");
+                setVisible(false);
+            }
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {
+            
+        }
+        
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel creditsBg;
