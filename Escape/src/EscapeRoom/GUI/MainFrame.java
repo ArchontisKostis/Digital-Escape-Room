@@ -4,14 +4,18 @@
  */
 package EscapeRoom.GUI;
 
+import EscapeRoom.Player;
 import java.awt.Cursor;
 import java.awt.Image;
 import java.awt.Point;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 /**
@@ -22,6 +26,8 @@ public class MainFrame extends javax.swing.JFrame {
     // Variable Declaration
     private String navigationState = "none";
     private String panelState = "home";
+    
+    private Player player;
     
     
     public MainFrame() {
@@ -44,6 +50,8 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
+        startGamePanel = new EscapeRoom.GUI.StartGamePanel();
+        newPlayerPanel = new EscapeRoom.GUI.newPlayerPanel(new ButtonListener());
         settingsPanel = new EscapeRoom.GUI.SettingsPanel();
         creditsPanel = new EscapeRoom.GUI.CreditsPanel();
         exitPromptPanel = new EscapeRoom.GUI.ExitPanel();
@@ -59,6 +67,13 @@ public class MainFrame extends javax.swing.JFrame {
         setUndecorated(true);
 
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        startGamePanel.setVisible(false);
+        startGamePanel.addListenerToButtons(new ButtonListener());
+        mainPanel.add(startGamePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 743, 395));
+
+        newPlayerPanel.setVisible(false);
+        mainPanel.add(newPlayerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         settingsPanel.setVisible(false);
         settingsPanel.setMainFrame(this);
@@ -283,8 +298,8 @@ public class MainFrame extends javax.swing.JFrame {
             if(e.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
                 switch (navigationState) {
                     case "start":
-                        System.out.println("START CLICKED\n--------------");
-                        //startGamePanel.setVisible(true);
+                        panelState = "startGame";
+                        startGamePanel.setVisible(true);
                         break;
                     case "settings":
                         panelState = "settings";
@@ -305,9 +320,18 @@ public class MainFrame extends javax.swing.JFrame {
             
             // ---- USER ESCAPE ACTION ----
             if(e.getKeyCode() == java.awt.event.KeyEvent.VK_ESCAPE){
+                System.out.println("ESCAPE");
                 switch (panelState) {
-                    case "home":
-                        break;
+                    case "startGame":
+                        panelState = "home";
+                        startGamePanel.setVisible(false);
+                    case "loadGame":
+                        panelState = "home";
+                        loadGamePanel.setVisible(false);
+                    case "newPlayer":
+                        panelState = "home";
+                        newPlayerPanel.getPlayerNameField().setText("Player");
+                        newPlayerPanel.setVisible(false);
                     case "settings":
                         panelState = "home";
                         settingsPanel.setVisible(false);
@@ -332,8 +356,11 @@ public class MainFrame extends javax.swing.JFrame {
     // ---------- Mouse Listener Class START ---------- //
     class myMouseListener implements MouseListener {
         public void mouseClicked(MouseEvent e) {
-           if(e.getSource() == startLabel && panelState.equalsIgnoreCase("home"))
-                System.out.println("MOUSE CLICKED START");
+            if(e.getSource() == startLabel && panelState.equalsIgnoreCase("home")){
+               panelState = "startGame";
+               startGamePanel.setVisible(true);
+            }
+               
             if(e.getSource() == settingsLabel && panelState.equalsIgnoreCase("home")){
                  panelState = "settings";
                 settingsPanel.setVisible(true);
@@ -411,6 +438,40 @@ public class MainFrame extends javax.swing.JFrame {
     }
     // ---------- Mouse Listener Class END ---------- //
     
+    // ---------- Button Listener Class START ---------- //
+    class ButtonListener implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            // Start Game Panels Buttons
+            JButton loadButton = startGamePanel.getLoadButton();
+            JButton newButton = startGamePanel.getNewButton();
+            
+            // New Player Panel's Buttons
+            JButton createPlayerButton = newPlayerPanel.getCreatePlayerButton();
+            
+            if(e.getSource() == loadButton){
+                panelState = "loadGame";
+                startGamePanel.setVisible(false);
+                loadGamePanel.setVisible(true);
+                requestFocus();
+            }
+            else if (e.getSource() == newButton){
+                panelState = "newPlayer";
+                startGamePanel.setVisible(false);
+                newPlayerPanel.setVisible(true);
+                requestFocus();
+            }
+            else if (e.getSource() == createPlayerButton){
+                player = new Player(newPlayerPanel.getTextfieldText(), 0, 3);
+                System.out.println(player.toString());
+                requestFocus();
+            }
+        }
+        
+    }
+    // ---------- Button Listener Class END ---------- //
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bgImage;
     private javax.swing.JLabel creditsLabel;
@@ -419,8 +480,10 @@ public class MainFrame extends javax.swing.JFrame {
     private EscapeRoom.GUI.ExitPanel exitPromptPanel;
     private EscapeRoom.GUI.loadGamePanel loadGamePanel;
     private javax.swing.JPanel mainPanel;
+    private EscapeRoom.GUI.newPlayerPanel newPlayerPanel;
     private javax.swing.JLabel settingsLabel;
     private EscapeRoom.GUI.SettingsPanel settingsPanel;
+    private EscapeRoom.GUI.StartGamePanel startGamePanel;
     private javax.swing.JLabel startLabel;
     private javax.swing.JLabel tutorialLabel;
     // End of variables declaration//GEN-END:variables
