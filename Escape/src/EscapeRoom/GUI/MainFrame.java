@@ -22,7 +22,6 @@ public class MainFrame extends javax.swing.JFrame {
     // Variable Declaration
     private String navigationState = "none";
     private String panelState = "home";
-    private SettingsFrame settingsFrame;
     
     
     public MainFrame() {
