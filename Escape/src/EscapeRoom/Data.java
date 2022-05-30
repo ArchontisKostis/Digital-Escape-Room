@@ -9,6 +9,7 @@ package EscapeRoom;
  * @author 30694
  */
 import java.util.ArrayList;
+import java.awt.Image;
 
 public class Data {
     
@@ -16,6 +17,18 @@ public class Data {
     
     public void Data(int riddleId){
         this.riddleId = riddleId;
+    }
+    //1st type [pictures in order]
+    
+    private Row rowGr = new Row();
+    private Row rowSk = new Row();
+
+    public Row getRowGr() {
+        return rowGr;
+    }
+
+    public Row getRowSk() {
+        return rowSk;
     }
     
     //3rd type [Multiple choice]
@@ -69,5 +82,4 @@ public class Data {
     public String getText3() {
         return text3[1];
     }
-    
 }

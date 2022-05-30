@@ -20,12 +20,17 @@ public class Riddles {
         this.riddleId = riddleId;
     }
     
-    /*
-    public boolean pictures_in_a_row(ArrayList<Image> images){
-        boolean solved = false;
+    
+    public boolean pictures_in_order(int riddleId , String Order){
+        boolean solved;
+        Data row = new Data();
+        if(riddleId == 1)
+            solved = (row.getRowGr()).getOrder().equals(Order);
+        else
+            solved = (row.getRowSk()).getOrder().equals(Order);
         return solved;
     }
-    */
+    
     
     /*
     public boolean match_image_to_text(ArrayList<Image> images , ArrayList<String> text){
