@@ -187,6 +187,7 @@ public class MainFrame extends javax.swing.JFrame {
             // ---- MENU NAVIGATION ----
             // If UP KEY is pressed
             if(e.getKeyCode() == java.awt.event.KeyEvent.VK_UP){
+                
                 // Check the pointer state
                 switch (navigationState) {
                     case "none":
@@ -287,6 +288,7 @@ public class MainFrame extends javax.swing.JFrame {
                         creditsPanel.setVisible(true);
                         break;
                     case "exit":
+                        panelState = "exit";
                         exitPromptPanel.setVisible(true);
                         break;
                 }
@@ -304,6 +306,10 @@ public class MainFrame extends javax.swing.JFrame {
                         panelState = "home";
                         creditsPanel.setVisible(false);
                         break;
+                    case "exit":
+                        panelState = "home";
+                        exitPromptPanel.setVisible(false);
+                        break;
                 }
             }
         }
@@ -317,7 +323,20 @@ public class MainFrame extends javax.swing.JFrame {
     // ---------- Mouse Listener Class START ---------- //
     class myMouseListener implements MouseListener {
         public void mouseClicked(MouseEvent e) {
-           
+           if(e.getSource() == startLabel)
+                System.out.println("MOUSE CLICKED START");
+            if(e.getSource() == settingsLabel){
+                 panelState = "settings";
+                settingsPanel.setVisible(true);
+            }   
+            if(e.getSource() == creditsLabel){
+                 panelState = "credits";
+                creditsPanel.setVisible(true);
+            }   
+            if(e.getSource() == exitLabel){
+                panelState = "exit";
+                exitPromptPanel.setVisible(true);
+            }
         }
         
         public void mouseEntered(MouseEvent e) {
@@ -371,18 +390,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         @Override
         public void mousePressed(MouseEvent e) {
-             if(e.getSource() == startLabel)
-                System.out.println("MOUSE CLICKED START");
-            if(e.getSource() == settingsLabel){
-                 panelState = "settings";
-                settingsPanel.setVisible(true);
-            }   
-            if(e.getSource() == creditsLabel){
-                 panelState = "credits";
-                creditsPanel.setVisible(true);
-            }   
-            if(e.getSource() == exitLabel)
-                exitPromptPanel.setVisible(true);
+            
+                
         }
 
         @Override
