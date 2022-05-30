@@ -13,6 +13,7 @@ import javax.swing.JFrame;
  * @author Archontis
  */
 public class ExitPanel extends javax.swing.JPanel {
+    private MainFrame mainFrame;
 
     /**
      * Creates new form exitPanel
@@ -22,7 +23,14 @@ public class ExitPanel extends javax.swing.JPanel {
         this.yesButton.addActionListener(new ButtonListener());
         this.noButton.addActionListener(new ButtonListener());
     }
-
+    
+    public void setMainFrame(MainFrame aFrame){
+        this.mainFrame = aFrame;
+    }
+    
+    public void setMainFramesPanelState(String aStateName){
+        this.mainFrame.setPanelState(aStateName);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -51,6 +59,7 @@ public class ExitPanel extends javax.swing.JPanel {
         noButton.setForeground(new java.awt.Color(255, 255, 255));
         noButton.setText("NO");
         noButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(66, 35, 22), 4));
+        noButton.setFocusable(false);
         add(noButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, 140, 50));
 
         yesButton.setFocusable(false);
@@ -59,6 +68,7 @@ public class ExitPanel extends javax.swing.JPanel {
         yesButton.setForeground(new java.awt.Color(255, 255, 255));
         yesButton.setText("YES");
         yesButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(66, 35, 22), 4));
+        yesButton.setFocusable(false);
         add(yesButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 140, 50));
     }// </editor-fold>//GEN-END:initComponents
     
@@ -114,9 +124,11 @@ public class ExitPanel extends javax.swing.JPanel {
         public void actionPerformed(ActionEvent e) {
             if(e.getSource() == yesButton)
                 System.exit(0);
-            if(e.getSource() == noButton)
+            if(e.getSource() == noButton){
                 setVisible(false);
-            setFocusable(false);
+                setMainFramesPanelState("home");
+            }    
+            //setFocusable(false);
         }
         
     }

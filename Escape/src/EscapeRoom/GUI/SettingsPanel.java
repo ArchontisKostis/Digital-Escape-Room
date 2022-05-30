@@ -9,6 +9,7 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 /**
  *
@@ -19,6 +20,7 @@ public class SettingsPanel extends javax.swing.JPanel {
     String navState = "none";
     boolean musicOn = true;
     boolean soundOn = true;
+    private MainFrame mainFrame;
     
     /**
      * Creates new form SettingsPanel
@@ -28,7 +30,22 @@ public class SettingsPanel extends javax.swing.JPanel {
         this.setFocusable(true);
         this.addKeyListener(new myKeyListener());
     }
-
+    
+    public JLabel getMusicToggle(){
+        return this.musicToggle;
+    }
+    
+    public JLabel getSoundToggle(){
+        return this.soundToggle;
+    }
+    
+    public void setMainFrame(MainFrame aFrame){
+        this.mainFrame = aFrame;
+    }
+    
+    public void transferFocusToMainFrame(){
+        this.mainFrame.requestFocus();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -56,7 +73,7 @@ public class SettingsPanel extends javax.swing.JPanel {
         soundToggle.setText("SOUND ON");
         soundToggle.setEnabled(false);
         soundToggle.addMouseListener(new myMouseListener());
-        add(soundToggle, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 290, 260, -1));
+        add(soundToggle, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 280, 260, -1));
 
         musicToggle.setBackground(new java.awt.Color(255, 255, 255));
         musicToggle.setFont(new java.awt.Font("DPComic", 0, 55)); // NOI18N
@@ -64,7 +81,7 @@ public class SettingsPanel extends javax.swing.JPanel {
         musicToggle.setText("MUSIC ON");
         musicToggle.setEnabled(false);
         musicToggle.addMouseListener(new myMouseListener());
-        add(musicToggle, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 230, 210, -1));
+        add(musicToggle, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 210, -1));
 
         settingsBg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/settings.png"))); // NOI18N
         add(settingsBg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -140,7 +157,6 @@ public class SettingsPanel extends javax.swing.JPanel {
             // ---- NAVIGATION ----
             // If UP or DOWN KEY is pressed (there are only two options so we dont need another if)
             if(e.getKeyCode() == java.awt.event.KeyEvent.VK_UP || e.getKeyCode() == java.awt.event.KeyEvent.VK_DOWN){
-                System.out.println("KEY");
                 // Check the pointer state
                 switch(navState){
                     case "none":
@@ -162,7 +178,7 @@ public class SettingsPanel extends javax.swing.JPanel {
            }
             
             // ---- USER CONFIRMATION ----
-            if(e.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
+           else if(e.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
                 switch(navState) {
                     case "music":
                         if(musicOn){
@@ -186,6 +202,12 @@ public class SettingsPanel extends javax.swing.JPanel {
                         }
                         break;
                 }
+            }
+            
+            // ------- USER ESCAPES -------
+            else if(e.getKeyCode() == java.awt.event.KeyEvent.VK_ESCAPE){
+                transferFocusToMainFrame();
+                setVisible(false);
             }
         }
 

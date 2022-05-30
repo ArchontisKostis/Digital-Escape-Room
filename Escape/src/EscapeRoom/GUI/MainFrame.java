@@ -29,6 +29,10 @@ public class MainFrame extends javax.swing.JFrame {
         this.makeCustomCursor();
         this.addKeyListener(new myKeyListener());
     }
+    
+    public void setPanelState(String aStateName){
+        this.panelState = aStateName;
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -57,12 +61,14 @@ public class MainFrame extends javax.swing.JFrame {
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         settingsPanel.setVisible(false);
+        settingsPanel.setMainFrame(this);
         mainPanel.add(settingsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         creditsPanel.setVisible(false);
         mainPanel.add(creditsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 560));
 
         exitPromptPanel.setVisible(false);
+        exitPromptPanel.setMainFrame(this);
         mainPanel.add(exitPromptPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 700, 180));
 
         loadGamePanel.setVisible(false);
@@ -283,6 +289,8 @@ public class MainFrame extends javax.swing.JFrame {
                     case "settings":
                         panelState = "settings";
                         settingsPanel.setVisible(true);
+                        // Give focus to SettingsPanel so its action listener works
+                        settingsPanel.requestFocus();
                         break;
                     case "credits":
                         panelState = "credits";
@@ -343,6 +351,7 @@ public class MainFrame extends javax.swing.JFrame {
         public void mouseEntered(MouseEvent e) {
             if(e.getSource() == startLabel){
                 disableAllLabels();
+                System.out.println("MOUSE ENTERED START");
                 startLabel.setEnabled(true);
                 navigationState = "start";
             }
