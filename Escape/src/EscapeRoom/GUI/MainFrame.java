@@ -84,6 +84,7 @@ public class MainFrame extends javax.swing.JFrame {
         settingsLabel.setForeground(new java.awt.Color(255, 255, 255));
         settingsLabel.setText("SETTINGS");
         settingsLabel.setEnabled(false);
+        settingsLabel.setFocusable(false);
         settingsLabel.addMouseListener(new myMouseListener());
         mainPanel.add(settingsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, 200, 60));
 
@@ -323,17 +324,17 @@ public class MainFrame extends javax.swing.JFrame {
     // ---------- Mouse Listener Class START ---------- //
     class myMouseListener implements MouseListener {
         public void mouseClicked(MouseEvent e) {
-           if(e.getSource() == startLabel)
+           if(e.getSource() == startLabel && panelState.equalsIgnoreCase("home"))
                 System.out.println("MOUSE CLICKED START");
-            if(e.getSource() == settingsLabel){
+            if(e.getSource() == settingsLabel && panelState.equalsIgnoreCase("home")){
                  panelState = "settings";
                 settingsPanel.setVisible(true);
             }   
-            if(e.getSource() == creditsLabel){
+            if(e.getSource() == creditsLabel && panelState.equalsIgnoreCase("home")){
                  panelState = "credits";
                 creditsPanel.setVisible(true);
             }   
-            if(e.getSource() == exitLabel){
+            if(e.getSource() == exitLabel && panelState.equalsIgnoreCase("home")){
                 panelState = "exit";
                 exitPromptPanel.setVisible(true);
             }

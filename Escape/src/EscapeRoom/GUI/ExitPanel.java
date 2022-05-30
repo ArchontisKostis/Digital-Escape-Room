@@ -45,6 +45,7 @@ public class ExitPanel extends javax.swing.JPanel {
         exitPromptLabel.setText("Are you sure you wanna to exit?");
         add(exitPromptLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, -1, -1));
 
+        noButton.setFocusable(false);
         noButton.setBackground(new java.awt.Color(229, 55, 55));
         noButton.setFont(new java.awt.Font("DPComic", 0, 30)); // NOI18N
         noButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -52,6 +53,7 @@ public class ExitPanel extends javax.swing.JPanel {
         noButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(66, 35, 22), 4));
         add(noButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, 140, 50));
 
+        yesButton.setFocusable(false);
         yesButton.setBackground(new java.awt.Color(80, 184, 71));
         yesButton.setFont(new java.awt.Font("DPComic", 0, 30)); // NOI18N
         yesButton.setForeground(new java.awt.Color(255, 255, 255));
