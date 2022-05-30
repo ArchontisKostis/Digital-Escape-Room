@@ -35,7 +35,7 @@ public class Riddles {
     */
     public boolean multiple_choice(int position , int riddleId , int pos4 , int pos5 , int pos6){
         
-        boolean solved = false;
+        boolean solved;
         Data question = new Data();
         
         if(riddleId == 1){            
@@ -52,23 +52,20 @@ public class Riddles {
     }
     
     public boolean type_the_answear(String answear , int riddleId){
-        boolean solved = false;
-        String question , rightAnswear;
+        String rightAnswear;
+        Data text = new Data();
         
         if(riddleId == 1){
-            question = "Ο Μύθος της Καλλιστώς: Ο Δίας ερωτεύεται την πανέμορφη Καλλιστώ, κόρη του βασιλιά της Αρκαδίας Λυκάονα, και αποκτά μαζί της έναν γιο, τον Αρκάδα. Θυμωμένη η Ήρα τη μεταμορφώνει σε αρκούδα, την οποία μετά από χρόνια συναντά ο γιός της στο δάσος. Προσπαθεί εκείνη να τον αγκαλιάσει και τρομαγμένος ο Αρκάδας ετοιμάζεται να τη σκοτώσει. Επεμβαίνει ο Δίας και την καταστερίζει -την ανεβάζει στον ουρανό- ως τον αστερισμό της Μεγάλης Άρκτου, καθώς επίσης και τον γιό της να την ακολουθεί ως Μικρή Άρκτος";
-            rightAnswear = "Ωρίων";
+            rightAnswear = (text.getText1())[1];
         }
         else if(riddleId == 2){
-            question = "Ποιο είναι το ον που όταν γεννιέται έχει τέσσερα πόδια, στη συνέχεια γίνεται δίποδο και όταν γερνά αποκτά και τρίτο πόδι;";
-            rightAnswear = "Σφίγγα";
+            rightAnswear = (text.getText2())[1];
         }
         else{
-            
+            rightAnswear = text.getText3();
         }
         
-        solved = rightAnswear.equals(answear);
-        return solved;
+        return rightAnswear.equals(answear);
     }
     
     /*
