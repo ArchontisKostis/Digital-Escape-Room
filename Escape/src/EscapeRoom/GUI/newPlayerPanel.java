@@ -5,6 +5,9 @@
 package EscapeRoom.GUI;
 import EscapeRoom.*;
 import EscapeRoom.GUI.MainFrame.ButtonListener;
+import java.awt.Point;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -57,7 +60,13 @@ public class newPlayerPanel extends javax.swing.JPanel {
         createPlayerButton.setText("START");
         createPlayerButton.setAlignmentY(0.0F);
         createPlayerButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(66, 35, 22), 5));
-        createPlayerButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        // Custom Cursor
+        createPlayerButton.setCursor(Toolkit.getDefaultToolkit().
+            createCustomCursor(
+                Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/cursor.png")),
+                new Point(0,0),"custom cursor"
+            )
+        );
         createPlayerButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         add(createPlayerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 370, 190, 60));
 
@@ -73,7 +82,7 @@ public class newPlayerPanel extends javax.swing.JPanel {
         add(playerNameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 430, 70));
 
         newPlayerHeader.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/newplayerbg.png"))); // NOI18N
-        add(newPlayerHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        add(newPlayerHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
     }// </editor-fold>//GEN-END:initComponents
 
 
