@@ -40,6 +40,16 @@
         <Property name="useNullLayout" type="boolean" value="false"/>
       </Layout>
       <SubComponents>
+        <Component class="EscapeRoom.GUI.newPlayerPanel" name="newPlayerPanel">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="newPlayerPanel.setVisible(false);&#xa;newPlayerPanel.addListenerToButton(new ButtonListener());"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
         <Component class="EscapeRoom.GUI.StartGamePanel" name="startGamePanel">
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="startGamePanel.setVisible(false);&#xa;startGamePanel.addListenerToButtons(new ButtonListener());"/>
@@ -47,17 +57,6 @@
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="140" y="100" width="743" height="395"/>
-            </Constraint>
-          </Constraints>
-        </Component>
-        <Component class="EscapeRoom.GUI.newPlayerPanel" name="newPlayerPanel">
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new EscapeRoom.GUI.newPlayerPanel(new ButtonListener())"/>
-            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="newPlayerPanel.setVisible(false);"/>
-          </AuxValues>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>

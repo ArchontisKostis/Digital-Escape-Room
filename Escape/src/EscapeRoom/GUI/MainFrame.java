@@ -50,8 +50,8 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
+        newPlayerPanel = new EscapeRoom.GUI.newPlayerPanel();
         startGamePanel = new EscapeRoom.GUI.StartGamePanel();
-        newPlayerPanel = new EscapeRoom.GUI.newPlayerPanel(new ButtonListener());
         settingsPanel = new EscapeRoom.GUI.SettingsPanel();
         creditsPanel = new EscapeRoom.GUI.CreditsPanel();
         exitPromptPanel = new EscapeRoom.GUI.ExitPanel();
@@ -68,12 +68,13 @@ public class MainFrame extends javax.swing.JFrame {
 
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        newPlayerPanel.setVisible(false);
+        newPlayerPanel.addListenerToButton(new ButtonListener());
+        mainPanel.add(newPlayerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
         startGamePanel.setVisible(false);
         startGamePanel.addListenerToButtons(new ButtonListener());
         mainPanel.add(startGamePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 743, 395));
-
-        newPlayerPanel.setVisible(false);
-        mainPanel.add(newPlayerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         settingsPanel.setVisible(false);
         settingsPanel.setMainFrame(this);

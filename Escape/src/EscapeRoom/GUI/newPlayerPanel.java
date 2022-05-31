@@ -22,9 +22,8 @@ public class newPlayerPanel extends javax.swing.JPanel {
     /**
      * Creates new form newPlayerPanel
      */
-    public newPlayerPanel(ButtonListener aListener) {
+    public newPlayerPanel() {
         initComponents();
-        this.createPlayerButton.addActionListener(aListener);
     }
     
     public JButton getCreatePlayerButton(){
@@ -37,6 +36,10 @@ public class newPlayerPanel extends javax.swing.JPanel {
     
     public String getTextfieldText(){
         return this.playerNameField.getText();
+    }
+    
+    public void addListenerToButton(ButtonListener aListener) {
+        this.createPlayerButton.addActionListener(aListener);
     }
 
     /**
