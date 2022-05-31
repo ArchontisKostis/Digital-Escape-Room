@@ -41,12 +41,16 @@ public class Storyteller {
     private String GHelp4 = "Όνομα ενός διάσημου κυνηγού";
     private String GHelp5 = "Το συναντάς καθημερινά";
     
-    /*Βοήθεια για τους Αιγυπτιακούς γριφους γρίφους*/
-     private String ΕHelpMsg1 = "Μπορείς να ψάξεις και στο διαδίκτυο αν σου φαίνονται ορνιθοσκαλίσματα";
-     private String EHelpMsg2 = "Απεικονίζεται ως φίδι";
-     private String EHelpMsg3 = "Το διαδίκτυο είναι ο φίλος σου";
-     private String EHelpMsg4 = "";
+    /*Βοήθεια για τους Αιγυπτιακούς γρίφους*/
+    private String ΕHelpMsg1 = "Μπορείς να ψάξεις και στο διαδίκτυο αν σου φαίνονται ορνιθοσκαλίσματα";
+    private String EHelpMsg2 = "Απεικονίζεται ως φίδι";
+    private String EHelpMsg3 = "Το διαδίκτυο είναι ο φίλος σου";
+    private String EHelpMsg4 = "";
      
+     /*Βοήθεια για τους Σκανδιναβικούς γρίφους*/
+    private String SHelpMsg1 = "Κοίτα προσεκτικά τις εικόνες. Μπορείς να ψάξεις και στο διαδίκτυο αν δεν γνωρίζεις την Σκανδιναβική μυθολογία"; 
+    private String SHelpMsg2 = "Κάποιος δεν είδε την σειρά Vikings";
+    private String SHelpMsg3 = "Οι γραμμές είναι το «σώμα» του φιδιού και οι κουκίδες οι κόμβοι";
             
     public Storyteller(String riddleHelp , String riddleStory){
         this.riddleHelp = riddleHelp;
