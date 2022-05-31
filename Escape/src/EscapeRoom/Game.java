@@ -22,7 +22,10 @@ public class Game {
         this.roomList = aRoomList;
         this.musicOn = true;
         this.soundOn = true;
+
+
     }
+
     
     /* GETTERS AND SETTERS */
     // Player
