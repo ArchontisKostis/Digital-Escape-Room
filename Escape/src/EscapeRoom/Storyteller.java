@@ -4,6 +4,8 @@
  */
 package EscapeRoom;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author 30694
@@ -12,12 +14,60 @@ public class Storyteller {
     private String riddleHelp;
     private String riddleStory;
     
+    /*Ερωτήσεις για τους ελληνικους γρίφους*/
+    private String Gmsg1 = "Πρέπει να βάλεις με τη σειρά τις εικόνες των άθλων του Ηρακλή.";
+    private String Gmsg2 = "Πρέπει να αντιστοιχήσεις τους ανθρώπους με τις τιμωρίες τους";
+    private String Gmsg3 = "Πρέπει να απαντήσει στην εξής ερώτηση πολλαπλής επιλογής";
+    private String Gmsg4 = "Πρέπει να γράψεις τη λέξη που βγάζουν τα έντονα γράμματα του κειμένου";
+    private String Gmsg5 = "Ποιο είναι το ον που όταν γεννιέται έχει τέσσερα πόδια, στη συνέχεια γίνεται δίποδο και όταν γερνά αποκτά και τρίτο πόδι;";
+    
+    /*Ερωτήσεις για τους Αιγυπτιακόυς γριφους*/
+    private String Emsg1 = "Να βρείς και να πατήσεις με τη σωστή σειρά πανω στα εξεις σύμβολα";
+    private String Emsg2 = "Ποιός είναι ο θεός της καταστροφής;";
+    private String Emsg3 = "Πρέπει να λύσεις το σταυρόλεξο για να βρείς τον κωδικό του γρίφου";
+    private String Emsg4 = "Πρέπει να μετρήσεις το πλήθος των εικόνων που υπάρχουν στην παρακάτω φοτογραφία";       
+            
     public Storyteller(String riddleHelp , String riddleStory){
         this.riddleHelp = riddleHelp;
         this.riddleStory = riddleStory;
     }
     
+    public String ShowGreekMsg1(){
+        return Gmsg1;
+    }
+    
+    public String ShowGreekMsg2(){
+        return Gmsg2;
+    }
+        
+    public String ShowGreekMsg3(){
+        return Gmsg3;
+    }
+            
+    public String ShowGreekMsg4(){
+        return Gmsg4;
+    }
+    
+        public String ShowEgyMsg1(){
+        return Emsg1;
+    }
+    
+    public String ShowEgyMsg2(){
+        return Gmsg2;
+    }
+        
+    public String ShowEgyMsg3(){
+        return Gmsg3;
+    }
+            
+    public String ShowEgyMsg4(){
+        return Gmsg4;
+    }
+         
+ 
+    /*
     public void Give_Help(Storyteller storyteller){
         
     }
+    */
 }
