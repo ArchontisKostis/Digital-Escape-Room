@@ -12,20 +12,27 @@ import java.awt.Image;
 import java.util.*;
 public class Row {
     
-    private String order;
+    private int[] order = new int[]{};
     private ArrayList<Image> Images = new ArrayList<Image>();
+    private int numberOfImages;
 
-    public void Row(String order , Image images[]){
-        
-        this.order = order;
-        
-        for(int i=0 ; i<12 ; i++){
+    public Row(int order[] , Image images[] , int numberOfImages){
+        for(int i=0 ; i<numberOfImages ; i++){
+            this.order[i]=order[i];
             Images.add(images[i]);
         }
     }
-    
-    public String getOrder() {
+
+    public int[] getOrder() {
         return order;
+    }
+
+    public ArrayList<Image> getImages() {
+        return Images;
+    }
+
+    public int getNumberOfImages() {
+        return numberOfImages;
     }
 }
     

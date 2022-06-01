@@ -24,6 +24,14 @@ public class Question {
         answear.add(choice3);
         answear.add(choice4);
     }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public ArrayList<String> getAnswear() {
+        return answear;
+    }
     
     public int getRightAnswear() {
         return rightAnswear;

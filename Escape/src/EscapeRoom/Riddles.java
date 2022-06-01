@@ -12,41 +12,39 @@ import java.util.*;
 import java.awt.Image;
 
 public class Riddles {
-    private Storyteller storyteller;
+    
     private int riddleId;
-    private ArrayList<Image> riddleImages = new ArrayList<Image>();
     
     public Riddles(int riddleId){
         this.riddleId = riddleId;
     }
     
-    
-    public boolean pictures_in_order(int riddleId , String Order){
+    public boolean pictures_in_order(String Order){
         boolean solved;
         Data row = new Data();
-        if(riddleId == 1)
-            solved = (row.getRowGr()).getOrder().equals(Order);
+        if(riddleId == 0011)
+            solved = row.getRowGr().getOrder().equals(Order);
+        else if(riddleId == 0012)
+            solved = row.getImageTextGr().getOrder().equals(Order);
+        else if(riddleId == 0021)
+            solved = row.getImageTextEg().getOrder().equals(Order);
+        else if(riddleId == 0031)
+            solved = row.getRowSc().getOrder().equals(Order);
         else
-            solved = (row.getRowSk()).getOrder().equals(Order);
+            solved = row.getTextToText().getOrder().equals(Order);
+            
         return solved;
     }
     
-    
-    /*
-    public boolean match_image_to_text(ArrayList<Image> images , ArrayList<String> text){
-        boolean solved = false;
-        return solved;
-    }
-    */
-    public boolean multiple_choice(int position , int riddleId , int pos4 , int pos5 , int pos6){
+    public boolean multiple_choice(int position , int pos4 , int pos5 , int pos6){
         
         boolean solved;
         Data question = new Data();
         
-        if(riddleId == 1){            
+        if(riddleId == 0013){            
             solved = position == (question.getQuestion1()).getRightAnswear();
         }
-        else if (riddleId == 2){
+        else if (riddleId == 0022){
             solved = position == (question.getQuestion2()).getRightAnswear();
         }
         else{
@@ -56,18 +54,18 @@ public class Riddles {
         return solved;
     }
     
-    public boolean type_the_answear(String answear , int riddleId){
+    public boolean type_the_answear(String answear){
         String rightAnswear;
         Data text = new Data();
         
-        if(riddleId == 1){
-            rightAnswear = (text.getText1())[1];
+        if(riddleId == 0014){
+            rightAnswear = text.getTextGr1()[1];
         }
-        else if(riddleId == 2){
-            rightAnswear = (text.getText2())[1];
+        else if(riddleId == 0015){
+            rightAnswear = text.getTextGr2()[1];
         }
         else{
-            rightAnswear = text.getText3();
+            rightAnswear = text.getTextEg1()[1];
         }
         
         return rightAnswear.equals(answear);
