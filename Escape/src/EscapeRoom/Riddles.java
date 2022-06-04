@@ -71,12 +71,25 @@ public class Riddles {
         return rightAnswear.equals(answear);
     }
     
-    /*
-    public boolean crossword_puzzle(ArrayList<String> clues){
-        boolean solved = false;
-        return solved;
+    
+    public boolean crossword_puzzle(int numOfquestion,String answear){
+        boolean correct;
+        if(numOfquestion == 1)
+            correct = "RA".equals(answear);
+        else if(numOfquestion == 2)
+            correct = "Anubis".equals(answear);
+        else if(numOfquestion == 3)
+            correct = "Osiris".equals(answear);
+        else if(numOfquestion == 4)
+            correct = "Isis".equals(answear);
+        else
+            correct = "Seth".equals(answear);
+        return correct;
     }
-    */
+    
+    public boolean crossword_check(int numOfCorrectAns){
+        return numOfCorrectAns == 5;
+    }
     
     /*
     public boolean puzzle(){

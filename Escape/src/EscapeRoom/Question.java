@@ -16,13 +16,12 @@ public class Question {
     private int rightAnswear;
     private ArrayList<String> answear = new ArrayList<String>();
     
-    public Question(String question , int rightAnswear, String choice1 , String choice2 , String choice3 , String choice4 ){
+    public Question(String question , int rightAnswear, String words[] , int numberOfWords){
         this.question = question;
         this.rightAnswear = rightAnswear;
-        answear.add(choice1);
-        answear.add(choice2);
-        answear.add(choice3);
-        answear.add(choice4);
+        for(int i=0 ; i<numberOfWords ; i++){
+            answear.add(words[i]);
+        }
     }
 
     public String getQuestion() {
