@@ -21,7 +21,7 @@ public class Riddles {
     
     public boolean pictures_in_order(String Order){
         boolean solved;
-        Data row = new Data();
+        Data row = new Data(riddleId);
         if(riddleId == 0011)
             solved = row.getRowGr().getOrder().equals(Order);
         else if(riddleId == 0012)
@@ -39,7 +39,7 @@ public class Riddles {
     public boolean multiple_choice(int position , int pos4 , int pos5 , int pos6){
         
         boolean solved;
-        Data question = new Data();
+        Data question = new Data(riddleId);
         
         if(riddleId == 0013){            
             solved = position == (question.getQuestion1()).getRightAnswear();
@@ -56,7 +56,7 @@ public class Riddles {
     
     public boolean type_the_answear(String answear){
         String rightAnswear;
-        Data text = new Data();
+        Data text = new Data(riddleId);
         
         if(riddleId == 0014){
             rightAnswear = text.getTextGr1()[1];

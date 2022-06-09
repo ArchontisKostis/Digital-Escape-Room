@@ -10,13 +10,14 @@ package EscapeRoom;
  */
 import java.awt.Image;
 import java.util.*;
+import javax.swing.ImageIcon;
 public class Row {
     
     private int[] order = new int[]{};
     private ArrayList<Image> Images = new ArrayList<Image>();
     private int numberOfImages;
 
-    public Row(int order[] , Image images[] , int numberOfImages){
+    public Row(int order[] , ArrayList<ImageIcon> images , int numberOfImages){
         for(int i=0 ; i<numberOfImages ; i++){
             this.order[i]=order[i];
             Images.add(images[i]);

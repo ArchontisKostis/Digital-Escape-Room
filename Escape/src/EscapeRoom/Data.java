@@ -9,14 +9,46 @@ package EscapeRoom;
  * @author 30694
  */
 import java.util.ArrayList;
-import java.awt.Image;
+import java.awt.*;
+import javax.swing.ImageIcon;
 
 public class Data {
     
     private int riddleId;
+    private ArrayList<ImageIcon> imagesGr1 = new ArrayList<ImageIcon>();
+    private ArrayList<ImageIcon> imagesGr2 = new ArrayList<ImageIcon>();
+    private ArrayList<ImageIcon> imageEg1 = new ArrayList<ImageIcon>();
+    private ArrayList<ImageIcon> imagesSc1 = new ArrayList<ImageIcon>(); 
     
     public void Data(int riddleId){
         this.riddleId = riddleId;
+        imagesGr1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules1.jpg")));
+        imagesGr1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules2.jpg")));
+        imagesGr1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules3.jpg")));
+        imagesGr1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules4.jpg")));
+        imagesGr1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules5.jpg")));
+        imagesGr1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules6.jpg")));
+        imagesGr1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules7.jpg")));
+        imagesGr1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules8.jpg")));
+        imagesGr1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules9.jpg")));
+        imagesGr1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules10.jpg")));
+        imagesGr1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules11.jpg")));
+        imagesGr1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules12.jpg")));
+        
+        imagesGr2.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/atlas.jpg")));
+        imagesGr2.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/prometheus.jpg")));
+        imagesGr2.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/sisyphus.jpg")));
+        
+        imageEg1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol1.jpg")));
+        imageEg1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol2.jpg")));
+        imageEg1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol3.jpg")));
+        imageEg1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol4.jpg")));
+        imageEg1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol5.jpg")));
+        
+        imagesSc1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/image1.jpg")));
+        imagesSc1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/image2.jpg")));
+        imagesSc1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/image3.jpg")));
+        imagesSc1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/image4.jpg")));
     }
 
     public int getRiddleId() {
@@ -26,7 +58,6 @@ public class Data {
     //Greek mythology
     //1 ID:0011
     private int[] orderGr1 = new int[]{7,2,1,8,4,10,5,3,11,9,6,12};
-    private Image[] imagesGr1 = new Image[12];          //θα γίνει κανονική αρχικοποίηση του πίνακα αντί για τη δήλωση μεγέθους
     private Row rowGr = new Row(orderGr1 , imagesGr1 , 12);
 
     public Row getRowGr() {
@@ -36,7 +67,6 @@ public class Data {
     //2 ID:0012
     private int[] orderGr2 = new int[]{2,3,1};
     private String[] choices1 = new String[]{"Άτλας","Προμηθέας","Σίσυφος"};
-    private Image[] imagesGr2 = new Image[3];          //θα γίνει κανονική αρχικοποίηση του πίνακα αντί για τη δήλωση μεγέθους
     private ImageText imageTextGr = new ImageText(choices1 , imagesGr2 , orderGr2 , 3);
 
     public ImageText getImageTextGr() {
@@ -70,7 +100,7 @@ public class Data {
     //1 ID:0021
     private int[] orderEg1 = new int[]{2,4,3,1};
     private String[] choices2 = new String[]{"Σύμβολο ζωής","Σύμβολο προστασίας","Σύμβολο της βασιλείας","Σύμβολο της μεταμόρφωσης","Σύμβολο του ήλιου"};
-    private Image[] imageEg1 = new Image[5];          //θα γίνει κανονική αρχικοποίηση του πίνακα αντί για τη δήλωση μεγέθους
+    
     private ImageText imageTextEg = new ImageText(choices2 , imageEg1 , orderEg1 , 5);
 
     public ImageText getImageTextEg() {
@@ -98,7 +128,6 @@ public class Data {
     //Scandinavian mythology
     //1 ID:0031
     private int[] orderSc1 = new int[]{2,4,3,1};
-    private Image[] imagesSc1 = new Image[4];          //θα γίνει κανονική αρχικοποίηση του πίνακα αντί για τη δήλωση μεγέθους
     private Row rowSc = new Row(orderSc1 , imagesSc1 , 4);
 
     public Row getRowSc() {

@@ -9,15 +9,16 @@ package EscapeRoom;
  * @author 30694
  */
 public class TextToText {
+
     private int[] order = new int[3];
     private String[] text1 = new String[3];
     private String[] text2 = new String[3];
-    
-    public TextToText(int order[],String text1[],String text2[]){
-        for(int i=0 ; i<3 ; i++){
-            this.order[i]=order[i];
-            this.text1[i]=text1[i];
-            this.text2[i]=text2[i];
+
+    public TextToText(int order[], String text1[], String text2[]) {
+        for (int i = 0; i < 3; i++) {
+            this.order[i] = order[i];
+            this.text1[i] = text1[i];
+            this.text2[i] = text2[i];
         }
     }
 
