@@ -14,6 +14,10 @@ public class Player {
     private int saveLevel;
     private int lives;
     private String message;
+<<<<<<< Updated upstream
+=======
+    private Storyteller aStoryteller;
+>>>>>>> Stashed changes
     
     // Constructor
     public Player(String Name, int saveLevel, int lives){
@@ -47,7 +51,9 @@ public class Player {
       
     public void setLives(int livesNum){
         this.lives = livesNum;
-    } 
+    }
+    
+    
 
     /*
     ΤΟ DO:
@@ -56,9 +62,14 @@ public class Player {
         
     }
     
+<<<<<<< Updated upstream
     public Sring Get_help(Storyteller aStoryteller){
         return message;
     }
     */
     
+=======
+    
+    
+>>>>>>> Stashed changes
 }
