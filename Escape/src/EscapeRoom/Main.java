@@ -10,10 +10,18 @@ import EscapeRoom.GUI.SplashScreenFrame;
 public class Main {
     // Properties Declaration
     private static SplashScreenFrame SplashScreen;
-    
+    private static Game game;
     
     // MAIN method
     public static void main(String[] args) {
+        // Game Creation
+        game = new Game();
+        
+        // Room Creation
+        Room R1 = new Room("Room 1", 0);
+        Room R2 = new Room("Room 2", 0);
+        Room R3 = new Room("Room 3", 0);
+        
         // Splash Screen Load
         SplashScreen = new SplashScreenFrame();
         SplashScreen.setVisible(true);
@@ -23,6 +31,9 @@ public class Main {
         // Show Main Menu Screem
         MainFrame MainMenu = new MainFrame();
         MainMenu.setVisible(true);
+        
+        // Add Game to MainFrame properties
+        MainMenu.setGame(game);
         
     }
     

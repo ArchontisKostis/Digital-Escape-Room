@@ -7,29 +7,29 @@ package EscapeRoom;
 import java.util.ArrayList;
 
 public class Room {
-	private String roomName;
-	private int SolvedRiddles;
+    private String roomName;
+    private int SolvedRiddles;
 
 
-public Room(String roomName, int SolvedRiddles){
-    this.roomName = roomName;
-    this.SolvedRiddles = SolvedRiddles;
-}
+    public Room(String roomName, int SolvedRiddles){
+        this.roomName = roomName;
+        this.SolvedRiddles = SolvedRiddles;
+    }
 
 
-public String getroomName() {
+    public String getroomName() {
 	return roomName;
-}
+    }
 
-public void setRoomName(String roomName) {
+    public void setRoomName(String roomName) {
 	this.roomName = roomName;
-}
+    }
 
-public int getSolvedRiddles() {
+    public int getSolvedRiddles() {
 	return SolvedRiddles;
-}
+    }
 
-public void setSolvedRiddles(int solvedRiddles) {
+    public void setSolvedRiddles(int solvedRiddles) {
 	SolvedRiddles = solvedRiddles;
-}
+    }
 }

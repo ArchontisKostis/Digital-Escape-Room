@@ -11,19 +11,14 @@ import java.util.ArrayList;
 public class Game {
     // Properties Declaration
     private Player player;
-    private ArrayList roomList;    // TO-DO: <Room>
-    private ArrayList saveList; // TO-DO: <GameSaves>
+    private ArrayList<Room> roomList;    // TO-DO: <Room>
+    private ArrayList saveList;    // TO-DO: <GameSaves>
     private boolean musicOn;
     private boolean soundOn;
     
     // Constructor
-    public Game(Player aPlayer, ArrayList aRoomList){
-        this.player = aPlayer;
-        this.roomList = aRoomList;
-        this.musicOn = true;
-        this.soundOn = true;
-
-
+    public Game(){
+        
     }
 
     
@@ -40,6 +35,10 @@ public class Game {
     // Rooms
     public ArrayList getRoomList(){
         return this.roomList;
+    }
+    
+    public Room getRoomByIndex(int index){
+        return roomList.get(index);
     }
     
     /*

@@ -4,6 +4,7 @@
  */
 package EscapeRoom.GUI;
 
+import EscapeRoom.Game;
 import EscapeRoom.Player;
 import java.awt.Cursor;
 import java.awt.Image;
@@ -27,12 +28,17 @@ public class MainFrame extends javax.swing.JFrame {
     private String navigationState = "none";
     private String panelState = "home";
     
-    private Player player;
+    // Game Class Instance
+    private Game game;
     
     
     public MainFrame() {
         initComponents();
         this.addKeyListener(new myKeyListener());
+    }
+    
+    public void setGame(Game aGame){
+        this.game = aGame;
     }
     
     public void setPanelState(String aStateName){
@@ -219,6 +225,8 @@ public class MainFrame extends javax.swing.JFrame {
        creditsLabel.setEnabled(false);
        exitLabel.setEnabled(false);
     }
+    
+    
     
     // ---------- Key Listener Class START ---------- //
     class myKeyListener implements KeyListener {
@@ -490,8 +498,8 @@ public class MainFrame extends javax.swing.JFrame {
                 requestFocus();
             }
             else if (e.getSource() == createPlayerButton){
-                player = new Player(newPlayerPanel.getTextfieldText(), 0, 3);
-                System.out.println(player.toString());
+                game.setPlayer(new Player(newPlayerPanel.getTextfieldText(), 0, 3));
+                System.out.println(game.getPlayer().toString());
                 requestFocus();
             }
         }
