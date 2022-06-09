@@ -14,10 +14,7 @@ public class Player {
     private int saveLevel;
     private int lives;
     private String message;
-<<<<<<< Updated upstream
-=======
     private Storyteller aStoryteller;
->>>>>>> Stashed changes
     
     // Constructor
     public Player(String Name, int saveLevel, int lives){
@@ -52,8 +49,7 @@ public class Player {
     public void setLives(int livesNum){
         this.lives = livesNum;
     }
-    
-    
+   
 
     /*
     ΤΟ DO:
@@ -68,8 +64,4 @@ public class Player {
     }
     */
     
-=======
-    
-    
->>>>>>> Stashed changes
 }
