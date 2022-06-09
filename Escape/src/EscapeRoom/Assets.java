@@ -10,4 +10,13 @@ package EscapeRoom;
  */
 public class Assets extends Items{
     
+<<<<<<< Updated upstream
+=======
+    public Assets(String itemName, int itemId, int itemRiddle) {
+            super(itemName, itemId);        
+	}
+    
+
+
+>>>>>>> Stashed changes
 }

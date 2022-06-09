@@ -8,7 +8,7 @@ package EscapeRoom;
  *
  * @author giorg
  */
-import java.util.ArrayList;
+
 
 public class Room {
 	private String roomName;
