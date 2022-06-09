@@ -69,7 +69,6 @@ public class MainFrame extends javax.swing.JFrame {
                 Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/cursor.png")),
                 new Point(0,0),"custom cursor"
             ));
-            setUndecorated(true);
 
             mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
