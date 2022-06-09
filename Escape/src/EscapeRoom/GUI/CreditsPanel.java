@@ -1,29 +1,26 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package EscapeRoom.GUI;
 
-import java.awt.Cursor;
-import java.awt.Image;
-import java.awt.Point;
-import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import javax.swing.JFrame;
 
 /**
  *
  * @author Archontis
  */
-public class CreditsFrame extends javax.swing.JFrame {
+public class CreditsPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form CreditsFrame
+     * Creates new form CreditsPanel
      */
-    public CreditsFrame() {
+    public CreditsPanel() {
         initComponents();
-        this.makeCustomCursor();
-        this.addKeyListener(new CreditsFrame.myKeyListener());
+        this.setFocusable(true);
+        this.addKeyListener(new CreditsPanel.myKeyListener());
     }
 
     /**
@@ -35,20 +32,15 @@ public class CreditsFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        mainPanel = new javax.swing.JPanel();
         escText = new javax.swing.JLabel();
         creditsBg = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setName("creditsFrame"); // NOI18N
-        setUndecorated(true);
-
-        mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         escText.setFont(new java.awt.Font("DPComic", 0, 18)); // NOI18N
         escText.setForeground(new java.awt.Color(255, 255, 255));
         escText.setText("Use ESC to go back to MAIN MENU");
-        mainPanel.add(escText, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        add(escText, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         System.out.print(getClass());
 
@@ -64,34 +56,11 @@ public class CreditsFrame extends javax.swing.JFrame {
             System.out.println(getClass());
             System.out.println("--------------------------");
         }
-        mainPanel.add(creditsBg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-
-        pack();
-        setLocationRelativeTo(null);
+        add(creditsBg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
     
-    
-    private void makeCustomCursor(){
-        Toolkit toolkit = Toolkit.getDefaultToolkit();
-        Image img = toolkit.getImage(getClass().getResource("/EscapeRoom/guiAssets/cursor.png"));
-        Point point = new Point(0, 0);
-        Cursor cursor = toolkit.createCustomCursor(img, point, "cursor"); 
-        setCursor(cursor);        
-    }
-    /**
-     * @param args the command line arguments
-     */
+    // --------- WARNING ----------
+    // THIS METHOD IS USED FOR TESTING ONLY
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -106,25 +75,37 @@ public class CreditsFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CreditsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CreditsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CreditsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CreditsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CreditsFrame().setVisible(true);
+                CreditsPanel testPanel = new EscapeRoom.GUI.CreditsPanel();
+                
+                // TEST FRAME CREATION
+                JFrame f = new JFrame();
+                f.setSize(1000, 556);
+                f.setUndecorated(true);
+                f.setVisible(true);
+                
+                // ADD PANEL
+                f.getContentPane().add(testPanel);
+                
             }
         });
     }
+    // -----------------------------------
     
-    class myKeyListener implements KeyListener { 
+    /* KEY LISTENER CLASS START */
+    class myKeyListener implements KeyListener {
 
         @Override
         public void keyTyped(KeyEvent e) {
@@ -134,6 +115,7 @@ public class CreditsFrame extends javax.swing.JFrame {
         @Override
         public void keyPressed(KeyEvent e) {
             if(e.getKeyCode() == java.awt.event.KeyEvent.VK_ESCAPE){
+                System.out.println("ESC CREDITS");
                 setVisible(false);
             }
         }
@@ -142,12 +124,11 @@ public class CreditsFrame extends javax.swing.JFrame {
         public void keyReleased(KeyEvent e) {
             
         }
-    
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel creditsBg;
     private javax.swing.JLabel escText;
-    private javax.swing.JPanel mainPanel;
     // End of variables declaration//GEN-END:variables
 }

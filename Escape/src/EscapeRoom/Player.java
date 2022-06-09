@@ -59,4 +59,9 @@ public class Player {
     }
     */
     
+    // toString Method USED FOR TESTING
+    public String toString() {
+        return "Name: " + this.playerName + "\nLevel: " + this.saveLevel + "\nLives: " + this.lives;
+    }
+    
 }
