@@ -13,6 +13,9 @@ public class Player {
     private String playerName;
     private int saveLevel;
     private int lives;
+    private String message;
+    
+  
     
     // Constructor
     public Player(String Name, int saveLevel, int lives){
@@ -46,7 +49,9 @@ public class Player {
       
     public void setLives(int livesNum){
         this.lives = livesNum;
-    } 
+    }
+    
+    
 
     /*
     ΤΟ DO:
@@ -55,13 +60,8 @@ public class Player {
         
     }
     
-    public void Get_help(Storyteller aStoryteller){
+    public Sring Get_help(Storyteller aStoryteller){
+        return message;
     }
-    */
-    
-    // toString Method USED FOR TESTING
-    public String toString() {
-        return "Name: " + this.playerName + "\nLevel: " + this.saveLevel + "\nLives: " + this.lives;
-    }
-    
+ */
 }
