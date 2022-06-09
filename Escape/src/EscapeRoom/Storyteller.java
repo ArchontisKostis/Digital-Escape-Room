@@ -104,6 +104,54 @@ public class Storyteller {
     public String ShowScanMsg3(){
         return Smsg3;
     }
+    
+    public String GiveGreekHelp1(){
+        return GHelp1;
+    }
+    
+    public String GiveGreekHelp2(){
+        return GHelp2;
+    }
+        
+    public String GiveGreekHelp3(){
+        return GHelp3;
+    }
+            
+    public String GiveGreekHelp4(){
+        return GHelp4;
+    }
+                
+    public String GiveGreekHelp5(){
+        return GHelp5;
+    }
+    
+    public String GiveEgyHelp1(){
+        return ΕHelpMsg1;
+    }
+    
+    public String GiveEgyHelp2(){
+        return EHelpMsg2;
+    }
+    
+    public String GiveEgyHelp3(){
+        return EHelpMsg3;
+    }
+    
+    public String GiveEgyHelp4(){
+        return EHelpMsg4;
+    }
+    
+    public String GiveScanHelp1(){
+        return SHelpMsg1;
+    }
+    
+    public String GiveScanHelp2(){
+        return SHelpMsg2;
+    }
+    
+    public String GiveScanHelp3(){
+        return SHelpMsg3;
+    }
  
     /*
     public void Give_Help(Storyteller storyteller){
