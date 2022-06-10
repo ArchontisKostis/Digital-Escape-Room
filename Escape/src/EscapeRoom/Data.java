@@ -20,8 +20,7 @@ public class Data {
     private ArrayList<ImageIcon> imageEg1 = new ArrayList<ImageIcon>();
     private ArrayList<ImageIcon> imagesSc1 = new ArrayList<ImageIcon>(); 
     
-    public void Data(int riddleId){
-        this.riddleId = riddleId;
+    public void Data(){
         imagesGr1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules1.jpg")));
         imagesGr1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules2.jpg")));
         imagesGr1.add(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules3.jpg")));
