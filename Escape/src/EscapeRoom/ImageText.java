@@ -14,7 +14,7 @@ import javax.swing.ImageIcon;
 
 public class ImageText {
     private int[] order = new int[12];
-    private ArrayList<Image> Images = new ArrayList<Image>();
+    private ArrayList<ImageIcon> Images = new ArrayList<ImageIcon>();
     private ArrayList<String> Text = new ArrayList<String>();
     private int numberOfQuestions;
 
@@ -22,7 +22,7 @@ public class ImageText {
         this.numberOfQuestions = numberOfQuestions;
         for(int i=0 ; i<numberOfQuestions ; i++){
             this.order[i]=order[i];
-            Images.add(images);
+            Images.add(images.get(i));
             Text.add(text[i]);
         }
     }
@@ -31,7 +31,7 @@ public class ImageText {
         return order;
     }
 
-    public ArrayList<Image> getImages() {
+    public ArrayList<ImageIcon> getImages() {
         return Images;
     }
 

@@ -14,13 +14,13 @@ import javax.swing.ImageIcon;
 public class Row {
     
     private int[] order = new int[]{};
-    private ArrayList<Image> Images = new ArrayList<Image>();
+    private ArrayList<ImageIcon> Images = new ArrayList<ImageIcon>();
     private int numberOfImages;
 
     public Row(int order[] , ArrayList<ImageIcon> images , int numberOfImages){
         for(int i=0 ; i<numberOfImages ; i++){
             this.order[i]=order[i];
-            Images.add(images[i]);
+            Images.add(images.get(i));
         }
     }
 
@@ -28,7 +28,7 @@ public class Row {
         return order;
     }
 
-    public ArrayList<Image> getImages() {
+    public ArrayList<ImageIcon> getImages() {
         return Images;
     }
 
