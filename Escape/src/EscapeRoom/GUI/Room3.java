@@ -26,17 +26,23 @@ public class Room3 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        Ship = new javax.swing.JLabel();
+        Room = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/ScandRoom.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        Ship.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/Ship.png"))); // NOI18N
+        Ship.setText("jLabel1");
+        add(Ship, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -130, 1850, 830));
+
+        Room.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/Room.png"))); // NOI18N
+        Room.setText("jLabel1");
+        add(Room, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel Room;
+    private javax.swing.JLabel Ship;
     // End of variables declaration//GEN-END:variables
 }
