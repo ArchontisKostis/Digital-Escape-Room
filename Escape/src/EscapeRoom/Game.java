@@ -14,13 +14,6 @@ public class Game {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-
-        System.out.println("ηελλο");
-        System.out.println("ARXONTHS");
-        System.out.println("Christaras");
-        System.out.println("GEIA");
-        System.out.println("δφξγνειγξδνλξγ");
     }
     
 }
