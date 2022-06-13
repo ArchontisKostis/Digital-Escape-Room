@@ -97,7 +97,7 @@ public class Data {
     
     //Egyptian mythology
     //1 ID:0021
-    private int[] orderEg1 = new int[]{2,4,3,1};
+    private int[] orderEg1 = new int[]{2,4,3,1,5};
     private String[] choices2 = new String[]{"Σύμβολο ζωής","Σύμβολο προστασίας","Σύμβολο της βασιλείας","Σύμβολο της μεταμόρφωσης","Σύμβολο του ήλιου"};
     
     private ImageText imageTextEg = new ImageText(choices2 , imageEg1 , orderEg1 , 5);
