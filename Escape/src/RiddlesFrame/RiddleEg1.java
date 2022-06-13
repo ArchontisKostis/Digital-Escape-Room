@@ -54,8 +54,8 @@ public class RiddleEg1 extends javax.swing.JPanel {
         jLabel2.setBackground(new java.awt.Color(255, 255, 204));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller1-removebg.png"))); // NOI18N
         jLabel2.setText("archaeologist");
-        jLabel2.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 10, 210, -1));
+        jLabel2.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 10, 200, 240));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol1.png"))); // NOI18N
         jLabel6.setText("symbol1");

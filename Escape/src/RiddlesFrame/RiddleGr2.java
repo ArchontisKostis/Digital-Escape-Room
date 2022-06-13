@@ -32,14 +32,14 @@ public class RiddleGr2 extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
         jComboBox3 = new javax.swing.JComboBox<>();
+        jLabel10 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setBackground(new java.awt.Color(255, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -78,23 +78,8 @@ public class RiddleGr2 extends javax.swing.JPanel {
         jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 0, 0), 3, true));
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 520, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(153, 0, 0));
-        jLabel7.setText("Προμηθέας");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 380, -1, -1));
-
-        jLabel9.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(153, 0, 0));
-        jLabel9.setText("Άτλας");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 460, -1, -1));
-
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, -1, -1));
-
-        jLabel8.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(153, 0, 0));
-        jLabel8.setText("Σίσυφος");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 420, -1, -1));
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 410, -1, -1));
@@ -102,17 +87,33 @@ public class RiddleGr2 extends javax.swing.JPanel {
         jComboBox1.setBackground(new java.awt.Color(153, 0, 0));
         jComboBox1.setForeground(new java.awt.Color(255, 153, 153));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1.", "2.", "3." }));
-        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 460, 50, -1));
+        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 470, 50, -1));
 
         jComboBox2.setBackground(new java.awt.Color(153, 0, 0));
         jComboBox2.setForeground(new java.awt.Color(255, 153, 153));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1.", "2.", "3." }));
-        add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 380, 50, -1));
+        add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 410, 50, -1));
 
         jComboBox3.setBackground(new java.awt.Color(153, 0, 0));
         jComboBox3.setForeground(new java.awt.Color(255, 153, 153));
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1.", "2.", "3." }));
-        add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 420, 50, 20));
+        add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 440, 50, 20));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller1.png"))); // NOI18N
+        jLabel10.setText("jLabel10");
+        jLabel10.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 20, 210, 240));
+
+        jTextArea1.setBackground(new java.awt.Color(255, 204, 204));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(153, 0, 0));
+        jTextArea1.setRows(3);
+        jTextArea1.setText("  \n    Προμηθέας\n    Σίσυφος\n    Άτλας");
+        jTextArea1.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        jScrollPane1.setViewportView(jTextArea1);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 380, 300, 130));
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -121,15 +122,15 @@ public class RiddleGr2 extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

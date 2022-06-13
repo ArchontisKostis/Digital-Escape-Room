@@ -340,7 +340,7 @@
           <Color blue="0" green="33" red="99" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/ImagesR/riddleGr4_woBack_1_900x500.png"/>
+          <Image iconType="3" name="/ImagesR/riddleGr4_woBack_1.png"/>
         </Property>
       </Properties>
       <Constraints>

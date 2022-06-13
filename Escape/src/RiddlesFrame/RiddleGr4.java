@@ -151,7 +151,7 @@ public class RiddleGr4 extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(153, 51, 0));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/riddleGr4_woBack_1_900x500.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/riddleGr4_woBack_1.png"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 870, 500));
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller1-removebg.png"))); // NOI18N

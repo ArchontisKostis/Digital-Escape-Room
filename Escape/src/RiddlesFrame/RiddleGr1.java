@@ -54,6 +54,7 @@ public class RiddleGr1 extends javax.swing.JPanel {
         jComboBox14 = new javax.swing.JComboBox<>();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jLabel14 = new javax.swing.JLabel();
 
         jScrollPane1.setViewportView(jTextPane1);
 
@@ -156,7 +157,7 @@ public class RiddleGr1 extends javax.swing.JPanel {
 
         jComboBox9.setBackground(new java.awt.Color(0, 0, 0));
         jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
-        add(jComboBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 440, 90, -1));
+        add(jComboBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 440, 90, -1));
 
         jComboBox10.setBackground(new java.awt.Color(0, 0, 0));
         jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
@@ -165,15 +166,15 @@ public class RiddleGr1 extends javax.swing.JPanel {
                 jComboBox10ActionPerformed(evt);
             }
         });
-        add(jComboBox10, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 440, 90, -1));
+        add(jComboBox10, new org.netbeans.lib.awtextra.AbsoluteConstraints(576, 440, 90, -1));
 
         jComboBox11.setBackground(new java.awt.Color(0, 0, 0));
         jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
-        add(jComboBox11, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 440, 90, -1));
+        add(jComboBox11, new org.netbeans.lib.awtextra.AbsoluteConstraints(746, 440, 90, -1));
 
         jComboBox12.setBackground(new java.awt.Color(0, 0, 0));
         jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
-        add(jComboBox12, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 440, 90, -1));
+        add(jComboBox12, new org.netbeans.lib.awtextra.AbsoluteConstraints(916, 440, 90, -1));
 
         jComboBox13.setBackground(new java.awt.Color(0, 0, 0));
         jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
@@ -197,10 +198,15 @@ public class RiddleGr1 extends javax.swing.JPanel {
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jTextArea1.setText("1. Λιοντάρι της Νεμέας\n2. Λερναία Ύδρα\n3. Κερυνίτιδα Έλαφος\n4. Ερυμάνθιος Κάρπος\n5. Κόπρος του Αυγεία\n6. Στυμφαλίδες Όρνιθες\n7. Ταύρος της Κρήτης\n8. Άλογα του Διομήδη\n9. Ζώνη της Ιππολύτης\n10. Βόδια του Γηρυόνη\n11. Μήλα των Εσπερίδων\n12. Κέρβερος");
-        jTextArea1.setBorder(new javax.swing.border.MatteBorder(null));
+        jTextArea1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
         jScrollPane2.setViewportView(jTextArea1);
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, 200));
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller2.png"))); // NOI18N
+        jLabel14.setText("jLabel14");
+        jLabel14.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 260, 100, 120));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -241,6 +247,7 @@ public class RiddleGr1 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
