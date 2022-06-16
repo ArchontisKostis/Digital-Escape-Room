@@ -26,42 +26,42 @@ public class RiddleGr2 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        atlas = new javax.swing.JLabel();
+        prometheus = new javax.swing.JLabel();
+        sisyphus = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jLabel10 = new javax.swing.JLabel();
+        ans3 = new javax.swing.JComboBox<>();
+        ans1 = new javax.swing.JComboBox<>();
+        ans2 = new javax.swing.JComboBox<>();
+        storyteller = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        QuestionBox = new javax.swing.JTextArea();
 
         setBackground(new java.awt.Color(255, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/atlas.jpg"))); // NOI18N
-        jLabel4.setText("atlas");
-        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 0, 0), 3));
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 210, -1));
+        atlas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/atlas.jpg"))); // NOI18N
+        atlas.setText("atlas");
+        atlas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 0, 0), 3));
+        add(atlas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 210, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/prometheus.jpg"))); // NOI18N
-        jLabel1.setText("prometheus");
-        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 0, 0), 3));
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 210, -1));
+        prometheus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/prometheus.jpg"))); // NOI18N
+        prometheus.setText("prometheus");
+        prometheus.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 0, 0), 3));
+        add(prometheus, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 210, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/sisyphus.jpg"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 0, 0), 3));
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 390, -1));
+        sisyphus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/sisyphus.jpg"))); // NOI18N
+        sisyphus.setText("jLabel2");
+        sisyphus.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 0, 0), 3));
+        add(sisyphus, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 390, -1));
 
         jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(153, 0, 0));
-        jLabel3.setLabelFor(jLabel1);
+        jLabel3.setLabelFor(prometheus);
         jLabel3.setText("1");
         jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 0, 0), 3, true));
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 20, 40));
@@ -84,53 +84,53 @@ public class RiddleGr2 extends javax.swing.JPanel {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 410, -1, -1));
 
-        jComboBox1.setBackground(new java.awt.Color(153, 0, 0));
-        jComboBox1.setForeground(new java.awt.Color(255, 153, 153));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1.", "2.", "3." }));
-        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 470, 50, -1));
+        ans3.setBackground(new java.awt.Color(153, 0, 0));
+        ans3.setForeground(new java.awt.Color(255, 153, 153));
+        ans3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1.", "2.", "3." }));
+        add(ans3, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 470, 50, -1));
 
-        jComboBox2.setBackground(new java.awt.Color(153, 0, 0));
-        jComboBox2.setForeground(new java.awt.Color(255, 153, 153));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1.", "2.", "3." }));
-        add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 410, 50, -1));
+        ans1.setBackground(new java.awt.Color(153, 0, 0));
+        ans1.setForeground(new java.awt.Color(255, 153, 153));
+        ans1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1.", "2.", "3." }));
+        add(ans1, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 410, 50, -1));
 
-        jComboBox3.setBackground(new java.awt.Color(153, 0, 0));
-        jComboBox3.setForeground(new java.awt.Color(255, 153, 153));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1.", "2.", "3." }));
-        add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 440, 50, 20));
+        ans2.setBackground(new java.awt.Color(153, 0, 0));
+        ans2.setForeground(new java.awt.Color(255, 153, 153));
+        ans2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1.", "2.", "3." }));
+        add(ans2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 440, 50, 20));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller1.png"))); // NOI18N
-        jLabel10.setText("jLabel10");
-        jLabel10.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 20, 210, 240));
+        storyteller.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller1.png"))); // NOI18N
+        storyteller.setText("jLabel10");
+        storyteller.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        add(storyteller, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 20, 210, 240));
 
-        jTextArea1.setBackground(new java.awt.Color(255, 204, 204));
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        jTextArea1.setForeground(new java.awt.Color(153, 0, 0));
-        jTextArea1.setRows(3);
-        jTextArea1.setText("  \n    Προμηθέας\n    Σίσυφος\n    Άτλας");
-        jTextArea1.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
-        jScrollPane1.setViewportView(jTextArea1);
+        QuestionBox.setBackground(new java.awt.Color(255, 204, 204));
+        QuestionBox.setColumns(20);
+        QuestionBox.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        QuestionBox.setForeground(new java.awt.Color(153, 0, 0));
+        QuestionBox.setRows(3);
+        QuestionBox.setText("  \n    Προμηθέας\n    Σίσυφος\n    Άτλας");
+        QuestionBox.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        jScrollPane1.setViewportView(QuestionBox);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 380, 300, 130));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextArea QuestionBox;
+    private javax.swing.JComboBox<String> ans1;
+    private javax.swing.JComboBox<String> ans2;
+    private javax.swing.JComboBox<String> ans3;
+    private javax.swing.JLabel atlas;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel prometheus;
+    private javax.swing.JLabel sisyphus;
+    private javax.swing.JLabel storyteller;
     // End of variables declaration//GEN-END:variables
 }

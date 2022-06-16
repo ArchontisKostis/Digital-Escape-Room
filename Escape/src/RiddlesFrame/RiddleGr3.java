@@ -27,14 +27,14 @@ public class RiddleGr3 extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        storryteller = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton4 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        question = new javax.swing.JTextArea();
+        choice4 = new javax.swing.JButton();
+        choice1 = new javax.swing.JButton();
+        choice2 = new javax.swing.JButton();
+        choice3 = new javax.swing.JButton();
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/286884671_718981529331721_7160274517225270454_n.png"))); // NOI18N
         jLabel2.setText("question");
@@ -42,98 +42,98 @@ public class RiddleGr3 extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 204, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller1.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        jLabel1.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 20, 220, 250));
+        storryteller.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller1.png"))); // NOI18N
+        storryteller.setText("jLabel1");
+        storryteller.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        add(storryteller, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, 210, 250));
 
         jPanel1.setBackground(new java.awt.Color(204, 153, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextArea1.setBackground(new java.awt.Color(255, 204, 153));
-        jTextArea1.setColumns(20);
-        jTextArea1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextArea1.setRows(5);
-        jTextArea1.setText("\"Κάποτε ήμουν ένα όμορφο κορίτσι.\n  Έκανα το λάθος να εξοργίσω την Αθηνά και τώρα είμαι ένα άσχημο τέρας. \n  Ποια είμαι;\"");
-        jTextArea1.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
-        jScrollPane1.setViewportView(jTextArea1);
+        question.setBackground(new java.awt.Color(255, 204, 153));
+        question.setColumns(20);
+        question.setForeground(new java.awt.Color(0, 0, 0));
+        question.setRows(5);
+        question.setText("\"Κάποτε ήμουν ένα όμορφο κορίτσι.\n  Έκανα το λάθος να εξοργίσω την Αθηνά και τώρα είμαι ένα άσχημο τέρας. \n  Ποια είμαι;\"");
+        question.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        jScrollPane1.setViewportView(question);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 430, -1));
 
-        jButton4.setBackground(new java.awt.Color(255, 204, 153));
-        jButton4.setForeground(new java.awt.Color(0, 0, 0));
-        jButton4.setText("Αίγινα");
-        jButton4.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        choice4.setBackground(new java.awt.Color(255, 204, 153));
+        choice4.setForeground(new java.awt.Color(0, 0, 0));
+        choice4.setText("Αίγινα");
+        choice4.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        choice4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                choice4ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 130, 40));
+        jPanel1.add(choice4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 130, 40));
 
-        jButton6.setBackground(new java.awt.Color(255, 204, 153));
-        jButton6.setForeground(new java.awt.Color(0, 0, 0));
-        jButton6.setText("Πανδώρα");
-        jButton6.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        choice1.setBackground(new java.awt.Color(255, 204, 153));
+        choice1.setForeground(new java.awt.Color(0, 0, 0));
+        choice1.setText("Πανδώρα");
+        choice1.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        choice1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                choice1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 130, 40));
+        jPanel1.add(choice1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 130, 40));
 
-        jButton7.setBackground(new java.awt.Color(255, 204, 153));
-        jButton7.setForeground(new java.awt.Color(0, 0, 0));
-        jButton7.setText("Δήμητρα");
-        jButton7.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        choice2.setBackground(new java.awt.Color(255, 204, 153));
+        choice2.setForeground(new java.awt.Color(0, 0, 0));
+        choice2.setText("Δήμητρα");
+        choice2.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        choice2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                choice2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 130, 40));
+        jPanel1.add(choice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 130, 40));
 
-        jButton8.setBackground(new java.awt.Color(255, 204, 153));
-        jButton8.setForeground(new java.awt.Color(0, 0, 0));
-        jButton8.setText("Μέδουσα");
-        jButton8.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        choice3.setBackground(new java.awt.Color(255, 204, 153));
+        choice3.setForeground(new java.awt.Color(0, 0, 0));
+        choice3.setText("Μέδουσα");
+        choice3.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        choice3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                choice3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 130, 40));
+        jPanel1.add(choice3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 130, 40));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 590, 320));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void choice4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choice4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_choice4ActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void choice1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choice1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_choice1ActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void choice2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choice2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_choice2ActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void choice3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choice3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_choice3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton choice1;
+    private javax.swing.JButton choice2;
+    private javax.swing.JButton choice3;
+    private javax.swing.JButton choice4;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea question;
+    private javax.swing.JLabel storryteller;
     // End of variables declaration//GEN-END:variables
 }

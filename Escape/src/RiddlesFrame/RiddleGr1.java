@@ -28,237 +28,237 @@ public class RiddleGr1 extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jComboBox6 = new javax.swing.JComboBox<>();
-        jComboBox7 = new javax.swing.JComboBox<>();
-        jComboBox8 = new javax.swing.JComboBox<>();
-        jComboBox9 = new javax.swing.JComboBox<>();
-        jComboBox10 = new javax.swing.JComboBox<>();
-        jComboBox11 = new javax.swing.JComboBox<>();
-        jComboBox12 = new javax.swing.JComboBox<>();
-        jComboBox13 = new javax.swing.JComboBox<>();
-        jComboBox14 = new javax.swing.JComboBox<>();
+        pos1 = new javax.swing.JLabel();
+        pos2 = new javax.swing.JLabel();
+        pos3 = new javax.swing.JLabel();
+        pos4 = new javax.swing.JLabel();
+        pos5 = new javax.swing.JLabel();
+        pos6 = new javax.swing.JLabel();
+        pos7 = new javax.swing.JLabel();
+        pos8 = new javax.swing.JLabel();
+        pos9 = new javax.swing.JLabel();
+        pos10 = new javax.swing.JLabel();
+        pos11 = new javax.swing.JLabel();
+        pos12 = new javax.swing.JLabel();
+        ans3 = new javax.swing.JComboBox<>();
+        ans4 = new javax.swing.JComboBox<>();
+        ans5 = new javax.swing.JComboBox<>();
+        ans6 = new javax.swing.JComboBox<>();
+        ans7 = new javax.swing.JComboBox<>();
+        ans8 = new javax.swing.JComboBox<>();
+        ans9 = new javax.swing.JComboBox<>();
+        ans10 = new javax.swing.JComboBox<>();
+        ans11 = new javax.swing.JComboBox<>();
+        ans12 = new javax.swing.JComboBox<>();
+        ans1 = new javax.swing.JComboBox<>();
+        ans2 = new javax.swing.JComboBox<>();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabel14 = new javax.swing.JLabel();
+        clue = new javax.swing.JTextArea();
+        storryteller = new javax.swing.JLabel();
 
         jScrollPane1.setViewportView(jTextPane1);
 
         setBackground(new java.awt.Color(204, 102, 0));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules7.jpg"))); // NOI18N
-        jLabel3.setText("jLabel3");
-        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 150, -1));
+        pos1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules7.jpg"))); // NOI18N
+        pos1.setText("jLabel3");
+        pos1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(pos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 150, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules2.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 150, -1));
+        pos2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules2.jpg"))); // NOI18N
+        pos2.setText("jLabel1");
+        pos2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(pos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 150, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules1.jpg"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 150, -1));
+        pos3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules1.jpg"))); // NOI18N
+        pos3.setText("jLabel2");
+        pos3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(pos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 150, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules8.jpg"))); // NOI18N
-        jLabel4.setText("jLabel4");
-        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, 150, -1));
+        pos4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules8.jpg"))); // NOI18N
+        pos4.setText("jLabel4");
+        pos4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(pos4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, 150, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules4.jpg"))); // NOI18N
-        jLabel5.setText("jLabel5");
-        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 150, -1));
+        pos5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules4.jpg"))); // NOI18N
+        pos5.setText("jLabel5");
+        pos5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(pos5, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 150, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules10.jpg"))); // NOI18N
-        jLabel6.setText("jLabel6");
-        jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 10, 150, -1));
+        pos6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules10.jpg"))); // NOI18N
+        pos6.setText("jLabel6");
+        pos6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(pos6, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 10, 150, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules5.jpg"))); // NOI18N
-        jLabel7.setText("jLabel7");
-        jLabel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, 150, -1));
+        pos7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules5.jpg"))); // NOI18N
+        pos7.setText("jLabel7");
+        pos7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(pos7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, 150, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules3.jpg"))); // NOI18N
-        jLabel8.setText("jLabel8");
-        jLabel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 150, -1));
+        pos8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules3.jpg"))); // NOI18N
+        pos8.setText("jLabel8");
+        pos8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(pos8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 150, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules11.jpg"))); // NOI18N
-        jLabel9.setText("jLabel9");
-        jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 480, 150, -1));
+        pos9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules11.jpg"))); // NOI18N
+        pos9.setText("jLabel9");
+        pos9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(pos9, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 480, 150, -1));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules9.jpg"))); // NOI18N
-        jLabel10.setText("jLabel10");
-        jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 480, 150, -1));
+        pos10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules9.jpg"))); // NOI18N
+        pos10.setText("jLabel10");
+        pos10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(pos10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 480, 150, -1));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules6.jpg"))); // NOI18N
-        jLabel11.setText("jLabel11");
-        jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 480, 150, -1));
+        pos11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules6.jpg"))); // NOI18N
+        pos11.setText("jLabel11");
+        pos11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(pos11, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 480, 150, -1));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules12.jpg"))); // NOI18N
-        jLabel12.setText("jLabel12");
-        jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 480, 150, -1));
+        pos12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules12.jpg"))); // NOI18N
+        pos12.setText("jLabel12");
+        pos12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(pos12, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 480, 150, -1));
 
-        jComboBox1.setBackground(new java.awt.Color(0, 0, 0));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        ans3.setBackground(new java.awt.Color(0, 0, 0));
+        ans3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
+        ans3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                ans3ActionPerformed(evt);
             }
         });
-        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 180, 90, -1));
+        add(ans3, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 180, 90, -1));
 
-        jComboBox4.setBackground(new java.awt.Color(0, 0, 0));
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
-        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+        ans4.setBackground(new java.awt.Color(0, 0, 0));
+        ans4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
+        ans4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox4ActionPerformed(evt);
+                ans4ActionPerformed(evt);
             }
         });
-        add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(576, 180, 90, -1));
+        add(ans4, new org.netbeans.lib.awtextra.AbsoluteConstraints(576, 180, 90, -1));
 
-        jComboBox5.setBackground(new java.awt.Color(0, 0, 0));
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
-        add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(746, 180, 90, -1));
+        ans5.setBackground(new java.awt.Color(0, 0, 0));
+        ans5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
+        add(ans5, new org.netbeans.lib.awtextra.AbsoluteConstraints(746, 180, 90, -1));
 
-        jComboBox6.setBackground(new java.awt.Color(0, 0, 0));
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
-        add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(916, 180, 90, -1));
+        ans6.setBackground(new java.awt.Color(0, 0, 0));
+        ans6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
+        add(ans6, new org.netbeans.lib.awtextra.AbsoluteConstraints(916, 180, 90, -1));
 
-        jComboBox7.setBackground(new java.awt.Color(0, 0, 0));
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
-        add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, 90, -1));
+        ans7.setBackground(new java.awt.Color(0, 0, 0));
+        ans7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
+        add(ans7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 440, 90, -1));
 
-        jComboBox8.setBackground(new java.awt.Color(0, 0, 0));
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
-        add(jComboBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 90, -1));
+        ans8.setBackground(new java.awt.Color(0, 0, 0));
+        ans8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
+        add(ans8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 90, -1));
 
-        jComboBox9.setBackground(new java.awt.Color(0, 0, 0));
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
-        add(jComboBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 440, 90, -1));
+        ans9.setBackground(new java.awt.Color(0, 0, 0));
+        ans9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
+        add(ans9, new org.netbeans.lib.awtextra.AbsoluteConstraints(406, 440, 90, -1));
 
-        jComboBox10.setBackground(new java.awt.Color(0, 0, 0));
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
-        jComboBox10.addActionListener(new java.awt.event.ActionListener() {
+        ans10.setBackground(new java.awt.Color(0, 0, 0));
+        ans10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
+        ans10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox10ActionPerformed(evt);
+                ans10ActionPerformed(evt);
             }
         });
-        add(jComboBox10, new org.netbeans.lib.awtextra.AbsoluteConstraints(576, 440, 90, -1));
+        add(ans10, new org.netbeans.lib.awtextra.AbsoluteConstraints(576, 440, 90, -1));
 
-        jComboBox11.setBackground(new java.awt.Color(0, 0, 0));
-        jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
-        add(jComboBox11, new org.netbeans.lib.awtextra.AbsoluteConstraints(746, 440, 90, -1));
+        ans11.setBackground(new java.awt.Color(0, 0, 0));
+        ans11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
+        add(ans11, new org.netbeans.lib.awtextra.AbsoluteConstraints(746, 440, 90, -1));
 
-        jComboBox12.setBackground(new java.awt.Color(0, 0, 0));
-        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
-        add(jComboBox12, new org.netbeans.lib.awtextra.AbsoluteConstraints(916, 440, 90, -1));
+        ans12.setBackground(new java.awt.Color(0, 0, 0));
+        ans12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
+        add(ans12, new org.netbeans.lib.awtextra.AbsoluteConstraints(916, 440, 90, -1));
 
-        jComboBox13.setBackground(new java.awt.Color(0, 0, 0));
-        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
-        jComboBox13.addActionListener(new java.awt.event.ActionListener() {
+        ans1.setBackground(new java.awt.Color(0, 0, 0));
+        ans1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
+        ans1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox13ActionPerformed(evt);
+                ans1ActionPerformed(evt);
             }
         });
-        add(jComboBox13, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 90, -1));
+        add(ans1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 90, -1));
 
-        jComboBox14.setBackground(new java.awt.Color(0, 0, 0));
-        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
-        jComboBox14.addActionListener(new java.awt.event.ActionListener() {
+        ans2.setBackground(new java.awt.Color(0, 0, 0));
+        ans2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
+        ans2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox14ActionPerformed(evt);
+                ans2ActionPerformed(evt);
             }
         });
-        add(jComboBox14, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 90, -1));
+        add(ans2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 90, -1));
 
-        jTextArea1.setBackground(new java.awt.Color(204, 51, 0));
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("1. Λιοντάρι της Νεμέας\n2. Λερναία Ύδρα\n3. Κερυνίτιδα Έλαφος\n4. Ερυμάνθιος Κάρπος\n5. Κόπρος του Αυγεία\n6. Στυμφαλίδες Όρνιθες\n7. Ταύρος της Κρήτης\n8. Άλογα του Διομήδη\n9. Ζώνη της Ιππολύτης\n10. Βόδια του Γηρυόνη\n11. Μήλα των Εσπερίδων\n12. Κέρβερος");
-        jTextArea1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
-        jScrollPane2.setViewportView(jTextArea1);
+        clue.setBackground(new java.awt.Color(204, 51, 0));
+        clue.setColumns(20);
+        clue.setRows(5);
+        clue.setText("1. Λιοντάρι της Νεμέας\n2. Λερναία Ύδρα\n3. Κερυνίτιδα Έλαφος\n4. Ερυμάνθιος Κάρπος\n5. Κόπρος του Αυγεία\n6. Στυμφαλίδες Όρνιθες\n7. Ταύρος της Κρήτης\n8. Άλογα του Διομήδη\n9. Ζώνη της Ιππολύτης\n10. Βόδια του Γηρυόνη\n11. Μήλα των Εσπερίδων\n12. Κέρβερος");
+        clue.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+        jScrollPane2.setViewportView(clue);
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, 200));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller2.png"))); // NOI18N
-        jLabel14.setText("jLabel14");
-        jLabel14.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
-        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 260, 100, 120));
+        storryteller.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller2.png"))); // NOI18N
+        storryteller.setText("jLabel14");
+        storryteller.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        add(storryteller, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 260, 100, 120));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+ 
+    private void ans3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_ans3ActionPerformed
 
-    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+    private void ans4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox4ActionPerformed
+    }//GEN-LAST:event_ans4ActionPerformed
 
-    private void jComboBox10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox10ActionPerformed
+    private void ans10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans10ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox10ActionPerformed
+    }//GEN-LAST:event_ans10ActionPerformed
 
-    private void jComboBox13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox13ActionPerformed
+    private void ans1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox13ActionPerformed
+    }//GEN-LAST:event_ans1ActionPerformed
 
-    private void jComboBox14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox14ActionPerformed
+    private void ans2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox14ActionPerformed
+    }//GEN-LAST:event_ans2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox10;
-    private javax.swing.JComboBox<String> jComboBox11;
-    private javax.swing.JComboBox<String> jComboBox12;
-    private javax.swing.JComboBox<String> jComboBox13;
-    private javax.swing.JComboBox<String> jComboBox14;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox7;
-    private javax.swing.JComboBox<String> jComboBox8;
-    private javax.swing.JComboBox<String> jComboBox9;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JComboBox<String> ans1;
+    private javax.swing.JComboBox<String> ans10;
+    private javax.swing.JComboBox<String> ans11;
+    private javax.swing.JComboBox<String> ans12;
+    private javax.swing.JComboBox<String> ans2;
+    private javax.swing.JComboBox<String> ans3;
+    private javax.swing.JComboBox<String> ans4;
+    private javax.swing.JComboBox<String> ans5;
+    private javax.swing.JComboBox<String> ans6;
+    private javax.swing.JComboBox<String> ans7;
+    private javax.swing.JComboBox<String> ans8;
+    private javax.swing.JComboBox<String> ans9;
+    private javax.swing.JTextArea clue;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JLabel pos1;
+    private javax.swing.JLabel pos10;
+    private javax.swing.JLabel pos11;
+    private javax.swing.JLabel pos12;
+    private javax.swing.JLabel pos2;
+    private javax.swing.JLabel pos3;
+    private javax.swing.JLabel pos4;
+    private javax.swing.JLabel pos5;
+    private javax.swing.JLabel pos6;
+    private javax.swing.JLabel pos7;
+    private javax.swing.JLabel pos8;
+    private javax.swing.JLabel pos9;
+    private javax.swing.JLabel storryteller;
     // End of variables declaration//GEN-END:variables
 }

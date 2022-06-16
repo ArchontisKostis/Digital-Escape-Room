@@ -73,7 +73,7 @@ public class RiddleEg2 extends javax.swing.JPanel {
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 380, 510, 240));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller1-removebg.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller1.png"))); // NOI18N
         jLabel2.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(817, 20, 210, 250));
     }// </editor-fold>//GEN-END:initComponents

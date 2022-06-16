@@ -26,69 +26,69 @@ public class RiddleEg1 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        storryteller = new javax.swing.JLabel();
+        photo4 = new javax.swing.JLabel();
+        photo1 = new javax.swing.JLabel();
+        photo3 = new javax.swing.JLabel();
+        photo2 = new javax.swing.JLabel();
+        photo5 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel13 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jLabel14 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jLabel15 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jLabel16 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox<>();
+        Q1 = new javax.swing.JLabel();
+        ans1 = new javax.swing.JComboBox<>();
+        Q2 = new javax.swing.JLabel();
+        ans2 = new javax.swing.JComboBox<>();
+        Q3 = new javax.swing.JLabel();
+        ans3 = new javax.swing.JComboBox<>();
+        Q4 = new javax.swing.JLabel();
+        ans4 = new javax.swing.JComboBox<>();
+        Q5 = new javax.swing.JLabel();
+        ans5 = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(175, 156, 77));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setBackground(new java.awt.Color(255, 255, 204));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller1-removebg.png"))); // NOI18N
-        jLabel2.setText("archaeologist");
-        jLabel2.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 10, 200, 240));
+        storryteller.setBackground(new java.awt.Color(255, 255, 204));
+        storryteller.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller1.png"))); // NOI18N
+        storryteller.setText("archaeologist");
+        storryteller.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
+        add(storryteller, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 10, 200, 240));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol1.png"))); // NOI18N
-        jLabel6.setText("symbol1");
-        jLabel6.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
-        jLabel6.setMaximumSize(new java.awt.Dimension(125, 125));
-        jLabel6.setMinimumSize(new java.awt.Dimension(125, 125));
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 350, 80, 125));
+        photo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol1.png"))); // NOI18N
+        photo4.setText("symbol1");
+        photo4.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
+        photo4.setMaximumSize(new java.awt.Dimension(125, 125));
+        photo4.setMinimumSize(new java.awt.Dimension(125, 125));
+        add(photo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 350, 80, 125));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol2.png"))); // NOI18N
-        jLabel1.setText("symbol2");
-        jLabel1.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
-        jLabel1.setMaximumSize(new java.awt.Dimension(209, 125));
-        jLabel1.setMinimumSize(new java.awt.Dimension(209, 125));
-        jLabel1.setPreferredSize(new java.awt.Dimension(209, 125));
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 160, 125));
+        photo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol2.png"))); // NOI18N
+        photo1.setText("symbol2");
+        photo1.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
+        photo1.setMaximumSize(new java.awt.Dimension(209, 125));
+        photo1.setMinimumSize(new java.awt.Dimension(209, 125));
+        photo1.setPreferredSize(new java.awt.Dimension(209, 125));
+        add(photo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 160, 125));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol3.png"))); // NOI18N
-        jLabel3.setText("symbol3");
-        jLabel3.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
-        jLabel3.setMaximumSize(new java.awt.Dimension(201, 125));
-        jLabel3.setMinimumSize(new java.awt.Dimension(201, 125));
-        jLabel3.setPreferredSize(new java.awt.Dimension(201, 125));
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 150, 125));
+        photo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol3.png"))); // NOI18N
+        photo3.setText("symbol3");
+        photo3.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
+        photo3.setMaximumSize(new java.awt.Dimension(201, 125));
+        photo3.setMinimumSize(new java.awt.Dimension(201, 125));
+        photo3.setPreferredSize(new java.awt.Dimension(201, 125));
+        add(photo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 150, 125));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol4.png"))); // NOI18N
-        jLabel4.setText("symbol4");
-        jLabel4.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 130, 125));
+        photo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol4.png"))); // NOI18N
+        photo2.setText("symbol4");
+        photo2.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
+        add(photo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 130, 125));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol5.png"))); // NOI18N
-        jLabel7.setText("symbol5");
-        jLabel7.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 350, 140, 125));
+        photo5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol5.png"))); // NOI18N
+        photo5.setText("symbol5");
+        photo5.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
+        add(photo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 350, 140, 125));
 
         jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(151, 114, 0));
@@ -120,89 +120,89 @@ public class RiddleEg1 extends javax.swing.JPanel {
         jLabel11.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(151, 114, 0), 3, true));
         add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 290, 40, -1));
 
-        jLabel12.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(151, 114, 0));
-        jLabel12.setText("Σύμβολο ζωής");
-        jLabel12.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 520, -1, -1));
+        Q1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        Q1.setForeground(new java.awt.Color(151, 114, 0));
+        Q1.setText("Σύμβολο ζωής");
+        Q1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
+        add(Q1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 520, -1, -1));
 
-        jComboBox1.setBackground(new java.awt.Color(255, 204, 102));
-        jComboBox1.setForeground(new java.awt.Color(151, 114, 0));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1", "2", "3", "4", "5" }));
-        jComboBox1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 520, -1, -1));
+        ans1.setBackground(new java.awt.Color(255, 204, 102));
+        ans1.setForeground(new java.awt.Color(151, 114, 0));
+        ans1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1", "2", "3", "4", "5" }));
+        ans1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
+        add(ans1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 520, -1, -1));
 
-        jLabel13.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(151, 114, 0));
-        jLabel13.setText("Σύβολο προστασίας");
-        jLabel13.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 570, -1, -1));
+        Q2.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        Q2.setForeground(new java.awt.Color(151, 114, 0));
+        Q2.setText("Σύβολο προστασίας");
+        Q2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
+        add(Q2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 570, -1, -1));
 
-        jComboBox2.setBackground(new java.awt.Color(255, 204, 102));
-        jComboBox2.setForeground(new java.awt.Color(151, 114, 0));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1", "2", "3", "4", "5" }));
-        jComboBox2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 570, -1, -1));
+        ans2.setBackground(new java.awt.Color(255, 204, 102));
+        ans2.setForeground(new java.awt.Color(151, 114, 0));
+        ans2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1", "2", "3", "4", "5" }));
+        ans2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
+        add(ans2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 570, -1, -1));
 
-        jLabel14.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(151, 114, 0));
-        jLabel14.setText("Σύμβολο βασιλείας");
-        jLabel14.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 550, -1, -1));
+        Q3.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        Q3.setForeground(new java.awt.Color(151, 114, 0));
+        Q3.setText("Σύμβολο βασιλείας");
+        Q3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
+        add(Q3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 550, -1, -1));
 
-        jComboBox3.setBackground(new java.awt.Color(255, 204, 102));
-        jComboBox3.setForeground(new java.awt.Color(151, 114, 0));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1", "2", "3", "4", "5" }));
-        jComboBox3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 550, -1, -1));
+        ans3.setBackground(new java.awt.Color(255, 204, 102));
+        ans3.setForeground(new java.awt.Color(151, 114, 0));
+        ans3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1", "2", "3", "4", "5" }));
+        ans3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
+        add(ans3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 550, -1, -1));
 
-        jLabel15.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(151, 114, 0));
-        jLabel15.setText("Σύμβολο μεταμόρφωσης");
-        jLabel15.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 520, -1, -1));
+        Q4.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        Q4.setForeground(new java.awt.Color(151, 114, 0));
+        Q4.setText("Σύμβολο μεταμόρφωσης");
+        Q4.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
+        add(Q4, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 520, -1, -1));
 
-        jComboBox4.setBackground(new java.awt.Color(255, 204, 102));
-        jComboBox4.setForeground(new java.awt.Color(151, 114, 0));
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1", "2", "3", "4", "5" }));
-        jComboBox4.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 520, -1, -1));
+        ans4.setBackground(new java.awt.Color(255, 204, 102));
+        ans4.setForeground(new java.awt.Color(151, 114, 0));
+        ans4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1", "2", "3", "4", "5" }));
+        ans4.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
+        add(ans4, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 520, -1, -1));
 
-        jLabel16.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(151, 114, 0));
-        jLabel16.setText("Σύμβολο του ήλιου");
-        jLabel16.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 570, -1, -1));
+        Q5.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        Q5.setForeground(new java.awt.Color(151, 114, 0));
+        Q5.setText("Σύμβολο του ήλιου");
+        Q5.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
+        add(Q5, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 570, -1, -1));
 
-        jComboBox5.setBackground(new java.awt.Color(255, 204, 102));
-        jComboBox5.setForeground(new java.awt.Color(151, 114, 0));
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1", "2", "3", "4", "5" }));
-        jComboBox5.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 570, -1, -1));
+        ans5.setBackground(new java.awt.Color(255, 204, 102));
+        ans5.setForeground(new java.awt.Color(151, 114, 0));
+        ans5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1", "2", "3", "4", "5" }));
+        ans5.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
+        add(ans5, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 570, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel Q1;
+    private javax.swing.JLabel Q2;
+    private javax.swing.JLabel Q3;
+    private javax.swing.JLabel Q4;
+    private javax.swing.JLabel Q5;
+    private javax.swing.JComboBox<String> ans1;
+    private javax.swing.JComboBox<String> ans2;
+    private javax.swing.JComboBox<String> ans3;
+    private javax.swing.JComboBox<String> ans4;
+    private javax.swing.JComboBox<String> ans5;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel photo1;
+    private javax.swing.JLabel photo2;
+    private javax.swing.JLabel photo3;
+    private javax.swing.JLabel photo4;
+    private javax.swing.JLabel photo5;
+    private javax.swing.JLabel storryteller;
     // End of variables declaration//GEN-END:variables
 }

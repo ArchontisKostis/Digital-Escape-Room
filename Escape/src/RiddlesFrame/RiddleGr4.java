@@ -43,9 +43,9 @@ public class RiddleGr4 extends javax.swing.JPanel {
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        ans = new javax.swing.JTextField();
+        confirm = new javax.swing.JButton();
+        question = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 204, 153));
@@ -132,41 +132,41 @@ public class RiddleGr4 extends javax.swing.JPanel {
         jLabel18.setText("επίσης και τον γιό της να την ακολουθεί ως Μικρή Άρκτος.");
         add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, 310, 20));
 
-        jTextField1.setBackground(new java.awt.Color(255, 204, 153));
-        jTextField1.setForeground(new java.awt.Color(102, 0, 0));
-        jTextField1.setText(" ...Type here...");
-        jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        ans.setBackground(new java.awt.Color(255, 204, 153));
+        ans.setForeground(new java.awt.Color(102, 0, 0));
+        ans.setText(" ...Type here...");
+        ans.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        ans.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                ansActionPerformed(evt);
             }
         });
-        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 170, 40));
+        add(ans, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 170, 40));
 
-        jButton2.setBackground(new java.awt.Color(102, 0, 0));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 204, 153));
-        jButton2.setText("OK");
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 460, -1, -1));
+        confirm.setBackground(new java.awt.Color(102, 0, 0));
+        confirm.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        confirm.setForeground(new java.awt.Color(255, 204, 153));
+        confirm.setText("OK");
+        add(confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 460, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 51, 0));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/riddleGr4_woBack_1.png"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 870, 500));
+        question.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
+        question.setForeground(new java.awt.Color(153, 51, 0));
+        question.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/riddleGr4_woBack_1.png"))); // NOI18N
+        add(question, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 870, 500));
 
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller1-removebg.png"))); // NOI18N
         jLabel19.setText("jLabel19");
         add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 0, 210, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void ansActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ansActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_ansActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField ans;
+    private javax.swing.JButton confirm;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -185,6 +185,6 @@ public class RiddleGr4 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel question;
     // End of variables declaration//GEN-END:variables
 }
