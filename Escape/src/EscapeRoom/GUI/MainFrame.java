@@ -23,11 +23,11 @@ import javax.swing.JOptionPane;
  * @author Archontis
  */
 public class MainFrame extends javax.swing.JFrame {
-    // Variable Declaration
+    // Properties Declaration
     private String navigationState = "none";
     private String panelState = "home";
-    
     private Player player;
+    
     
     
     public MainFrame() {
@@ -220,6 +220,142 @@ public class MainFrame extends javax.swing.JFrame {
        exitLabel.setEnabled(false);
     }
     
+    public void navigateUpKey() {
+        // Check the pointer state
+        switch (navigationState) {
+            case "none":
+                // Change the state
+                navigationState = "start";
+                // Disable Start Label and Enable Exit Label
+                startLabel.setEnabled(true);
+                break;
+                
+            case "start":
+                // Change the state
+                navigationState = "exit";
+                // Disable Start Label and Enable Exit Label
+                exitLabel.setEnabled(true);
+                startLabel.setEnabled(false);
+                break;
+                
+            case "settings":
+                // Change the state
+                navigationState = "start";
+                // Disable Credits Label and Enable Start Label
+                startLabel.setEnabled(true);
+                settingsLabel.setEnabled(false);
+                break;
+                
+            case "credits":
+                // Change the state
+                navigationState = "settings";
+                // Disable Credits Label and Enable Start Label
+                settingsLabel.setEnabled(true);
+                creditsLabel.setEnabled(false);
+                break;
+            case "exit":
+                // Change the state
+                navigationState = "credits";
+                // Disable Credits Label and Enable Start Label
+                creditsLabel.setEnabled(true);
+                exitLabel.setEnabled(false);
+                break;
+        }
+    }
+    
+    public void navigateDownKey(){
+        switch (navigationState) {
+            case "none":
+                navigationState="start";
+                startLabel.setEnabled(true);
+                break;
+        
+            case "start":
+                // Change the state
+                navigationState = "settings";
+                // Disable Start Label and Enable Credits Label
+                settingsLabel.setEnabled(true);
+                startLabel.setEnabled(false);
+                break;
+            
+            case "settings":
+                // Change the state
+                navigationState = "credits";
+                // Disable Settings Label and Enable Credits Label
+                creditsLabel.setEnabled(true);
+                settingsLabel.setEnabled(false);
+                break;
+        
+            case "credits":
+                // Change the state
+                navigationState = "exit";
+                // Disable Start Label and Enable Exit Label
+                exitLabel.setEnabled(true);
+                creditsLabel.setEnabled(false);
+                break;
+        
+            case "exit":
+                // Change the state
+                navigationState = "start";
+                // Disable Start Label and Enable Exit Label
+                startLabel.setEnabled(true);
+                exitLabel.setEnabled(false);     
+                break;
+        } 
+    }
+    
+    public void enterKeyPressed(){
+        switch (navigationState) {
+            case "start":
+                panelState = "startGame";
+                startGamePanel.setVisible(true);
+                break;
+            case "settings":
+                panelState = "settings";
+                settingsPanel.setVisible(true);
+                // Give focus to SettingsPanel so its action listener works
+                settingsPanel.requestFocus();
+                break;
+            case "credits":
+                panelState = "credits";
+                creditsPanel.setVisible(true);
+                break;
+            case "exit":
+                panelState = "exit";
+                exitPromptPanel.setVisible(true);
+                break;
+        }
+    }
+    
+    public void escapeKeyPressed(){
+        switch (panelState) {
+            case "tutorial":
+                panelState = "home";
+                tutorialPanel.setVisible(false);
+            case "startGame":
+                panelState = "home";
+                startGamePanel.setVisible(false);
+            case "loadGame":
+                panelState = "home";
+                loadGamePanel.setVisible(false);
+            case "newPlayer":
+                panelState = "home";
+                newPlayerPanel.getPlayerNameField().setText("Player");
+                newPlayerPanel.setVisible(false);
+            case "settings":
+                panelState = "home";
+                settingsPanel.setVisible(false);
+            case "credits":
+                panelState = "home";
+                creditsPanel.setVisible(false);
+                break;
+            case "exit":
+                panelState = "home";
+                exitPromptPanel.setVisible(false);
+                break;
+        }
+    }
+    
     // ---------- Key Listener Class START ---------- //
     class myKeyListener implements KeyListener {
 
@@ -233,144 +369,23 @@ public class MainFrame extends javax.swing.JFrame {
             // ---- MENU NAVIGATION ----
             // If UP KEY is pressed
             if(e.getKeyCode() == java.awt.event.KeyEvent.VK_UP){
-                
-                // Check the pointer state
-                switch (navigationState) {
-                    case "none":
-                        // Change the state
-                        navigationState = "start";
-                        // Disable Start Label and Enable Exit Label
-                        startLabel.setEnabled(true);
-                        break;
-                        
-                    case "start":
-                        // Change the state
-                        navigationState = "exit";
-                        // Disable Start Label and Enable Exit Label
-                        exitLabel.setEnabled(true);
-                        startLabel.setEnabled(false);
-                        break;
-                        
-                    case "settings":
-                        // Change the state
-                        navigationState = "start";
-                        // Disable Credits Label and Enable Start Label
-                        startLabel.setEnabled(true);
-                        settingsLabel.setEnabled(false);
-                        break;
-                        
-                    case "credits":
-                        // Change the state
-                        navigationState = "settings";
-                        // Disable Credits Label and Enable Start Label
-                        settingsLabel.setEnabled(true);
-                        creditsLabel.setEnabled(false);
-                        break;
-                    case "exit":
-                        // Change the state
-                        navigationState = "credits";
-                        // Disable Credits Label and Enable Start Label
-                        creditsLabel.setEnabled(true);
-                        exitLabel.setEnabled(false);
-                        break;
-                }
+                navigateUpKey();
+                System.out.println("UP");
             }
             
             // If DOWN KEY is pressed
             if(e.getKeyCode() == java.awt.event.KeyEvent.VK_DOWN){
-                switch (navigationState) {
-                    case "none":
-                        navigationState="start";
-                        startLabel.setEnabled(true);
-                        break;
-                
-                    case "start":
-                        // Change the state
-                        navigationState = "settings";
-                        // Disable Start Label and Enable Credits Label
-                        settingsLabel.setEnabled(true);
-                        startLabel.setEnabled(false);
-                        break;
-                    
-                    case "settings":
-                        // Change the state
-                        navigationState = "credits";
-                        // Disable Settings Label and Enable Credits Label
-                        creditsLabel.setEnabled(true);
-                        settingsLabel.setEnabled(false);
-                        break;
-                
-                    case "credits":
-                        // Change the state
-                        navigationState = "exit";
-                        // Disable Start Label and Enable Exit Label
-                        exitLabel.setEnabled(true);
-                        creditsLabel.setEnabled(false);
-                        break;
-                
-                    case "exit":
-                        // Change the state
-                        navigationState = "start";
-                        // Disable Start Label and Enable Exit Label
-                        startLabel.setEnabled(true);
-                        exitLabel.setEnabled(false);     
-                        break;
-                } 
+                navigateDownKey();
             }
             
             // ---- USER CONFIRMATION ACTION ----
             if(e.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
-                switch (navigationState) {
-                    case "start":
-                        panelState = "startGame";
-                        startGamePanel.setVisible(true);
-                        break;
-                    case "settings":
-                        panelState = "settings";
-                        settingsPanel.setVisible(true);
-                        // Give focus to SettingsPanel so its action listener works
-                        settingsPanel.requestFocus();
-                        break;
-                    case "credits":
-                        panelState = "credits";
-                        creditsPanel.setVisible(true);
-                        break;
-                    case "exit":
-                        panelState = "exit";
-                        exitPromptPanel.setVisible(true);
-                        break;
-                }
+                enterKeyPressed();
             }
             
             // ---- USER ESCAPE ACTION ----
             if(e.getKeyCode() == java.awt.event.KeyEvent.VK_ESCAPE){
-                System.out.println("ESCAPE");
-                switch (panelState) {
-                    case "tutorial":
-                        panelState = "home";
-                        tutorialPanel.setVisible(false);
-                    case "startGame":
-                        panelState = "home";
-                        startGamePanel.setVisible(false);
-                    case "loadGame":
-                        panelState = "home";
-                        loadGamePanel.setVisible(false);
-                    case "newPlayer":
-                        panelState = "home";
-                        newPlayerPanel.getPlayerNameField().setText("Player");
-                        newPlayerPanel.setVisible(false);
-                    case "settings":
-                        panelState = "home";
-                        settingsPanel.setVisible(false);
-                    case "credits":
-                        panelState = "home";
-                        creditsPanel.setVisible(false);
-                        break;
-                    case "exit":
-                        panelState = "home";
-                        exitPromptPanel.setVisible(false);
-                        break;
-                }
+                escapeKeyPressed();
             }
         }
 
