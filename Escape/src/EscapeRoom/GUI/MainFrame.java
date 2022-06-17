@@ -4,6 +4,8 @@
  */
 package EscapeRoom.GUI;
 
+import EscapeRoom.Game;
+import EscapeRoom.Game_Saves;
 import EscapeRoom.Player;
 import java.awt.Cursor;
 import java.awt.Image;
@@ -15,8 +17,10 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /**
  *
@@ -26,11 +30,19 @@ public class MainFrame extends javax.swing.JFrame {
     // Properties Declaration
     private String navigationState = "none";
     private String panelState = "home";
-    private Player player;
+    private Game game;
     
     
     public MainFrame() {
         initComponents();
+        
+        // Create Game Instance
+        this.game = new Game();
+        // Create an Empty Save List
+        this.game.setSavesList(new ArrayList<Game_Saves>());
+        // Create the Room List
+        this.game.fillRoomList();
+        
         this.addKeyListener(new myKeyListener());
     }
     
@@ -403,10 +415,13 @@ public class MainFrame extends javax.swing.JFrame {
     
     public void newPlayerPanelActionPerformed(ActionEvent e){
         JButton createPlayerButton = newPlayerPanel.getCreatePlayerButton();
+        JTextField playerNameField = newPlayerPanel.getPlayerNameField();
         
         if (e.getSource() == createPlayerButton){
-            player = new Player(newPlayerPanel.getTextfieldText(), 0, 3);
-            System.out.println(player.toString());
+            game.setPlayer(new Player(playerNameField.getText(), 0, 3));
+            System.out.println(game);
+            testFrame tf = new testFrame(this.game);
+            tf.setVisible(rootPaneCheckingEnabled);
             requestFocus();
         }
     }
