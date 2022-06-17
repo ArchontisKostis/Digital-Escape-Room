@@ -8,6 +8,7 @@ package RiddlesFrame;
  *
  * @author 30694
  */
+import EscapeRoom.*;
 public class RiddleGr1 extends javax.swing.JPanel {
 
     /**
@@ -28,18 +29,18 @@ public class RiddleGr1 extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
-        pos1 = new javax.swing.JLabel();
-        pos2 = new javax.swing.JLabel();
-        pos3 = new javax.swing.JLabel();
-        pos4 = new javax.swing.JLabel();
-        pos5 = new javax.swing.JLabel();
-        pos6 = new javax.swing.JLabel();
-        pos7 = new javax.swing.JLabel();
-        pos8 = new javax.swing.JLabel();
-        pos9 = new javax.swing.JLabel();
-        pos10 = new javax.swing.JLabel();
-        pos11 = new javax.swing.JLabel();
-        pos12 = new javax.swing.JLabel();
+        image1 = new javax.swing.JLabel();
+        image2 = new javax.swing.JLabel();
+        image3 = new javax.swing.JLabel();
+        image4 = new javax.swing.JLabel();
+        image5 = new javax.swing.JLabel();
+        image6 = new javax.swing.JLabel();
+        image7 = new javax.swing.JLabel();
+        image8 = new javax.swing.JLabel();
+        image9 = new javax.swing.JLabel();
+        image10 = new javax.swing.JLabel();
+        image11 = new javax.swing.JLabel();
+        image12 = new javax.swing.JLabel();
         ans3 = new javax.swing.JComboBox<>();
         ans4 = new javax.swing.JComboBox<>();
         ans5 = new javax.swing.JComboBox<>();
@@ -61,65 +62,54 @@ public class RiddleGr1 extends javax.swing.JPanel {
         setBackground(new java.awt.Color(204, 102, 0));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pos1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules7.jpg"))); // NOI18N
-        pos1.setText("jLabel3");
-        pos1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(pos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 150, -1));
+        Data data = new Data();
+        image1.setIcon(data.getRowGr().getImages().get(7));
+        image1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(image1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 150, 150));
 
-        pos2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules2.jpg"))); // NOI18N
-        pos2.setText("jLabel1");
-        pos2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(pos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 150, -1));
+        image2.setIcon(data.getRowGr().getImages().get(2));
+        image2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(image2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 150, 150));
 
-        pos3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules1.jpg"))); // NOI18N
-        pos3.setText("jLabel2");
-        pos3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(pos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 150, -1));
+        image3.setIcon(data.getRowGr().getImages().get(1));
+        image3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(image3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 150, 150));
 
-        pos4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules8.jpg"))); // NOI18N
-        pos4.setText("jLabel4");
-        pos4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(pos4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, 150, -1));
+        image4.setIcon(data.getRowGr().getImages().get(8));
+        image4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(image4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, 150, 150));
 
-        pos5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules4.jpg"))); // NOI18N
-        pos5.setText("jLabel5");
-        pos5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(pos5, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 150, -1));
+        image5.setIcon(data.getRowGr().getImages().get(4));
+        image5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(image5, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 150, 150));
 
-        pos6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules10.jpg"))); // NOI18N
-        pos6.setText("jLabel6");
-        pos6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(pos6, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 10, 150, -1));
+        image6.setIcon(data.getRowGr().getImages().get(10));
+        image6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(image6, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 10, 150, 150));
 
-        pos7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules5.jpg"))); // NOI18N
-        pos7.setText("jLabel7");
-        pos7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(pos7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, 150, -1));
+        image7.setIcon(data.getRowGr().getImages().get(5));
+        image7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(image7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, 150, 150));
 
-        pos8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules3.jpg"))); // NOI18N
-        pos8.setText("jLabel8");
-        pos8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(pos8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 150, -1));
+        image8.setIcon(data.getRowGr().getImages().get(3));
+        image8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(image8, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 480, 150, 150));
 
-        pos9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules11.jpg"))); // NOI18N
-        pos9.setText("jLabel9");
-        pos9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(pos9, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 480, 150, -1));
+        image9.setIcon(data.getRowGr().getImages().get(11));
+        image9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(image9, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 480, 150, 150));
 
-        pos10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules9.jpg"))); // NOI18N
-        pos10.setText("jLabel10");
-        pos10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(pos10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 480, 150, -1));
+        image10.setIcon(data.getRowGr().getImages().get(9));
+        image10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(image10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 480, 150, 150));
 
-        pos11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules6.jpg"))); // NOI18N
-        pos11.setText("jLabel11");
-        pos11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(pos11, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 480, 150, -1));
+        image11.setIcon(data.getRowGr().getImages().get(6));
+        image11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(image11, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 480, 150, 150));
 
-        pos12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/hercules12.jpg"))); // NOI18N
-        pos12.setText("jLabel12");
-        pos12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        add(pos12, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 480, 150, -1));
+        image12.setIcon(data.getRowGr().getImages().get(12));
+        image12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        add(image12, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 480, 150, 150));
 
         ans3.setBackground(new java.awt.Color(0, 0, 0));
         ans3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
@@ -244,21 +234,21 @@ public class RiddleGr1 extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> ans8;
     private javax.swing.JComboBox<String> ans9;
     private javax.swing.JTextArea clue;
+    private javax.swing.JLabel image1;
+    private javax.swing.JLabel image10;
+    private javax.swing.JLabel image11;
+    private javax.swing.JLabel image12;
+    private javax.swing.JLabel image2;
+    private javax.swing.JLabel image3;
+    private javax.swing.JLabel image4;
+    private javax.swing.JLabel image5;
+    private javax.swing.JLabel image6;
+    private javax.swing.JLabel image7;
+    private javax.swing.JLabel image8;
+    private javax.swing.JLabel image9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextPane jTextPane1;
-    private javax.swing.JLabel pos1;
-    private javax.swing.JLabel pos10;
-    private javax.swing.JLabel pos11;
-    private javax.swing.JLabel pos12;
-    private javax.swing.JLabel pos2;
-    private javax.swing.JLabel pos3;
-    private javax.swing.JLabel pos4;
-    private javax.swing.JLabel pos5;
-    private javax.swing.JLabel pos6;
-    private javax.swing.JLabel pos7;
-    private javax.swing.JLabel pos8;
-    private javax.swing.JLabel pos9;
     private javax.swing.JLabel storryteller;
     // End of variables declaration//GEN-END:variables
 }
