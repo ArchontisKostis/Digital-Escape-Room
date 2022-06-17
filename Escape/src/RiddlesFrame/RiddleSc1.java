@@ -153,7 +153,7 @@ public class RiddleSc1 extends javax.swing.JPanel {
         jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102)));
         add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 580, 30, 60));
 
-        image3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/image3.1_1.jpg"))); // NOI18N
+        image3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/image3.1.jpg"))); // NOI18N
         image3.setText("jLabel1");
         image3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 102), 4));
         add(image3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 300, 210, -1));

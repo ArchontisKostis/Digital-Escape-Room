@@ -19,11 +19,16 @@ public class Riddles {
         this.riddleId = riddleId;
     }
     
-    public boolean pictures_in_order(String Order){
-        boolean solved;
+    public boolean pictures_in_order(int Order[]){
+        boolean solved = true;
         Data row = new Data();
         if(riddleId == 0011)
-            solved = row.getRowGr().getOrder().equals(Order);
+            for(int i=0 ; i<row.getRowGr().getNumberOfImages(); i++){
+                if(Order[i]!=row.getRowGr().getOrder()[i]){
+                    solved = false;
+                    break;
+                }
+            }
         else if(riddleId == 0012)
             solved = row.getImageTextGr().getOrder().equals(Order);
         else if(riddleId == 0021)

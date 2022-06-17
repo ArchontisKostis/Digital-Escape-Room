@@ -294,7 +294,7 @@
     <Component class="javax.swing.JLabel" name="image3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/ImagesR/image3.1_1.jpg"/>
+          <Image iconType="3" name="/ImagesR/image3.1.jpg"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel1"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">

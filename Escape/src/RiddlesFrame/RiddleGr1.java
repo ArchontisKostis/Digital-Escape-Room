@@ -29,6 +29,7 @@ public class RiddleGr1 extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
+        jButton1 = new javax.swing.JButton();
         image1 = new javax.swing.JLabel();
         image2 = new javax.swing.JLabel();
         image3 = new javax.swing.JLabel();
@@ -56,8 +57,11 @@ public class RiddleGr1 extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         clue = new javax.swing.JTextArea();
         storryteller = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         jScrollPane1.setViewportView(jTextPane1);
+
+        jButton1.setText("jButton1");
 
         setBackground(new java.awt.Color(204, 102, 0));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -168,6 +172,11 @@ public class RiddleGr1 extends javax.swing.JPanel {
 
         ans1.setBackground(new java.awt.Color(0, 0, 0));
         ans1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "'Αθλος 1", "'Αθλος 2", "'Αθλος 3", "'Αθλος 4", "'Αθλος 5", "'Αθλος 6", "'Αθλος 7", "'Αθλος 8", "'Αθλος 9", "'Αθλος 10", "'Αθλος 11", "'Αθλος 12" }));
+        ans1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ans1MouseClicked(evt);
+            }
+        });
         ans1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ans1ActionPerformed(evt);
@@ -184,21 +193,44 @@ public class RiddleGr1 extends javax.swing.JPanel {
         });
         add(ans2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, 90, -1));
 
-        clue.setBackground(new java.awt.Color(204, 51, 0));
+        clue.setBackground(new java.awt.Color(255, 204, 102));
         clue.setColumns(20);
+        clue.setFont(new java.awt.Font("Consolas", 0, 12)); // NOI18N
+        clue.setForeground(new java.awt.Color(102, 51, 0));
         clue.setRows(5);
-        clue.setText("1. Λιοντάρι της Νεμέας\n2. Λερναία Ύδρα\n3. Κερυνίτιδα Έλαφος\n4. Ερυμάνθιος Κάρπος\n5. Κόπρος του Αυγεία\n6. Στυμφαλίδες Όρνιθες\n7. Ταύρος της Κρήτης\n8. Άλογα του Διομήδη\n9. Ζώνη της Ιππολύτης\n10. Βόδια του Γηρυόνη\n11. Μήλα των Εσπερίδων\n12. Κέρβερος");
-        clue.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 0, 0)));
+        clue.setText("\n 1. Λιοντάρι της Νεμέας\n 2. Λερναία Ύδρα\n 3. Κερυνίτιδα Έλαφος\n 4. Ερυμάνθιος Κάρπος\n 5. Κόπρος του Αυγεία\n 6. Στυμφαλίδες Όρνιθες\n 7. Ταύρος της Κρήτης\n 8. Άλογα του Διομήδη\n 9. Ζώνη της Ιππολύτης\n 10. Βόδια του Γηρυόνη\n 11. Μήλα των Εσπερίδων\n 12. Κέρβερος");
+        clue.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
         jScrollPane2.setViewportView(clue);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, 200));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 170, 210));
 
         storryteller.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller2.png"))); // NOI18N
         storryteller.setText("jLabel14");
         storryteller.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
         add(storryteller, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 260, 100, 120));
+
+        jButton2.setBackground(new java.awt.Color(255, 204, 102));
+        jButton2.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(102, 51, 0));
+        jButton2.setText("READY!");
+        jButton2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 390, 100, -1));
     }// </editor-fold>//GEN-END:initComponents
  
+    private int[] orderOfpics = new int[12];
+    private Riddles riddleGr1 = new Riddles(0011);
+    private boolean solved;
+    
     private void ans3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ans3ActionPerformed
@@ -218,6 +250,32 @@ public class RiddleGr1 extends javax.swing.JPanel {
     private void ans2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ans2ActionPerformed
+
+    private void ans1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ans1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ans1MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        orderOfpics[0] = ans1.getSelectedIndex();
+        orderOfpics[0] = ans2.getSelectedIndex();
+        orderOfpics[0] = ans3.getSelectedIndex();
+        orderOfpics[0] = ans4.getSelectedIndex();
+        orderOfpics[0] = ans5.getSelectedIndex();
+        orderOfpics[0] = ans6.getSelectedIndex();
+        orderOfpics[0] = ans7.getSelectedIndex();
+        orderOfpics[0] = ans8.getSelectedIndex();
+        orderOfpics[0] = ans9.getSelectedIndex();
+        orderOfpics[0] = ans10.getSelectedIndex();
+        orderOfpics[0] = ans11.getSelectedIndex();
+        orderOfpics[0] = ans12.getSelectedIndex();
+        
+        solved = riddleGr1.pictures_in_order(orderOfpics);
+        //errorMessage.setVisible(!solved);
+    }//GEN-LAST:event_jButton2MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -246,6 +304,8 @@ public class RiddleGr1 extends javax.swing.JPanel {
     private javax.swing.JLabel image7;
     private javax.swing.JLabel image8;
     private javax.swing.JLabel image9;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextPane jTextPane1;

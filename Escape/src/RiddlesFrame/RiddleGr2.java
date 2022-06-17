@@ -8,6 +8,7 @@ package RiddlesFrame;
  *
  * @author 30694
  */
+import EscapeRoom.*;
 public class RiddleGr2 extends javax.swing.JPanel {
 
     /**
@@ -29,9 +30,9 @@ public class RiddleGr2 extends javax.swing.JPanel {
         atlas = new javax.swing.JLabel();
         prometheus = new javax.swing.JLabel();
         sisyphus = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        label1 = new javax.swing.JLabel();
+        label2 = new javax.swing.JLabel();
+        label3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         ans3 = new javax.swing.JComboBox<>();
@@ -40,43 +41,43 @@ public class RiddleGr2 extends javax.swing.JPanel {
         storyteller = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         QuestionBox = new javax.swing.JTextArea();
+        jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 153, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        atlas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/atlas.jpg"))); // NOI18N
-        atlas.setText("atlas");
+        Data data = new Data();
+        atlas.setIcon(data.getImageTextGr().getImages().get(1));
         atlas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 0, 0), 3));
-        add(atlas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 210, -1));
+        atlas.setPreferredSize(new java.awt.Dimension(210, 210));
+        add(atlas, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 210, 210));
 
-        prometheus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/prometheus.jpg"))); // NOI18N
-        prometheus.setText("prometheus");
+        prometheus.setIcon(data.getImageTextGr().getImages().get(2));
         prometheus.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 0, 0), 3));
-        add(prometheus, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 210, -1));
+        add(prometheus, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 210, 210));
 
-        sisyphus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/sisyphus.jpg"))); // NOI18N
-        sisyphus.setText("jLabel2");
+        sisyphus.setIcon(data.getImageTextGr().getImages().get(3));
         sisyphus.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 0, 0), 3));
-        add(sisyphus, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 390, -1));
+        add(sisyphus, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 431, 126));
 
-        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(153, 0, 0));
-        jLabel3.setLabelFor(prometheus);
-        jLabel3.setText("1");
-        jLabel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 0, 0), 3, true));
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 20, 40));
+        label1.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        label1.setForeground(new java.awt.Color(153, 0, 0));
+        label1.setLabelFor(prometheus);
+        label1.setText(" 1");
+        label1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 0, 0), 3, true));
+        add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 40, 40));
 
-        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(153, 0, 0));
-        jLabel5.setText("2");
-        jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 0, 0), 3, true));
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 270, -1, -1));
+        label2.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        label2.setForeground(new java.awt.Color(153, 0, 0));
+        label2.setText(" 2 ");
+        label2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 0, 0), 3, true));
+        add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, -1, -1));
 
-        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(153, 0, 0));
-        jLabel6.setText("3");
-        jLabel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 0, 0), 3, true));
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 520, -1, -1));
+        label3.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        label3.setForeground(new java.awt.Color(153, 0, 0));
+        label3.setText(" 3 ");
+        label3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 0, 0), 3, true));
+        add(label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 520, -1, -1));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, -1, -1));
@@ -114,7 +115,23 @@ public class RiddleGr2 extends javax.swing.JPanel {
         jScrollPane1.setViewportView(QuestionBox);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 380, 300, 130));
+
+        jButton1.setBackground(new java.awt.Color(255, 204, 204));
+        jButton1.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(153, 0, 0));
+        jButton1.setText("READY!");
+        jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 280, 110, 30));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        
+    }//GEN-LAST:event_jButton1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -123,12 +140,13 @@ public class RiddleGr2 extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> ans2;
     private javax.swing.JComboBox<String> ans3;
     private javax.swing.JLabel atlas;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel label1;
+    private javax.swing.JLabel label2;
+    private javax.swing.JLabel label3;
     private javax.swing.JLabel prometheus;
     private javax.swing.JLabel sisyphus;
     private javax.swing.JLabel storyteller;
