@@ -65,7 +65,7 @@ public class Data {
     
     //2 ID:0012
     private int[] orderGr2 = new int[]{2,3,1};
-    private String[] choices1 = new String[]{"Άτλας","Προμηθέας","Σίσυφος"};
+    private String[] choices1 = new String[]{"Προμηθέας","Σίσυφος","Άτλας"};
     private ImageText imageTextGr = new ImageText(choices1 , imagesGr2 , orderGr2 , 3);
 
     public ImageText getImageTextGr() {
