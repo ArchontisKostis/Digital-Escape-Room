@@ -9,29 +9,19 @@ import java.util.ArrayList;
  * @author Archontis
  */
 public class Game {
+
     // Properties Declaration
     private Player player;
-    private ArrayList roomList;    // TO-DO: <Room>
+    private ArrayList<Room> roomList;    // TO-DO: <Room>
     private ArrayList saveList; // TO-DO: <GameSaves>
-    private boolean musicOn;
-    private boolean soundOn;
-    
-    // Constructor
-    public Game(Player aPlayer, ArrayList aRoomList){
-        this.player = aPlayer;
-        this.roomList = aRoomList;
-        this.musicOn = true;
-        this.soundOn = true;
-
-
-    }
-
     
     /* GETTERS AND SETTERS */
     // Player
     public void setPlayer(Player aPlayer){
         this.player = aPlayer;
     }
+
+
     
     public Player getPlayer(){
         return this.player;
@@ -42,17 +32,21 @@ public class Game {
         return this.roomList;
     }
     
+    public void setRoomList(ArrayList<Room> aList){
+        this.roomList = aList;
+    }
+    
     /*
     Αυτη η μεθοδος επιστρεφει ένα δωματιο απο την λίστα με βάση την θέση του στην λιστα
     Μπορει να φανει χρήσιμη
-    
+    */
     public Room getRoomByIndex(int index){
         return this.roomList.get(index);
     }
-    */
+    
     
     // Saves List
-    public void setSavesList(ArrayList aSaveList){
+    public void setSavesList(ArrayList<Game_Saves> aSaveList){
         this.saveList = aSaveList;
     }
     
@@ -68,12 +62,30 @@ public class Game {
     }
     */
     
+    public void fillRoomList(){
+        this.roomList = new ArrayList<Room>();
+        Room room1 = new Room("Room1", 0);
+        this.roomList.add(room1);
+        
+        Room room2 = new Room("Room2", 0);
+        this.roomList.add(room2);
+        
+        Room room3 = new Room("Room3", 0);
+        this.roomList.add(room3);
+    }
+    
     public void startNewGame(Player player,  ArrayList rooms){
       
     }
     
     public void loadGame(ArrayList<Game_Saves> saves){  
         
+    }
+    
+    // USED FOR TESTING
+    public String toString() {
+        String text = "Player:" + this.player.toString() + roomList.size() + this.saveList.size();
+        return text;
     }
 }
 

@@ -4,8 +4,13 @@
  */
 package EscapeRoom.GUI;
 
+import EscapeRoom.Game;
+import EscapeRoom.Game_Saves;
 import EscapeRoom.Player;
 import java.awt.Cursor;
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.awt.GraphicsEnvironment;
 import java.awt.Image;
 import java.awt.Point;
 import java.awt.Toolkit;
@@ -15,23 +20,40 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 /**
  *
  * @author Archontis
  */
 public class MainFrame extends javax.swing.JFrame {
-    // Variable Declaration
+    // Properties Declaration
     private String navigationState = "none";
     private String panelState = "home";
-    
-    private Player player;
+    private Game game;
     
     
     public MainFrame() {
         initComponents();
+        
+        // Create Game Instance
+        this.game = new Game();
+        // Create an Empty Save List
+        this.game.setSavesList(new ArrayList<Game_Saves>());
+        // Create the Room List
+        this.game.fillRoomList();
+        
+        // Set App Icon
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/icon.png")));
+        
         this.addKeyListener(new myKeyListener());
     }
     
@@ -48,6 +70,15 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        // Custom Font Creation
+        try{
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            Font dpComicFont = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/EscapeRoom/GUI/dpcomic.ttf"));
+            ge.registerFont(dpComicFont);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
         mainPanel = new javax.swing.JPanel();
         tutorialPanel = new EscapeRoom.GUI.TutorialPanel();
         newPlayerPanel = new EscapeRoom.GUI.newPlayerPanel();
@@ -64,11 +95,14 @@ public class MainFrame extends javax.swing.JFrame {
         bgImage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Digital Escape Room");
         setCursor(Toolkit.getDefaultToolkit().
             createCustomCursor(
                 Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/cursor.png")),
                 new Point(0,0),"custom cursor"
             ));
+            setUndecorated(true);
+            setResizable(false);
 
             mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -85,10 +119,11 @@ public class MainFrame extends javax.swing.JFrame {
 
             settingsPanel.setVisible(false);
             settingsPanel.setMainFrame(this);
+            settingsPanel.getFeaturePanel().addListener(new ButtonListener());
             mainPanel.add(settingsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
             creditsPanel.setVisible(false);
-            mainPanel.add(creditsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 560));
+            mainPanel.add(creditsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 550));
 
             exitPromptPanel.setVisible(false);
             exitPromptPanel.setMainFrame(this);
@@ -98,17 +133,7 @@ public class MainFrame extends javax.swing.JFrame {
             mainPanel.add(loadGamePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
             tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/tutorialIcon.png"))); // NOI18N
-            tutorialLabel.addMouseListener(new java.awt.event.MouseAdapter() {
-                public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    tutorialLabelMouseClicked(evt);
-                }
-                public void mouseEntered(java.awt.event.MouseEvent evt) {
-                    tutorialLabelMouseEntered(evt);
-                }
-                public void mouseExited(java.awt.event.MouseEvent evt) {
-                    tutorialLabelMouseExited(evt);
-                }
-            });
+            tutorialLabel.addMouseListener(new myMouseListener());
             mainPanel.add(tutorialLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 110, 110));
 
             startLabel.setBackground(new java.awt.Color(255, 255, 255));
@@ -161,57 +186,6 @@ public class MainFrame extends javax.swing.JFrame {
             pack();
             setLocationRelativeTo(null);
         }// </editor-fold>//GEN-END:initComponents
-
-    private void tutorialLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tutorialLabelMouseClicked
-        this.tutorialPanel.setVisible(true);
-        this.panelState = "tutorial";
-        this.requestFocus();
-    }//GEN-LAST:event_tutorialLabelMouseClicked
-
-    private void tutorialLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tutorialLabelMouseEntered
-        this.tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/tutorialIconHover.png")));
-    }//GEN-LAST:event_tutorialLabelMouseEntered
-
-    private void tutorialLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tutorialLabelMouseExited
-        this.tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/tutorialIcon.png")));
-    }//GEN-LAST:event_tutorialLabelMouseExited
-    
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                MainFrame menuFrame = new MainFrame();
-                menuFrame.setVisible(true);
-                
-            }
-        });
-    }
     
     private void disableAllLabels() {
        startLabel.setEnabled(false);
@@ -219,6 +193,271 @@ public class MainFrame extends javax.swing.JFrame {
        creditsLabel.setEnabled(false);
        exitLabel.setEnabled(false);
     }
+    
+    /* This Methods are used from the Listeners */
+    // Methods for Key Listener
+    public void navigateUpKey() {
+        // Check the pointer state
+        switch (navigationState) {
+            case "none":
+                // Change the state
+                navigationState = "start";
+                // Disable Start Label and Enable Exit Label
+                startLabel.setEnabled(true);
+                break;
+                
+            case "start":
+                // Change the state
+                navigationState = "exit";
+                // Disable Start Label and Enable Exit Label
+                exitLabel.setEnabled(true);
+                startLabel.setEnabled(false);
+                break;
+                
+            case "settings":
+                // Change the state
+                navigationState = "start";
+                // Disable Credits Label and Enable Start Label
+                startLabel.setEnabled(true);
+                settingsLabel.setEnabled(false);
+                break;
+                
+            case "credits":
+                // Change the state
+                navigationState = "settings";
+                // Disable Credits Label and Enable Start Label
+                settingsLabel.setEnabled(true);
+                creditsLabel.setEnabled(false);
+                break;
+            case "exit":
+                // Change the state
+                navigationState = "credits";
+                // Disable Credits Label and Enable Start Label
+                creditsLabel.setEnabled(true);
+                exitLabel.setEnabled(false);
+                break;
+        }
+    }
+    
+    public void navigateDownKey(){
+        switch (navigationState) {
+            case "none":
+                navigationState="start";
+                startLabel.setEnabled(true);
+                break;
+        
+            case "start":
+                // Change the state
+                navigationState = "settings";
+                // Disable Start Label and Enable Credits Label
+                settingsLabel.setEnabled(true);
+                startLabel.setEnabled(false);
+                break;
+            
+            case "settings":
+                // Change the state
+                navigationState = "credits";
+                // Disable Settings Label and Enable Credits Label
+                creditsLabel.setEnabled(true);
+                settingsLabel.setEnabled(false);
+                break;
+        
+            case "credits":
+                // Change the state
+                navigationState = "exit";
+                // Disable Start Label and Enable Exit Label
+                exitLabel.setEnabled(true);
+                creditsLabel.setEnabled(false);
+                break;
+        
+            case "exit":
+                // Change the state
+                navigationState = "start";
+                // Disable Start Label and Enable Exit Label
+                startLabel.setEnabled(true);
+                exitLabel.setEnabled(false);     
+                break;
+        } 
+    }
+    
+    public void enterKeyPressed(){
+        switch (navigationState) {
+            case "start":
+                panelState = "startGame";
+                startGamePanel.setVisible(true);
+                break;
+            case "settings":
+                panelState = "settings";
+                settingsPanel.setVisible(true);
+                // Give focus to SettingsPanel so its action listener works
+                settingsPanel.requestFocus();
+                break;
+            case "credits":
+                panelState = "credits";
+                creditsPanel.setVisible(true);
+                break;
+            case "exit":
+                panelState = "exit";
+                exitPromptPanel.setVisible(true);
+                break;
+        }
+    }
+    
+    public void escapeKeyPressed(){
+        switch (panelState) {
+            case "tutorial":
+                panelState = "home";
+                tutorialPanel.setVisible(false);
+            case "startGame":
+                panelState = "home";
+                startGamePanel.setVisible(false);
+            case "loadGame":
+                panelState = "home";
+                loadGamePanel.setVisible(false);
+            case "newPlayer":
+                panelState = "home";
+                newPlayerPanel.getPlayerNameField().setText("Player");
+                newPlayerPanel.setVisible(false);
+            case "settings":
+                panelState = "home";
+                settingsPanel.setVisible(false);
+                settingsPanel.getFeaturePanel().setVisible(false);
+            case "credits":
+                panelState = "home";
+                creditsPanel.setVisible(false);
+                break;
+            case "exit":
+                panelState = "home";
+                exitPromptPanel.setVisible(false);
+                break;
+        }
+    }
+    
+    // Methods for Mouse Listener
+    public void homePanelMouseClicked(MouseEvent e){
+        if(e.getSource() == startLabel){
+            panelState = "startGame";
+            startGamePanel.setVisible(true);
+        }
+        if(e.getSource() == settingsLabel){
+             panelState = "settings";
+            settingsPanel.setVisible(true);
+            this.requestFocus();
+        }   
+        if(e.getSource() == creditsLabel){
+             panelState = "credits";
+            creditsPanel.setVisible(true);
+        }   
+        if(e.getSource() == exitLabel){
+            panelState = "exit";
+            exitPromptPanel.setVisible(true);
+        }
+        
+        if(e.getSource() == tutorialLabel){
+            this.tutorialPanel.setVisible(true);
+            this.panelState = "tutorial";
+            this.requestFocus();
+        }
+    }
+    
+    public void homePanelMouseEntered(MouseEvent e){
+        if(e.getSource() == startLabel){
+            disableAllLabels();
+            startLabel.setEnabled(true);
+            navigationState = "start";
+        }
+            
+        if(e.getSource() == settingsLabel){
+            disableAllLabels();
+            settingsLabel.setEnabled(true);
+            navigationState = "settings";
+        }
+                
+        if(e.getSource() == creditsLabel){
+            disableAllLabels();
+            creditsLabel.setEnabled(true);
+            navigationState = "credits";
+        }
+                
+        if(e.getSource() == exitLabel){
+            disableAllLabels();
+            exitLabel.setEnabled(true);
+            navigationState = "exit";
+        }  
+        
+        if(e.getSource() == tutorialLabel){
+            this.tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/tutorialIconHover.png")));
+        }
+    }
+    
+    public void homePanelMouseExited(MouseEvent e){
+        if(e.getSource() == startLabel){
+            startLabel.setEnabled(false);
+            navigationState = "none";
+        }
+            
+        if(e.getSource() == settingsLabel){
+            settingsLabel.setEnabled(false);
+            navigationState = "none";
+        }
+            
+        if(e.getSource() == creditsLabel){
+            creditsLabel.setEnabled(false);
+            navigationState = "none";
+        }
+            
+        if(e.getSource() == exitLabel){
+            exitLabel.setEnabled(false);
+            navigationState = "none";
+        }
+        
+        if(e.getSource() == tutorialLabel){
+            this.tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/tutorialIcon.png")));
+        }
+    }
+    
+    // Methods for Button Listener 
+    public void startGamePanelActionPerformed(ActionEvent e){
+        JButton loadButton = this.startGamePanel.getLoadButton();
+        JButton newButton = this.startGamePanel.getNewButton();
+        
+        if(e.getSource() == loadButton){
+            panelState = "loadGame";
+            startGamePanel.setVisible(false);
+            loadGamePanel.setVisible(true);
+            requestFocus();
+        }
+        else if (e.getSource() == newButton){
+            panelState = "newPlayer";
+            startGamePanel.setVisible(false);
+            newPlayerPanel.setVisible(true);
+            requestFocus();
+        }
+    }
+    
+    public void newPlayerPanelActionPerformed(ActionEvent e){
+        JButton createPlayerButton = newPlayerPanel.getCreatePlayerButton();
+        JTextField playerNameField = newPlayerPanel.getPlayerNameField();
+        
+        if (e.getSource() == createPlayerButton){
+            game.setPlayer(new Player(playerNameField.getText(), 0, 3));
+
+            testFrame tf = new testFrame(this.game);
+            tf.setVisible(rootPaneCheckingEnabled);
+            requestFocus();
+        }
+    }
+    
+    public void SettingsPanelActionPerformed(ActionEvent e) {
+        FeatureUnavailablePanel featureUnavalablePanel = this.settingsPanel.getFeaturePanel();
+        JButton confirmButton = featureUnavalablePanel.getConfirmButton();
+        
+        if(e.getSource() == confirmButton){
+            featureUnavalablePanel.setVisible(false);
+            requestFocus();
+        }
+    }
+    
     
     // ---------- Key Listener Class START ---------- //
     class myKeyListener implements KeyListener {
@@ -233,144 +472,22 @@ public class MainFrame extends javax.swing.JFrame {
             // ---- MENU NAVIGATION ----
             // If UP KEY is pressed
             if(e.getKeyCode() == java.awt.event.KeyEvent.VK_UP){
-                
-                // Check the pointer state
-                switch (navigationState) {
-                    case "none":
-                        // Change the state
-                        navigationState = "start";
-                        // Disable Start Label and Enable Exit Label
-                        startLabel.setEnabled(true);
-                        break;
-                        
-                    case "start":
-                        // Change the state
-                        navigationState = "exit";
-                        // Disable Start Label and Enable Exit Label
-                        exitLabel.setEnabled(true);
-                        startLabel.setEnabled(false);
-                        break;
-                        
-                    case "settings":
-                        // Change the state
-                        navigationState = "start";
-                        // Disable Credits Label and Enable Start Label
-                        startLabel.setEnabled(true);
-                        settingsLabel.setEnabled(false);
-                        break;
-                        
-                    case "credits":
-                        // Change the state
-                        navigationState = "settings";
-                        // Disable Credits Label and Enable Start Label
-                        settingsLabel.setEnabled(true);
-                        creditsLabel.setEnabled(false);
-                        break;
-                    case "exit":
-                        // Change the state
-                        navigationState = "credits";
-                        // Disable Credits Label and Enable Start Label
-                        creditsLabel.setEnabled(true);
-                        exitLabel.setEnabled(false);
-                        break;
-                }
+                navigateUpKey();
             }
             
             // If DOWN KEY is pressed
             if(e.getKeyCode() == java.awt.event.KeyEvent.VK_DOWN){
-                switch (navigationState) {
-                    case "none":
-                        navigationState="start";
-                        startLabel.setEnabled(true);
-                        break;
-                
-                    case "start":
-                        // Change the state
-                        navigationState = "settings";
-                        // Disable Start Label and Enable Credits Label
-                        settingsLabel.setEnabled(true);
-                        startLabel.setEnabled(false);
-                        break;
-                    
-                    case "settings":
-                        // Change the state
-                        navigationState = "credits";
-                        // Disable Settings Label and Enable Credits Label
-                        creditsLabel.setEnabled(true);
-                        settingsLabel.setEnabled(false);
-                        break;
-                
-                    case "credits":
-                        // Change the state
-                        navigationState = "exit";
-                        // Disable Start Label and Enable Exit Label
-                        exitLabel.setEnabled(true);
-                        creditsLabel.setEnabled(false);
-                        break;
-                
-                    case "exit":
-                        // Change the state
-                        navigationState = "start";
-                        // Disable Start Label and Enable Exit Label
-                        startLabel.setEnabled(true);
-                        exitLabel.setEnabled(false);     
-                        break;
-                } 
+                navigateDownKey();
             }
             
             // ---- USER CONFIRMATION ACTION ----
             if(e.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER){
-                switch (navigationState) {
-                    case "start":
-                        panelState = "startGame";
-                        startGamePanel.setVisible(true);
-                        break;
-                    case "settings":
-                        panelState = "settings";
-                        settingsPanel.setVisible(true);
-                        // Give focus to SettingsPanel so its action listener works
-                        settingsPanel.requestFocus();
-                        break;
-                    case "credits":
-                        panelState = "credits";
-                        creditsPanel.setVisible(true);
-                        break;
-                    case "exit":
-                        panelState = "exit";
-                        exitPromptPanel.setVisible(true);
-                        break;
-                }
+                enterKeyPressed();
             }
             
             // ---- USER ESCAPE ACTION ----
             if(e.getKeyCode() == java.awt.event.KeyEvent.VK_ESCAPE){
-                System.out.println("ESCAPE");
-                switch (panelState) {
-                    case "tutorial":
-                        panelState = "home";
-                        tutorialPanel.setVisible(false);
-                    case "startGame":
-                        panelState = "home";
-                        startGamePanel.setVisible(false);
-                    case "loadGame":
-                        panelState = "home";
-                        loadGamePanel.setVisible(false);
-                    case "newPlayer":
-                        panelState = "home";
-                        newPlayerPanel.getPlayerNameField().setText("Player");
-                        newPlayerPanel.setVisible(false);
-                    case "settings":
-                        panelState = "home";
-                        settingsPanel.setVisible(false);
-                    case "credits":
-                        panelState = "home";
-                        creditsPanel.setVisible(false);
-                        break;
-                    case "exit":
-                        panelState = "home";
-                        exitPromptPanel.setVisible(false);
-                        break;
-                }
+                escapeKeyPressed();
             }
         }
 
@@ -382,73 +499,20 @@ public class MainFrame extends javax.swing.JFrame {
     
     // ---------- Mouse Listener Class START ---------- //
     class myMouseListener implements MouseListener {
+        @Override
         public void mouseClicked(MouseEvent e) {
-            if(e.getSource() == startLabel && panelState.equalsIgnoreCase("home")){
-               panelState = "startGame";
-               startGamePanel.setVisible(true);
-            }
-               
-            if(e.getSource() == settingsLabel && panelState.equalsIgnoreCase("home")){
-                 panelState = "settings";
-                settingsPanel.setVisible(true);
-            }   
-            if(e.getSource() == creditsLabel && panelState.equalsIgnoreCase("home")){
-                 panelState = "credits";
-                creditsPanel.setVisible(true);
-            }   
-            if(e.getSource() == exitLabel && panelState.equalsIgnoreCase("home")){
-                panelState = "exit";
-                exitPromptPanel.setVisible(true);
-            }
+            if(panelState.equalsIgnoreCase("home"))
+               homePanelMouseClicked(e);
         }
         
+        @Override
         public void mouseEntered(MouseEvent e) {
-            if(e.getSource() == startLabel){
-                disableAllLabels();
-                System.out.println("MOUSE ENTERED START");
-                startLabel.setEnabled(true);
-                navigationState = "start";
-            }
-                
-            if(e.getSource() == settingsLabel){
-                disableAllLabels();
-                settingsLabel.setEnabled(true);
-                navigationState = "settings";
-            }
-                
-            if(e.getSource() == creditsLabel){
-                disableAllLabels();
-                creditsLabel.setEnabled(true);
-                navigationState = "credits";
-            }
-                
-            if(e.getSource() == exitLabel){
-                disableAllLabels();
-                exitLabel.setEnabled(true);
-                navigationState = "exit";
-            }     
+              homePanelMouseEntered(e);
         }
         
+        @Override
         public void mouseExited(MouseEvent e) {
-            if(e.getSource() == startLabel){
-                startLabel.setEnabled(false);
-                navigationState = "none";
-            }
-                
-            if(e.getSource() == settingsLabel){
-                settingsLabel.setEnabled(false);
-                navigationState = "none";
-            }
-                
-            if(e.getSource() == creditsLabel){
-                creditsLabel.setEnabled(false);
-                navigationState = "none";
-            }
-                
-            if(e.getSource() == exitLabel){
-                exitLabel.setEnabled(false);
-                navigationState = "none";
-            }
+            homePanelMouseExited(e);
                 
         }
 
@@ -467,33 +531,11 @@ public class MainFrame extends javax.swing.JFrame {
     
     // ---------- Button Listener Class START ---------- //
     class ButtonListener implements ActionListener{
-
         @Override
         public void actionPerformed(ActionEvent e) {
-            // Start Game Panels Buttons
-            JButton loadButton = startGamePanel.getLoadButton();
-            JButton newButton = startGamePanel.getNewButton();
-            
-            // New Player Panel's Buttons
-            JButton createPlayerButton = newPlayerPanel.getCreatePlayerButton();
-            
-            if(e.getSource() == loadButton){
-                panelState = "loadGame";
-                startGamePanel.setVisible(false);
-                loadGamePanel.setVisible(true);
-                requestFocus();
-            }
-            else if (e.getSource() == newButton){
-                panelState = "newPlayer";
-                startGamePanel.setVisible(false);
-                newPlayerPanel.setVisible(true);
-                requestFocus();
-            }
-            else if (e.getSource() == createPlayerButton){
-                player = new Player(newPlayerPanel.getTextfieldText(), 0, 3);
-                System.out.println(player.toString());
-                requestFocus();
-            }
+            startGamePanelActionPerformed(e);
+            newPlayerPanelActionPerformed(e);
+            SettingsPanelActionPerformed(e);
         }
         
     }

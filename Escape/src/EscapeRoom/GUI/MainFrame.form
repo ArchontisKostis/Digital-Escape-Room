@@ -3,9 +3,12 @@
 <Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="Digital Escape Room"/>
     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
       <Connection code="Toolkit.getDefaultToolkit().&#xa;    createCustomCursor(&#xa;        Toolkit.getDefaultToolkit().getImage(getClass().getResource(&quot;/EscapeRoom/guiAssets/cursor.png&quot;)),&#xa;        new Point(0,0),&quot;custom cursor&quot;&#xa;    )" type="code"/>
     </Property>
+    <Property name="undecorated" type="boolean" value="true"/>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -37,6 +40,9 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="mainPanel">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="// Custom Font Creation&#xa;try{&#xa;    GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();&#xa;    Font dpComicFont = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream(&quot;/EscapeRoom/GUI/dpcomic.ttf&quot;));&#xa;    ge.registerFont(dpComicFont);&#xa;}&#xa;catch(Exception e){&#xa;    e.printStackTrace();&#xa;}"/>
+      </AuxValues>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
         <Property name="useNullLayout" type="boolean" value="false"/>
@@ -74,7 +80,7 @@
         </Component>
         <Component class="EscapeRoom.GUI.SettingsPanel" name="settingsPanel">
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="settingsPanel.setVisible(false);&#xa;settingsPanel.setMainFrame(this);"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="settingsPanel.setVisible(false);&#xa;settingsPanel.setMainFrame(this);&#xa;settingsPanel.getFeaturePanel().addListener(new ButtonListener());"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -88,7 +94,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="-1" height="560"/>
+              <AbsoluteConstraints x="0" y="0" width="-1" height="550"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -118,11 +124,9 @@
               <Image iconType="3" name="/EscapeRoom/guiAssets/tutorialIcon.png"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tutorialLabelMouseClicked"/>
-            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tutorialLabelMouseEntered"/>
-            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tutorialLabelMouseExited"/>
-          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="tutorialLabel.addMouseListener(new myMouseListener());"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
               <AbsoluteConstraints x="160" y="50" width="110" height="110"/>

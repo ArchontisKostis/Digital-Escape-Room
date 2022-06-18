@@ -4,11 +4,13 @@
  */
 package EscapeRoom;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Christos
  */
-public class Player {
+public class Player implements Serializable{
     // Variable Declaration
     private String playerName;
     private int saveLevel;

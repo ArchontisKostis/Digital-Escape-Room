@@ -15,7 +15,7 @@ public abstract class Items {
 
 
 
- public Items(String itemName, int itemId,Image itemImage,Image itemImageHovered){
+ public void Items(String itemName, int itemId,Image itemImage,Image itemImageHovered){
      this.itemName = itemName;
      this.itemId  = itemId;
      this.itemImage = itemImage;

@@ -3,19 +3,58 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package EscapeRoom;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.net.URL;
+import java.util.ArrayList;
 /**
  *
  * @author Christos
  */
 public class Game_Saves implements Serializable{
-    
     private Player aplayer;
     private Room aroom;
     
-    public Game_Saves(Player aplayer,Room aroom){
-        this.aplayer = aplayer;
-        this.aroom = aroom;
+    // Getters
+    public Player getPlayer(){
+        return this.aplayer;
     }
+    
+    public Room getRoom() {
+        return this.aroom;
+    }
+    
+    // Setters
+    public void setPlayer(Player player){
+        this.aplayer = player;
+    }
+    
+    public void setRoom(Room room) {
+        this.aroom = room;
+    }
+    
+    public void saveToFile(String aFileName) throws FileNotFoundException, IOException{
+        // The name of the users save file will be the name of the player and a random number
+        String fileName = this.aplayer.getPlayerName() + "Savegame.txt";
+        String fileUrl = "src\\EscapeRoom\\saves\\" + fileName;
+        
+        File file = new File(fileUrl);
+        
+        FileOutputStream fileOutStream = new FileOutputStream(file);
+        ObjectOutputStream objOutStream = new ObjectOutputStream(fileOutStream);
+        
+        try{
+            objOutStream.writeObject(this.aplayer);
+        } catch (Exception e){
+            e.printStackTrace();
+        } finally {
+            objOutStream.close();
+        }
+    }
+    
     
 }
