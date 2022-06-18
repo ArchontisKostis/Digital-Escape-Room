@@ -8,6 +8,9 @@ import EscapeRoom.Game;
 import EscapeRoom.Game_Saves;
 import EscapeRoom.Player;
 import java.awt.Cursor;
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.awt.GraphicsEnvironment;
 import java.awt.Image;
 import java.awt.Point;
 import java.awt.Toolkit;
@@ -17,7 +20,11 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -59,6 +66,15 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        // Custom Font Creation
+        try{
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            Font dpComicFont = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/EscapeRoom/GUI/dpcomic.ttf"));
+            ge.registerFont(dpComicFont);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
         mainPanel = new javax.swing.JPanel();
         tutorialPanel = new EscapeRoom.GUI.TutorialPanel();
         newPlayerPanel = new EscapeRoom.GUI.newPlayerPanel();
@@ -81,7 +97,6 @@ public class MainFrame extends javax.swing.JFrame {
                 new Point(0,0),"custom cursor"
             ));
             setUndecorated(true);
-            setPreferredSize(new java.awt.Dimension(1000, 556));
             setResizable(false);
 
             mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -419,7 +434,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         if (e.getSource() == createPlayerButton){
             game.setPlayer(new Player(playerNameField.getText(), 0, 3));
-            System.out.println(game);
+
             testFrame tf = new testFrame(this.game);
             tf.setVisible(rootPaneCheckingEnabled);
             requestFocus();

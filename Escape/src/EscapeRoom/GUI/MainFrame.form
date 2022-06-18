@@ -7,9 +7,6 @@
       <Connection code="Toolkit.getDefaultToolkit().&#xa;    createCustomCursor(&#xa;        Toolkit.getDefaultToolkit().getImage(getClass().getResource(&quot;/EscapeRoom/guiAssets/cursor.png&quot;)),&#xa;        new Point(0,0),&quot;custom cursor&quot;&#xa;    )" type="code"/>
     </Property>
     <Property name="undecorated" type="boolean" value="true"/>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[1000, 556]"/>
-    </Property>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
@@ -42,6 +39,9 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="mainPanel">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="// Custom Font Creation&#xa;try{&#xa;    GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();&#xa;    Font dpComicFont = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream(&quot;/EscapeRoom/GUI/dpcomic.ttf&quot;));&#xa;    ge.registerFont(dpComicFont);&#xa;}&#xa;catch(Exception e){&#xa;    e.printStackTrace();&#xa;}"/>
+      </AuxValues>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
         <Property name="useNullLayout" type="boolean" value="false"/>
