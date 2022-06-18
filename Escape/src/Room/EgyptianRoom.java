@@ -26,15 +26,33 @@ public class EgyptianRoom extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        rock = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        torch = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        plant1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(41, 26, 5));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        rock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/rock_1.png"))); // NOI18N
+        add(rock, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, -1, -1));
+
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/gate_a.png"))); // NOI18N
         jLabel3.setText("jLabel3");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, 280, 390));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 280, 390));
+
+        torch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/lampa.png"))); // NOI18N
+        add(torch, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 340, 50, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/glastra2.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 400, 110, -1));
+
+        plant1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/glastra1.png"))); // NOI18N
+        plant1.setText("jLabel4");
+        add(plant1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 440, 140, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/background1_.png"))); // NOI18N
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, -1));
@@ -43,6 +61,10 @@ public class EgyptianRoom extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel plant1;
+    private javax.swing.JLabel rock;
+    private javax.swing.JLabel torch;
     // End of variables declaration//GEN-END:variables
 }
