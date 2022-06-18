@@ -9,6 +9,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.net.URL;
 /**
  *
  * @author Christos
@@ -36,7 +37,10 @@ public class Game_Saves implements Serializable{
     }
     
     public void saveToFile(String aFileName) throws FileNotFoundException, IOException{
-        File file = new File("savegames.txt");
+        String fileName = this.aplayer.getPlayerName() + "Savegame.txt";
+        String fileUrl = "/EscapeRoom/saves/" + fileName;
+        
+        File file = new File(fileUrl);
         
         FileOutputStream fileOutStream = new FileOutputStream(file);
         ObjectOutputStream objOutStream = new ObjectOutputStream(fileOutStream);
