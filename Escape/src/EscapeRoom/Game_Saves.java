@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.net.URL;
+import java.util.ArrayList;
 /**
  *
  * @author Christos
@@ -37,6 +38,7 @@ public class Game_Saves implements Serializable{
     }
     
     public void saveToFile(String aFileName) throws FileNotFoundException, IOException{
+        // The name of the users save file will be the name of the player and a random number
         String fileName = this.aplayer.getPlayerName() + "Savegame.txt";
         String fileUrl = "src\\EscapeRoom\\saves\\" + fileName;
         

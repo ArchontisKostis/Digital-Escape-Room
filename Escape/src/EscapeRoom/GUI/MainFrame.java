@@ -321,6 +321,7 @@ public class MainFrame extends javax.swing.JFrame {
             case "settings":
                 panelState = "home";
                 settingsPanel.setVisible(false);
+                settingsPanel.getFeaturePanel().setVisible(false);
             case "credits":
                 panelState = "home";
                 creditsPanel.setVisible(false);
