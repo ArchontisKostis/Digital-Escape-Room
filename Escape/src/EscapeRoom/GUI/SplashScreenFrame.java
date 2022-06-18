@@ -4,6 +4,8 @@
  */
 package EscapeRoom.GUI;
 
+import java.awt.Toolkit;
+
 /**
  *
  * @author Archontis
@@ -15,6 +17,7 @@ public class SplashScreenFrame extends javax.swing.JFrame {
      */
     public SplashScreenFrame() {
         initComponents();
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/icon.png")));
     }
 
     /**

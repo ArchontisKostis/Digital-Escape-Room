@@ -51,6 +51,9 @@ public class MainFrame extends javax.swing.JFrame {
         // Create the Room List
         this.game.fillRoomList();
         
+        // Set App Icon
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/icon.png")));
+        
         this.addKeyListener(new myKeyListener());
     }
     
@@ -92,6 +95,7 @@ public class MainFrame extends javax.swing.JFrame {
         bgImage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Digital Escape Room");
         setCursor(Toolkit.getDefaultToolkit().
             createCustomCursor(
                 Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/cursor.png")),
