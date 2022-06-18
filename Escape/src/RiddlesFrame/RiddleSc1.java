@@ -218,11 +218,11 @@ public class RiddleSc1 extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 60, 270, 170));
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 153));
+        jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 102, 102));
+        jButton1.setForeground(new java.awt.Color(0, 153, 153));
         jButton1.setText("OK");
-        jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(0, 102, 102)));
+        jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/ScFrame.jpg")))); // NOI18N
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 240, 70, 30));
     }// </editor-fold>//GEN-END:initComponents
 

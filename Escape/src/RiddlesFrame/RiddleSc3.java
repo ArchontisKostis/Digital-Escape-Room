@@ -51,10 +51,11 @@ public class RiddleSc3 extends javax.swing.JPanel {
         jButton15 = new javax.swing.JButton();
         Message1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        Message0 = new javax.swing.JLabel();
         jButton16 = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea4 = new javax.swing.JTextArea();
+        jLabel3 = new javax.swing.JLabel();
+        speechBubble = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 204, 163));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -180,8 +181,8 @@ public class RiddleSc3 extends javax.swing.JPanel {
 
         Message2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Message2.setForeground(new java.awt.Color(0, 51, 51));
-        Message2.setText("είσαι ελεύθερος");
-        add(Message2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 440, -1, -1));
+        Message2.setText("είσαι ελεύθερος!");
+        add(Message2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 460, -1, -1));
 
         jButton13.setBackground(new java.awt.Color(0, 153, 153));
         jButton13.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
@@ -212,16 +213,12 @@ public class RiddleSc3 extends javax.swing.JPanel {
         Message1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Message1.setForeground(new java.awt.Color(0, 51, 51));
         Message1.setText("ερωτήσεις μου και");
-        add(Message1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 420, -1, -1));
+        add(Message1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 440, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 51, 51));
         jLabel2.setText("Απάντησε τις τελυταίες");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 400, -1, -1));
-
-        Message0.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/bubble.png"))); // NOI18N
-        Message0.setText("jLabel2");
-        add(Message0, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 370, 340, 200));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 420, -1, -1));
 
         jButton16.setBackground(new java.awt.Color(0, 153, 153));
         jButton16.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
@@ -244,6 +241,10 @@ public class RiddleSc3 extends javax.swing.JPanel {
         jScrollPane4.setViewportView(jTextArea4);
 
         add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 430, 170));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 510, -1, -1));
+
+        speechBubble.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/bubble.png"))); // NOI18N
+        add(speechBubble, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 390, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
@@ -256,7 +257,6 @@ public class RiddleSc3 extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Message0;
     private javax.swing.JLabel Message1;
     private javax.swing.JLabel Message2;
     private javax.swing.JButton jButton1;
@@ -277,6 +277,7 @@ public class RiddleSc3 extends javax.swing.JPanel {
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -285,5 +286,6 @@ public class RiddleSc3 extends javax.swing.JPanel {
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
+    private javax.swing.JLabel speechBubble;
     // End of variables declaration//GEN-END:variables
 }
