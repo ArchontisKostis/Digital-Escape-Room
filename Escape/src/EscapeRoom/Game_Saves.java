@@ -38,7 +38,7 @@ public class Game_Saves implements Serializable{
     
     public void saveToFile(String aFileName) throws FileNotFoundException, IOException{
         String fileName = this.aplayer.getPlayerName() + "Savegame.txt";
-        String fileUrl = "/EscapeRoom/saves/" + fileName;
+        String fileUrl = "src\\EscapeRoom\\saves\\" + fileName;
         
         File file = new File(fileUrl);
         
