@@ -107,7 +107,7 @@ public class Data {
     
     //2 ID:0022
     private String[] wordsEg1 = new String[]{"Apophis","Seth","Sekhmet"};
-    private Question question2 = new Question("«Ποιος είναι ο θεός του χάους και της καταστροφής;»",3,wordsEg1,3);
+    private Question question2 = new Question("Ποιός είναι ο θεός του χάους και της καταστροφής;",3,wordsEg1,3);
 
     public Question getQuestion2() {
         return question2;
