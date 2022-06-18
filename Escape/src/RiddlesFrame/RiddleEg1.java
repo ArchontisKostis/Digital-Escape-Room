@@ -8,6 +8,7 @@ package RiddlesFrame;
  *
  * @author 30694
  */
+import EscapeRoom.*;
 public class RiddleEg1 extends javax.swing.JPanel {
 
     /**
@@ -28,6 +29,7 @@ public class RiddleEg1 extends javax.swing.JPanel {
 
         storryteller = new javax.swing.JLabel();
         photo4 = new javax.swing.JLabel();
+        Data data = new Data();
         photo1 = new javax.swing.JLabel();
         photo3 = new javax.swing.JLabel();
         photo2 = new javax.swing.JLabel();
@@ -57,36 +59,31 @@ public class RiddleEg1 extends javax.swing.JPanel {
         storryteller.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
         add(storryteller, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 10, 200, 240));
 
-        photo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol1.png"))); // NOI18N
-        photo4.setText("symbol1");
+        photo4.setIcon(data.getImageTextEg().getImages().get(0));
         photo4.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
         photo4.setMaximumSize(new java.awt.Dimension(125, 125));
         photo4.setMinimumSize(new java.awt.Dimension(125, 125));
         add(photo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 350, 80, 125));
 
-        photo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol2.png"))); // NOI18N
-        photo1.setText("symbol2");
+        photo1.setIcon(data.getImageTextEg().getImages().get(1));
         photo1.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
         photo1.setMaximumSize(new java.awt.Dimension(209, 125));
         photo1.setMinimumSize(new java.awt.Dimension(209, 125));
         photo1.setPreferredSize(new java.awt.Dimension(209, 125));
         add(photo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 160, 125));
 
-        photo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol3.png"))); // NOI18N
-        photo3.setText("symbol3");
+        photo3.setIcon(data.getImageTextEg().getImages().get(2));
         photo3.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
         photo3.setMaximumSize(new java.awt.Dimension(201, 125));
         photo3.setMinimumSize(new java.awt.Dimension(201, 125));
         photo3.setPreferredSize(new java.awt.Dimension(201, 125));
         add(photo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 150, 125));
 
-        photo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol4.png"))); // NOI18N
-        photo2.setText("symbol4");
+        photo2.setIcon(data.getImageTextEg().getImages().get(3));
         photo2.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
         add(photo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 130, 125));
 
-        photo5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol5.png"))); // NOI18N
-        photo5.setText("symbol5");
+        photo5.setIcon(data.getImageTextEg().getImages().get(4));
         photo5.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
         add(photo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 350, 140, 125));
 
@@ -122,7 +119,7 @@ public class RiddleEg1 extends javax.swing.JPanel {
 
         Q1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         Q1.setForeground(new java.awt.Color(151, 114, 0));
-        Q1.setText("Σύμβολο ζωής");
+        Q1.setText(data.getImageTextEg().getText().get(0));
         Q1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
         add(Q1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 520, -1, -1));
 
@@ -134,7 +131,7 @@ public class RiddleEg1 extends javax.swing.JPanel {
 
         Q2.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         Q2.setForeground(new java.awt.Color(151, 114, 0));
-        Q2.setText("Σύβολο προστασίας");
+        Q2.setText(data.getImageTextEg().getText().get(1));
         Q2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
         add(Q2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 570, -1, -1));
 
@@ -146,7 +143,7 @@ public class RiddleEg1 extends javax.swing.JPanel {
 
         Q3.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         Q3.setForeground(new java.awt.Color(151, 114, 0));
-        Q3.setText("Σύμβολο βασιλείας");
+        Q3.setText(data.getImageTextEg().getText().get(2));
         Q3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
         add(Q3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 550, -1, -1));
 
@@ -158,7 +155,7 @@ public class RiddleEg1 extends javax.swing.JPanel {
 
         Q4.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         Q4.setForeground(new java.awt.Color(151, 114, 0));
-        Q4.setText("Σύμβολο μεταμόρφωσης");
+        Q4.setText(data.getImageTextEg().getText().get(3));
         Q4.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
         add(Q4, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 520, -1, -1));
 
@@ -170,7 +167,7 @@ public class RiddleEg1 extends javax.swing.JPanel {
 
         Q5.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         Q5.setForeground(new java.awt.Color(151, 114, 0));
-        Q5.setText("Σύμβολο του ήλιου");
+        Q5.setText(data.getImageTextEg().getText().get(4));
         Q5.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
         add(Q5, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 570, -1, -1));
 
