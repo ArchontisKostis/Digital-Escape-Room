@@ -11,6 +11,7 @@ package EscapeRoom;
 import java.util.ArrayList;
 import java.awt.*;
 import javax.swing.ImageIcon;
+
 public class Data {
     
     private int riddleId;

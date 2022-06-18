@@ -48,9 +48,10 @@
     </Component>
     <Component class="javax.swing.JLabel" name="photo4">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="data.getImageTextEg().getImages().get(0)" type="code"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/ImagesR/symbol1.png"/>
         </Property>
+        <Property name="text" type="java.lang.String" value="symbol1"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
             <MatteColorBorder bottom="5" left="5" right="5" top="5">
@@ -73,9 +74,10 @@
     </Component>
     <Component class="javax.swing.JLabel" name="photo1">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="data.getImageTextEg().getImages().get(1)" type="code"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/ImagesR/symbol2.png"/>
         </Property>
+        <Property name="text" type="java.lang.String" value="symbol2"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
             <MatteColorBorder bottom="5" left="5" right="5" top="5">
@@ -93,9 +95,6 @@
           <Dimension value="[209, 125]"/>
         </Property>
       </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="Data data = new Data();"/>
-      </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="20" y="350" width="160" height="125"/>
@@ -104,9 +103,10 @@
     </Component>
     <Component class="javax.swing.JLabel" name="photo3">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="data.getImageTextEg().getImages().get(2)" type="code"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/ImagesR/symbol3.png"/>
         </Property>
+        <Property name="text" type="java.lang.String" value="symbol3"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
             <MatteColorBorder bottom="5" left="5" right="5" top="5">
@@ -132,9 +132,10 @@
     </Component>
     <Component class="javax.swing.JLabel" name="photo2">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="data.getImageTextEg().getImages().get(3)" type="code"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/ImagesR/symbol4.png"/>
         </Property>
+        <Property name="text" type="java.lang.String" value="symbol4"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
             <MatteColorBorder bottom="5" left="5" right="5" top="5">
@@ -151,9 +152,10 @@
     </Component>
     <Component class="javax.swing.JLabel" name="photo5">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="data.getImageTextEg().getImages().get(4)" type="code"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/ImagesR/symbol5.png"/>
         </Property>
+        <Property name="text" type="java.lang.String" value="symbol5"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
             <MatteColorBorder bottom="5" left="5" right="5" top="5">
@@ -291,9 +293,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="72" red="97" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="data.getImageTextEg().getText().get(0)" type="code"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="&#x3a3;&#x3cd;&#x3bc;&#x3b2;&#x3bf;&#x3bb;&#x3bf; &#x3b6;&#x3c9;&#x3ae;&#x3c2;"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.MatteIconBorderInfo">
             <MatteIconBorder bottom="2" left="2" right="2" top="2">
@@ -351,9 +351,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="72" red="97" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="data.getImageTextEg().getText().get(1)" type="code"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="&#x3a3;&#x3cd;&#x3b2;&#x3bf;&#x3bb;&#x3bf; &#x3c0;&#x3c1;&#x3bf;&#x3c3;&#x3c4;&#x3b1;&#x3c3;&#x3af;&#x3b1;&#x3c2;"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.MatteIconBorderInfo">
             <MatteIconBorder bottom="2" left="2" right="2" top="2">
@@ -411,9 +409,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="72" red="97" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="data.getImageTextEg().getText().get(2)" type="code"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="&#x3a3;&#x3cd;&#x3bc;&#x3b2;&#x3bf;&#x3bb;&#x3bf; &#x3b2;&#x3b1;&#x3c3;&#x3b9;&#x3bb;&#x3b5;&#x3af;&#x3b1;&#x3c2;"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.MatteIconBorderInfo">
             <MatteIconBorder bottom="2" left="2" right="2" top="2">
@@ -471,9 +467,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="72" red="97" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="data.getImageTextEg().getText().get(3)" type="code"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="&#x3a3;&#x3cd;&#x3bc;&#x3b2;&#x3bf;&#x3bb;&#x3bf; &#x3bc;&#x3b5;&#x3c4;&#x3b1;&#x3bc;&#x3cc;&#x3c1;&#x3c6;&#x3c9;&#x3c3;&#x3b7;&#x3c2;"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.MatteIconBorderInfo">
             <MatteIconBorder bottom="2" left="2" right="2" top="2">
@@ -531,9 +525,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="72" red="97" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="data.getImageTextEg().getText().get(4)" type="code"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="&#x3a3;&#x3cd;&#x3bc;&#x3b2;&#x3bf;&#x3bb;&#x3bf; &#x3c4;&#x3bf;&#x3c5; &#x3ae;&#x3bb;&#x3b9;&#x3bf;&#x3c5;"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.MatteIconBorderInfo">
             <MatteIconBorder bottom="2" left="2" right="2" top="2">
