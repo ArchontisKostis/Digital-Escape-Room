@@ -8,6 +8,7 @@ package RiddlesFrame;
  *
  * @author 30694
  */
+import EscapeRoom.*;
 public class RiddleGr4 extends javax.swing.JPanel {
 
     /**
@@ -43,10 +44,10 @@ public class RiddleGr4 extends javax.swing.JPanel {
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
-        ans = new javax.swing.JTextField();
-        confirm = new javax.swing.JButton();
+        answear = new javax.swing.JTextField();
+        ready = new javax.swing.JButton();
         question = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        storryteller = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 204, 153));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -54,7 +55,7 @@ public class RiddleGr4 extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Arial Narrow", 3, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(153, 51, 0));
         jLabel2.setText("Ο Μύθος της Καλλιστώς");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 230, 190, 20));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 229, 190, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(153, 51, 0));
@@ -64,47 +65,47 @@ public class RiddleGr4 extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Arial Narrow", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(153, 51, 0));
         jLabel3.setText("Ο Δίας ερωτεύεται την πα");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, -1, 20));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 273, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(153, 51, 0));
         jLabel5.setText(" ν");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, 10, 20));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 273, 10, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial Narrow", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(153, 51, 0));
         jLabel6.setText("έμορφη Καλλιστώ, κόρη του βασιλιά της Αρκαδίας Λυκάονα, και αποκτά μαζί της έναν");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 450, 20));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 273, 450, -1));
 
         jLabel7.setFont(new java.awt.Font("Arial Narrow", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(153, 51, 0));
         jLabel7.setText("γιο, τον Αρκάδα. Θυμ");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 110, 20));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 293, 110, -1));
 
         jLabel8.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(153, 51, 0));
         jLabel8.setText("ω");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, 10, 20));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 293, 10, -1));
 
         jLabel9.setFont(new java.awt.Font("Arial Narrow", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(153, 51, 0));
         jLabel9.setText("μένη η Ήρα τη μεταμορφώνει σε αρκούδα, την οποία μετά από χρόνια συναντά ο γιός");
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 440, 20));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 293, 440, -1));
 
         jLabel10.setFont(new java.awt.Font("Arial Narrow", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(153, 51, 0));
         jLabel10.setText("της στο δάσος. Προσπαθεί εκείνη να τον αγκαλιάσει και τρομαγμένος  ο  Α");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 390, 20));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 313, 390, -1));
 
         jLabel11.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(153, 51, 0));
         jLabel11.setText(" ρ");
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, 10, 20));
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 313, 10, -1));
 
         jLabel12.setFont(new java.awt.Font("Arial Narrow", 0, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(153, 51, 0));
         jLabel12.setText("κάδας ετοιμάζεται να τη σκοτώσει.");
-        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 200, 20));
+        add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 313, 200, -1));
         add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, -1, -1));
 
         jLabel15.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
@@ -115,58 +116,69 @@ public class RiddleGr4 extends javax.swing.JPanel {
         jLabel14.setFont(new java.awt.Font("Arial Narrow", 0, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(153, 51, 0));
         jLabel14.setText("  Επεμβαίνει  ο  Δ");
-        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, 90, 20));
+        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 333, 90, -1));
 
         jLabel16.setFont(new java.awt.Font("Arial Narrow", 0, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(153, 51, 0));
         jLabel16.setText(" ας και την καταστερίζει -την ανεβάζει στον ουρανό- ως τον αστερισμό της Μεγάλης Άρκτου, καθώς");
-        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 530, 20));
+        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 333, 530, -1));
 
         jLabel17.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(153, 51, 0));
         jLabel17.setText("ί");
-        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 10, 20));
+        add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 333, 10, -1));
 
         jLabel18.setFont(new java.awt.Font("Arial Narrow", 0, 14)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(153, 51, 0));
         jLabel18.setText("επίσης και τον γιό της να την ακολουθεί ως Μικρή Άρκτος.");
-        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, 310, 20));
+        add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 353, 310, -1));
 
-        ans.setBackground(new java.awt.Color(255, 204, 153));
-        ans.setForeground(new java.awt.Color(102, 0, 0));
-        ans.setText(" ...Type here...");
-        ans.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
-        ans.addActionListener(new java.awt.event.ActionListener() {
+        answear.setBackground(new java.awt.Color(255, 204, 153));
+        answear.setForeground(new java.awt.Color(102, 0, 0));
+        answear.setText(" ...Type here...");
+        answear.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        answear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ansActionPerformed(evt);
+                answearActionPerformed(evt);
             }
         });
-        add(ans, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 170, 40));
+        add(answear, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 420, 170, 30));
 
-        confirm.setBackground(new java.awt.Color(102, 0, 0));
-        confirm.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        confirm.setForeground(new java.awt.Color(255, 204, 153));
-        confirm.setText("OK");
-        add(confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 460, -1, -1));
+        ready.setBackground(new java.awt.Color(102, 0, 0));
+        ready.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        ready.setForeground(new java.awt.Color(255, 204, 153));
+        ready.setText("OK");
+        ready.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                readyMouseClicked(evt);
+            }
+        });
+        add(ready, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 460, -1, -1));
 
         question.setFont(new java.awt.Font("Arial Narrow", 1, 14)); // NOI18N
         question.setForeground(new java.awt.Color(153, 51, 0));
         question.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/riddleGr4_woBack_1.png"))); // NOI18N
-        add(question, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 870, 500));
+        add(question, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 180, 870, 470));
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller1-removebg.png"))); // NOI18N
-        jLabel19.setText("jLabel19");
-        add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 0, 210, -1));
+        storryteller.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller1.png"))); // NOI18N
+        storryteller.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        add(storryteller, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 0, 220, 240));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ansActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ansActionPerformed
+    private void answearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_answearActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ansActionPerformed
+    }//GEN-LAST:event_answearActionPerformed
+    
+    private Riddles riddleGr4 = new Riddles(0014);
+    private void readyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_readyMouseClicked
+        String ans;
+        ans = answear.getSelectedText();
+        riddleGr4.type_the_answear(ans);
+    }//GEN-LAST:event_readyMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField ans;
-    private javax.swing.JButton confirm;
+    private javax.swing.JTextField answear;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -176,7 +188,6 @@ public class RiddleGr4 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -186,5 +197,7 @@ public class RiddleGr4 extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel question;
+    private javax.swing.JButton ready;
+    private javax.swing.JLabel storryteller;
     // End of variables declaration//GEN-END:variables
 }

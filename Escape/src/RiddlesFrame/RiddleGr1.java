@@ -229,7 +229,7 @@ public class RiddleGr1 extends javax.swing.JPanel {
  
     private int[] orderOfpics = new int[12];
     private Riddles riddleGr1 = new Riddles(0011);
-    private boolean solved;
+    
     
     private void ans3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ans3ActionPerformed
         // TODO add your handling code here:
@@ -260,6 +260,7 @@ public class RiddleGr1 extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        boolean solved;
         orderOfpics[0] = ans1.getSelectedIndex();
         orderOfpics[0] = ans2.getSelectedIndex();
         orderOfpics[0] = ans3.getSelectedIndex();

@@ -302,8 +302,10 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="99" type="rgb"/>
             </Property>
-            <Property name="rows" type="int" value="3"/>
-            <Property name="text" type="java.lang.String" value="  &#xa;    &#x3a0;&#x3c1;&#x3bf;&#x3bc;&#x3b7;&#x3b8;&#x3ad;&#x3b1;&#x3c2;&#xa;    &#x3a3;&#x3af;&#x3c3;&#x3c5;&#x3c6;&#x3bf;&#x3c2;&#xa;    &#x386;&#x3c4;&#x3bb;&#x3b1;&#x3c2;"/>
+            <Property name="rows" type="int" value="3" postCode="Data data1 = new Data();"/>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="&quot;  \n    &quot; + data1.getImageTextGr().getText().get(1) + &quot;\n    &quot; + data1.getImageTextGr().getText().get(2) + &quot;\n    &quot; + data1.getImageTextGr().getText().get(3)" type="code"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.MatteIconBorderInfo">
                 <MatteIconBorder bottom="5" left="5" right="5" top="5">

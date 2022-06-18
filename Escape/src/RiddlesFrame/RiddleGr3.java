@@ -8,6 +8,7 @@ package RiddlesFrame;
  *
  * @author 30694
  */
+import EscapeRoom.*;
 public class RiddleGr3 extends javax.swing.JPanel {
 
     /**
@@ -28,7 +29,7 @@ public class RiddleGr3 extends javax.swing.JPanel {
 
         jLabel2 = new javax.swing.JLabel();
         storryteller = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        Qpanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         question = new javax.swing.JTextArea();
         choice4 = new javax.swing.JButton();
@@ -45,69 +46,93 @@ public class RiddleGr3 extends javax.swing.JPanel {
         storryteller.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller1.png"))); // NOI18N
         storryteller.setText("jLabel1");
         storryteller.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
-        add(storryteller, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 20, 210, 250));
+        add(storryteller, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 20, 200, 240));
 
-        jPanel1.setBackground(new java.awt.Color(204, 153, 0));
-        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Qpanel.setBackground(new java.awt.Color(204, 153, 0));
+        Qpanel.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        Qpanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         question.setBackground(new java.awt.Color(255, 204, 153));
         question.setColumns(20);
         question.setForeground(new java.awt.Color(0, 0, 0));
         question.setRows(5);
-        question.setText("\"Κάποτε ήμουν ένα όμορφο κορίτσι.\n  Έκανα το λάθος να εξοργίσω την Αθηνά και τώρα είμαι ένα άσχημο τέρας. \n  Ποια είμαι;\"");
+        Data data = new Data();
+        question.setText(data.getQuestion1().getQuestion());
         question.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
         jScrollPane1.setViewportView(question);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 430, -1));
+        Qpanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 430, -1));
 
         choice4.setBackground(new java.awt.Color(255, 204, 153));
         choice4.setForeground(new java.awt.Color(0, 0, 0));
-        choice4.setText("Αίγινα");
+        choice4.setText(data.getQuestion1().getAnswear().get(4));
         choice4.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        choice4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                choice4MouseClicked(evt);
+            }
+        });
         choice4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 choice4ActionPerformed(evt);
             }
         });
-        jPanel1.add(choice4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 130, 40));
+        Qpanel.add(choice4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 130, 40));
 
         choice1.setBackground(new java.awt.Color(255, 204, 153));
         choice1.setForeground(new java.awt.Color(0, 0, 0));
-        choice1.setText("Πανδώρα");
+        choice1.setText(data.getQuestion1().getAnswear().get(1));
         choice1.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        choice1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                choice1MouseClicked(evt);
+            }
+        });
         choice1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 choice1ActionPerformed(evt);
             }
         });
-        jPanel1.add(choice1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 130, 40));
+        Qpanel.add(choice1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 130, 40));
 
         choice2.setBackground(new java.awt.Color(255, 204, 153));
         choice2.setForeground(new java.awt.Color(0, 0, 0));
-        choice2.setText("Δήμητρα");
+        Data data2 = new Data();
+        choice2.setText(data2.getQuestion1().getAnswear().get(2));
         choice2.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        choice2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                choice2MouseClicked(evt);
+            }
+        });
         choice2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 choice2ActionPerformed(evt);
             }
         });
-        jPanel1.add(choice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 130, 40));
+        Qpanel.add(choice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 130, 40));
 
         choice3.setBackground(new java.awt.Color(255, 204, 153));
         choice3.setForeground(new java.awt.Color(0, 0, 0));
-        choice3.setText("Μέδουσα");
+        choice3.setText(data.getQuestion1().getAnswear().get(3));
         choice3.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
+        choice3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                choice3MouseClicked(evt);
+            }
+        });
         choice3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 choice3ActionPerformed(evt);
             }
         });
-        jPanel1.add(choice3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 130, 40));
+        Qpanel.add(choice3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 130, 40));
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 590, 320));
+        add(Qpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 300, 590, 320));
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    private Riddles riddleGr3 = new Riddles(0013);
+    
     private void choice4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_choice4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_choice4ActionPerformed
@@ -124,14 +149,33 @@ public class RiddleGr3 extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_choice3ActionPerformed
 
+    private void choice1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_choice1MouseClicked
+       boolean solved;
+       solved = riddleGr3.multiple_choice(1, 0, 0, 0);
+    }//GEN-LAST:event_choice1MouseClicked
+
+    private void choice2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_choice2MouseClicked
+       boolean solved;
+       solved = riddleGr3.multiple_choice(2, 0, 0, 0);    }//GEN-LAST:event_choice2MouseClicked
+
+    private void choice3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_choice3MouseClicked
+       boolean solved;
+       solved = riddleGr3.multiple_choice(3, 0, 0, 0);
+    }//GEN-LAST:event_choice3MouseClicked
+
+    private void choice4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_choice4MouseClicked
+       boolean solved;
+       solved = riddleGr3.multiple_choice(4, 0, 0, 0);
+    }//GEN-LAST:event_choice4MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Qpanel;
     private javax.swing.JButton choice1;
     private javax.swing.JButton choice2;
     private javax.swing.JButton choice3;
     private javax.swing.JButton choice4;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea question;
     private javax.swing.JLabel storryteller;

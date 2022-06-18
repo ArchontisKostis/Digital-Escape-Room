@@ -110,7 +110,8 @@ public class RiddleGr2 extends javax.swing.JPanel {
         QuestionBox.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         QuestionBox.setForeground(new java.awt.Color(153, 0, 0));
         QuestionBox.setRows(3);
-        QuestionBox.setText("  \n    Προμηθέας\n    Σίσυφος\n    Άτλας");
+        Data data1 = new Data();
+        QuestionBox.setText("  \n    " + data1.getImageTextGr().getText().get(1) + "\n    " + data1.getImageTextGr().getText().get(2) + "\n    " + data1.getImageTextGr().getText().get(3));
         QuestionBox.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/woodFrame.jpg")))); // NOI18N
         jScrollPane1.setViewportView(QuestionBox);
 
@@ -128,9 +129,16 @@ public class RiddleGr2 extends javax.swing.JPanel {
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 280, 110, 30));
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    private int[] match = new int[3];
+    private Riddles riddleGr2 = new Riddles(0022);
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        boolean solved;
+        match[0]=ans1.getSelectedIndex();
+        match[1]=ans2.getSelectedIndex();
+        match[3]=ans3.getSelectedIndex();
         
+        solved = riddleGr2.pictures_in_order(match);
     }//GEN-LAST:event_jButton1MouseClicked
 
 
