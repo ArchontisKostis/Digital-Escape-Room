@@ -8,6 +8,7 @@ package RiddlesFrame;
  *
  * @author 30694
  */
+import EscapeRoom.*;
 public class RiddleEg2 extends javax.swing.JPanel {
 
     /**
@@ -27,6 +28,7 @@ public class RiddleEg2 extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        Data data = new Data();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -42,13 +44,13 @@ public class RiddleEg2 extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 153, 0));
-        jLabel1.setText("«Ποιος είναι ο θεός του χάους και της καταστροφής;»");
+        jLabel1.setText(data.getQuestion2().getQuestion());
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, 20));
 
         jButton1.setBackground(new java.awt.Color(255, 255, 153));
         jButton1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(204, 153, 0));
-        jButton1.setText("Sekhmet");
+        jButton1.setText(data.getQuestion2().getAnswear().get(2));
         jButton1.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,14 +62,14 @@ public class RiddleEg2 extends javax.swing.JPanel {
         jButton2.setBackground(new java.awt.Color(255, 255, 153));
         jButton2.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(204, 153, 0));
-        jButton2.setText("Apophis");
+        jButton2.setText(data.getQuestion2().getAnswear().get(0));
         jButton2.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 80, -1));
 
         jButton3.setBackground(new java.awt.Color(255, 255, 153));
         jButton3.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(204, 153, 0));
-        jButton3.setText("Seth");
+        jButton3.setText(data.getQuestion2().getAnswear().get(1));
         jButton3.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 80, -1));
 
