@@ -26,7 +26,7 @@ public class EgyptianRoom extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        rock = new javax.swing.JLabel();
+        trigger1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         torch = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -36,8 +36,8 @@ public class EgyptianRoom extends javax.swing.JPanel {
         setBackground(new java.awt.Color(41, 26, 5));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        rock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/rock_1.png"))); // NOI18N
-        add(rock, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, -1, -1));
+        trigger1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/rock_1.png"))); // NOI18N
+        add(trigger1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/gate_a.png"))); // NOI18N
         jLabel3.setText("jLabel3");
@@ -64,7 +64,7 @@ public class EgyptianRoom extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel plant1;
-    private javax.swing.JLabel rock;
     private javax.swing.JLabel torch;
+    private javax.swing.JLabel trigger1;
     // End of variables declaration//GEN-END:variables
 }
