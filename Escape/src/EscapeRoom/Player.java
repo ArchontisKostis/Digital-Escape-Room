@@ -1,23 +1,20 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package EscapeRoom;
 
-import java.io.Serializable;
 
-/**
- *
- * @author Christos
+
+/*
+@author Christos
  */
-public class Player implements Serializable{
+public class Player{
     // Variable Declaration
     private String playerName;
     private int saveLevel;
     private int lives;
     private String message;
-    
-  
+
+    private Storyteller aStoryteller;
+
     
     // Constructor
     public Player(String Name, int saveLevel, int lives){
@@ -39,7 +36,7 @@ public class Player implements Serializable{
     public int getSaveLevel(){
         return saveLevel;
     }
-      
+
     public void setSaveLevel(int level){
         this.saveLevel = level;
     }
@@ -48,12 +45,10 @@ public class Player implements Serializable{
     public int getLives(){
         return lives;
     }
-      
+
     public void setLives(int livesNum){
         this.lives = livesNum;
     }
-    
-    
 
     /*
     ΤΟ DO:
@@ -65,5 +60,11 @@ public class Player implements Serializable{
     public Sring Get_help(Storyteller aStoryteller){
         return message;
     }
- */
+    */
+    /* 
+    public Sring Get_help(Storyteller aStoryteller){
+        return message;
+    }
+    */
+    
 }

@@ -16,6 +16,7 @@ public class Question {
     private int rightAnswear;
     private ArrayList<String> answear = new ArrayList<String>();
     
+
     public Question(String question , int rightAnswear, String words[] , int numberOfWords){
         this.question = question;
         this.rightAnswear = rightAnswear;
@@ -30,6 +31,16 @@ public class Question {
 
     public ArrayList<String> getAnswear() {
         return answear;
+    }
+
+    public Question(String question , int rightAnswear, String choice1 , String choice2 , String choice3 , String choice4 ){
+        this.question = question;
+        this.rightAnswear = rightAnswear;
+        answear.add(choice1);
+        answear.add(choice2);
+        answear.add(choice3);
+        answear.add(choice4);
+
     }
     
     public int getRightAnswear() {
