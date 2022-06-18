@@ -27,6 +27,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 /**
@@ -114,10 +115,11 @@ public class MainFrame extends javax.swing.JFrame {
 
             settingsPanel.setVisible(false);
             settingsPanel.setMainFrame(this);
+            settingsPanel.getFeaturePanel().addListener(new ButtonListener());
             mainPanel.add(settingsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
             creditsPanel.setVisible(false);
-            mainPanel.add(creditsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 560));
+            mainPanel.add(creditsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 550));
 
             exitPromptPanel.setVisible(false);
             exitPromptPanel.setMainFrame(this);
@@ -335,6 +337,7 @@ public class MainFrame extends javax.swing.JFrame {
         if(e.getSource() == settingsLabel){
              panelState = "settings";
             settingsPanel.setVisible(true);
+            this.requestFocus();
         }   
         if(e.getSource() == creditsLabel){
              panelState = "credits";
@@ -355,7 +358,6 @@ public class MainFrame extends javax.swing.JFrame {
     public void homePanelMouseEntered(MouseEvent e){
         if(e.getSource() == startLabel){
             disableAllLabels();
-            System.out.println("MOUSE ENTERED START");
             startLabel.setEnabled(true);
             navigationState = "start";
         }
@@ -441,6 +443,16 @@ public class MainFrame extends javax.swing.JFrame {
         }
     }
     
+    public void SettingsPanelActionPerformed(ActionEvent e) {
+        FeatureUnavailablePanel featureUnavalablePanel = this.settingsPanel.getFeaturePanel();
+        JButton confirmButton = featureUnavalablePanel.getConfirmButton();
+        
+        if(e.getSource() == confirmButton){
+            featureUnavalablePanel.setVisible(false);
+            requestFocus();
+        }
+    }
+    
     
     // ---------- Key Listener Class START ---------- //
     class myKeyListener implements KeyListener {
@@ -518,6 +530,7 @@ public class MainFrame extends javax.swing.JFrame {
         public void actionPerformed(ActionEvent e) {
             startGamePanelActionPerformed(e);
             newPlayerPanelActionPerformed(e);
+            SettingsPanelActionPerformed(e);
         }
         
     }

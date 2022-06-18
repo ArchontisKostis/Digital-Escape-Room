@@ -4,6 +4,7 @@
  */
 package EscapeRoom.GUI;
 
+import EscapeRoom.GUI.MainFrame.ButtonListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
@@ -39,6 +40,10 @@ public class SettingsPanel extends javax.swing.JPanel {
         return this.soundToggle;
     }
     
+    public FeatureUnavailablePanel getFeaturePanel(){
+        return this.featureUnavailablePanel1;
+    }
+    
     public void setMainFrame(MainFrame aFrame){
         this.mainFrame = aFrame;
     }
@@ -55,12 +60,14 @@ public class SettingsPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        featureUnavailablePanel1 = new EscapeRoom.GUI.FeatureUnavailablePanel();
         escText = new javax.swing.JLabel();
         soundToggle = new javax.swing.JLabel();
         musicToggle = new javax.swing.JLabel();
         settingsBg = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        add(featureUnavailablePanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, -1, 270));
 
         escText.setFont(new java.awt.Font("DPComic", 0, 18)); // NOI18N
         escText.setForeground(new java.awt.Color(255, 255, 255));
@@ -114,23 +121,28 @@ public class SettingsPanel extends javax.swing.JPanel {
                 if(musicOn){
                     musicOn = false;
                     musicToggle.setText("MUSIC OFF");
+                    featureUnavailablePanel1.setVisible(true);
+                    
                 }
                     
                 else{
                     musicOn = true;
                     musicToggle.setText("MUSIC ON");
+                    featureUnavailablePanel1.setVisible(true);
                 }    
             }
                 
             if(e.getSource() == soundToggle){
                  if(soundOn){
-                     soundOn = false; 
+                    soundOn = false; 
                     soundToggle.setText("SOUND OFF");
+                    featureUnavailablePanel1.setVisible(true);
                  }
                     
                 else{
                     soundOn = true; 
-                    soundToggle.setText("SOUND ON");     
+                    soundToggle.setText("SOUND ON");  
+                    featureUnavailablePanel1.setVisible(true);
                 }   
             }
         }
@@ -184,10 +196,12 @@ public class SettingsPanel extends javax.swing.JPanel {
                         if(musicOn){
                             musicToggle.setText("MUSIC OFF");
                             musicOn = false;
+                            featureUnavailablePanel1.setVisible(true);
                         }
                         else {
                             musicToggle.setText("MUSIC ON");
                             musicOn = true;
+                            featureUnavailablePanel1.setVisible(true);
                         }
                         break;
                     
@@ -195,10 +209,12 @@ public class SettingsPanel extends javax.swing.JPanel {
                         if(soundOn){
                             soundToggle.setText("SOUND OFF");
                             soundOn = false;
+                            featureUnavailablePanel1.setVisible(true);
                         }
                         else {
                             soundToggle.setText("SOUND ON");
                             soundOn = true;
+                            featureUnavailablePanel1.setVisible(true);
                         }
                         break;
                 }
@@ -267,6 +283,7 @@ public class SettingsPanel extends javax.swing.JPanel {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel escText;
+    private EscapeRoom.GUI.FeatureUnavailablePanel featureUnavailablePanel1;
     private javax.swing.JLabel musicToggle;
     private javax.swing.JLabel settingsBg;
     private javax.swing.JLabel soundToggle;

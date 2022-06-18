@@ -79,7 +79,7 @@
         </Component>
         <Component class="EscapeRoom.GUI.SettingsPanel" name="settingsPanel">
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="settingsPanel.setVisible(false);&#xa;settingsPanel.setMainFrame(this);"/>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="settingsPanel.setVisible(false);&#xa;settingsPanel.setMainFrame(this);&#xa;settingsPanel.getFeaturePanel().addListener(new ButtonListener());"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -93,7 +93,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="-1" height="560"/>
+              <AbsoluteConstraints x="0" y="0" width="-1" height="550"/>
             </Constraint>
           </Constraints>
         </Component>
