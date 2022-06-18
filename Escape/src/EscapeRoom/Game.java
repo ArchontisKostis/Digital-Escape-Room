@@ -9,6 +9,7 @@ import java.util.ArrayList;
  * @author Archontis
  */
 public class Game {
+<<<<<<< HEAD
     // Properties Declaration
     private Player player;
     private ArrayList<Room> roomList;    // TO-DO: <Room>
@@ -18,6 +19,13 @@ public class Game {
     // Player
     public void setPlayer(Player aPlayer){
         this.player = aPlayer;
+=======
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+>>>>>>> alexandra
     }
     
     public Player getPlayer(){
