@@ -80,6 +80,7 @@ public class MainFrame extends javax.swing.JFrame {
             e.printStackTrace();
         }
         mainPanel = new javax.swing.JPanel();
+        egyptianRoom1 = new Room.EgyptianRoom();
         tutorialPanel = new EscapeRoom.GUI.TutorialPanel();
         newPlayerPanel = new EscapeRoom.GUI.newPlayerPanel();
         startGamePanel = new EscapeRoom.GUI.StartGamePanel();
@@ -105,6 +106,9 @@ public class MainFrame extends javax.swing.JFrame {
             setResizable(false);
 
             mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+            egyptianRoom1.setVisible(false);
+            mainPanel.add(egyptianRoom1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 950, 650));
 
             tutorialPanel.setVisible(false);
             mainPanel.add(tutorialPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -180,7 +184,9 @@ public class MainFrame extends javax.swing.JFrame {
             );
             layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(10, Short.MAX_VALUE))
             );
 
             pack();
@@ -441,9 +447,9 @@ public class MainFrame extends javax.swing.JFrame {
         
         if (e.getSource() == createPlayerButton){
             game.setPlayer(new Player(playerNameField.getText(), 0, 3));
-
-            testFrame tf = new testFrame(this.game);
-            tf.setVisible(rootPaneCheckingEnabled);
+            
+            this.newPlayerPanel.setVisible(false);
+            this.egyptianRoom1.setVisible(true);
             requestFocus();
         }
     }
@@ -545,6 +551,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel bgImage;
     private javax.swing.JLabel creditsLabel;
     private EscapeRoom.GUI.CreditsPanel creditsPanel;
+    private Room.EgyptianRoom egyptianRoom1;
     private javax.swing.JLabel exitLabel;
     private EscapeRoom.GUI.ExitPanel exitPromptPanel;
     private EscapeRoom.GUI.loadGamePanel loadGamePanel;

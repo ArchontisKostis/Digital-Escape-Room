@@ -79,23 +79,23 @@ public class RiddleEg3 extends javax.swing.JPanel {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller1.png"))); // NOI18N
         jLabel1.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(837, 10, 210, 250));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 230, 210, 250));
         jLabel1.getAccessibleContext().setAccessibleName("archaeologist");
 
         crossword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/crossword1.jpg"))); // NOI18N
-        add(crossword, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 320, -1, -1));
+        add(crossword, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 0, 320, -1));
 
         jLabel3.setForeground(new java.awt.Color(102, 51, 0));
         jLabel3.setText("1. Θεός του θανάτου και της ανάστασης, βασιλιάς του Κάτω Κόσμου ");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jLabel4.setForeground(new java.awt.Color(102, 51, 0));
         jLabel4.setText("και αυτός που καθιστά δυνατή τη βλάστηση, θεός ήλιος");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
 
         jLabel5.setForeground(new java.awt.Color(102, 51, 0));
         jLabel5.setText("και των θεός των ψυχών των νεκρών.");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 153));
         jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
@@ -108,7 +108,7 @@ public class RiddleEg3 extends javax.swing.JPanel {
         jTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, 130, -1));
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 440, 90));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 440, 90));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 153));
         jPanel2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
@@ -184,7 +184,7 @@ public class RiddleEg3 extends javax.swing.JPanel {
         jLabel21.setText("(εκάστοτε) βασιλιά.");
         jPanel2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 46, -1, -1));
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 520, 440, 90));
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 440, 90));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 153));
         jPanel3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
@@ -200,7 +200,7 @@ public class RiddleEg3 extends javax.swing.JPanel {
         jTextField3.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
         jPanel3.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, 130, -1));
 
-        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 440, 70));
+        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 440, 70));
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 153));
         jPanel5.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
@@ -232,7 +232,7 @@ public class RiddleEg3 extends javax.swing.JPanel {
 
         jPanel5.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 300, 440, 70));
 
-        add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 440, 70));
+        add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 440, 70));
 
         jPanel9.setBackground(new java.awt.Color(255, 255, 153));
         jPanel9.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
@@ -304,7 +304,7 @@ public class RiddleEg3 extends javax.swing.JPanel {
 
         jPanel9.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 390, 440, 100));
 
-        add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 400, 440, 100));
+        add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 440, 100));
     }// </editor-fold>//GEN-END:initComponents
 
 
