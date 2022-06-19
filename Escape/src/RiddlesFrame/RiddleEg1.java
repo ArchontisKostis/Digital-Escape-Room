@@ -9,12 +9,17 @@ package RiddlesFrame;
  * @author 30694
  */
 public class RiddleEg1 extends javax.swing.JPanel {
+    private RiddleEg2 nextRiddlePanel;
 
     /**
      * Creates new form RiddleEg1
      */
     public RiddleEg1() {
         initComponents();
+    }
+    
+    public void setNextRiddlePanel(RiddleEg2 aPanel){
+        this.nextRiddlePanel = aPanel;
     }
 
     /**
@@ -26,6 +31,7 @@ public class RiddleEg1 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         storryteller = new javax.swing.JLabel();
         photo4 = new javax.swing.JLabel();
         photo1 = new javax.swing.JLabel();
@@ -47,6 +53,9 @@ public class RiddleEg1 extends javax.swing.JPanel {
         ans4 = new javax.swing.JComboBox<>();
         Q5 = new javax.swing.JLabel();
         ans5 = new javax.swing.JComboBox<>();
+        submitButton = new javax.swing.JButton();
+
+        jButton1.setText("jButton1");
 
         setBackground(new java.awt.Color(175, 156, 77));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -55,14 +64,14 @@ public class RiddleEg1 extends javax.swing.JPanel {
         storryteller.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/storyteller1.png"))); // NOI18N
         storryteller.setText("archaeologist");
         storryteller.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(storryteller, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 10, 200, 240));
+        add(storryteller, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 250, 230, 250));
 
         photo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol1.png"))); // NOI18N
         photo4.setText("symbol1");
         photo4.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
         photo4.setMaximumSize(new java.awt.Dimension(125, 125));
         photo4.setMinimumSize(new java.awt.Dimension(125, 125));
-        add(photo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 350, 80, 125));
+        add(photo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 80, 125));
 
         photo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol2.png"))); // NOI18N
         photo1.setText("symbol2");
@@ -70,7 +79,7 @@ public class RiddleEg1 extends javax.swing.JPanel {
         photo1.setMaximumSize(new java.awt.Dimension(209, 125));
         photo1.setMinimumSize(new java.awt.Dimension(209, 125));
         photo1.setPreferredSize(new java.awt.Dimension(209, 125));
-        add(photo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 160, 125));
+        add(photo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 160, 120));
 
         photo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol3.png"))); // NOI18N
         photo3.setText("symbol3");
@@ -78,110 +87,142 @@ public class RiddleEg1 extends javax.swing.JPanel {
         photo3.setMaximumSize(new java.awt.Dimension(201, 125));
         photo3.setMinimumSize(new java.awt.Dimension(201, 125));
         photo3.setPreferredSize(new java.awt.Dimension(201, 125));
-        add(photo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 350, 150, 125));
+        add(photo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 150, 125));
 
         photo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol4.png"))); // NOI18N
         photo2.setText("symbol4");
         photo2.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
-        add(photo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 130, 125));
+        add(photo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 130, 125));
 
         photo5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagesR/symbol5.png"))); // NOI18N
         photo5.setText("symbol5");
         photo5.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(214, 190, 112)));
-        add(photo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 350, 140, 125));
+        add(photo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, 140, 125));
 
         jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(151, 114, 0));
         jLabel5.setText(" 5");
         jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(151, 114, 0), 3, true));
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 290, 40, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, 40, -1));
 
         jLabel8.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(151, 114, 0));
         jLabel8.setText(" 1");
         jLabel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(151, 114, 0), 3, true));
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 40, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 40, -1));
 
         jLabel9.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(151, 114, 0));
         jLabel9.setText(" 2");
         jLabel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(151, 114, 0), 3, true));
-        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, 40, -1));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 40, -1));
 
         jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(151, 114, 0));
         jLabel10.setText(" 3");
         jLabel10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(151, 114, 0), 3, true));
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 290, 40, -1));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, 40, -1));
 
         jLabel11.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(151, 114, 0));
         jLabel11.setText(" 4");
         jLabel11.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(151, 114, 0), 3, true));
-        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 290, 40, -1));
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 40, -1));
 
         Q1.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         Q1.setForeground(new java.awt.Color(151, 114, 0));
         Q1.setText("Σύμβολο ζωής");
         Q1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(Q1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 520, -1, -1));
+        add(Q1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, -1, -1));
 
         ans1.setBackground(new java.awt.Color(255, 204, 102));
         ans1.setForeground(new java.awt.Color(151, 114, 0));
         ans1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1", "2", "3", "4", "5" }));
         ans1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(ans1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 520, -1, -1));
+        add(ans1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 490, -1, -1));
 
         Q2.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         Q2.setForeground(new java.awt.Color(151, 114, 0));
         Q2.setText("Σύβολο προστασίας");
         Q2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(Q2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 570, -1, -1));
+        add(Q2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 490, -1, -1));
 
         ans2.setBackground(new java.awt.Color(255, 204, 102));
         ans2.setForeground(new java.awt.Color(151, 114, 0));
         ans2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1", "2", "3", "4", "5" }));
         ans2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(ans2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 570, -1, -1));
+        add(ans2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 490, -1, -1));
 
         Q3.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         Q3.setForeground(new java.awt.Color(151, 114, 0));
         Q3.setText("Σύμβολο βασιλείας");
         Q3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(Q3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 550, -1, -1));
+        add(Q3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 550, -1, -1));
 
         ans3.setBackground(new java.awt.Color(255, 204, 102));
         ans3.setForeground(new java.awt.Color(151, 114, 0));
         ans3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1", "2", "3", "4", "5" }));
         ans3.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(ans3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 550, -1, -1));
+        add(ans3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 550, -1, -1));
 
         Q4.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         Q4.setForeground(new java.awt.Color(151, 114, 0));
         Q4.setText("Σύμβολο μεταμόρφωσης");
         Q4.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(Q4, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 520, -1, -1));
+        add(Q4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 550, -1, -1));
 
         ans4.setBackground(new java.awt.Color(255, 204, 102));
         ans4.setForeground(new java.awt.Color(151, 114, 0));
         ans4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1", "2", "3", "4", "5" }));
         ans4.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(ans4, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 520, -1, -1));
+        add(ans4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 550, -1, -1));
 
         Q5.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         Q5.setForeground(new java.awt.Color(151, 114, 0));
         Q5.setText("Σύμβολο του ήλιου");
         Q5.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(Q5, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 570, -1, -1));
+        add(Q5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 600, -1, -1));
 
         ans5.setBackground(new java.awt.Color(255, 204, 102));
         ans5.setForeground(new java.awt.Color(151, 114, 0));
         ans5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--", "1", "2", "3", "4", "5" }));
         ans5.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new javax.swing.ImageIcon(getClass().getResource("/ImagesR/EgFrame.jpg")))); // NOI18N
-        add(ans5, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 570, -1, -1));
+        add(ans5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 600, -1, -1));
+
+        submitButton.setText("ΥΠΟΒΟΛΗ");
+        submitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitButtonActionPerformed(evt);
+            }
+        });
+        add(submitButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 550, 150, 60));
     }// </editor-fold>//GEN-END:initComponents
 
+    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
+        // Get user input
+        String userAns1 = (String)this.ans1.getSelectedItem();
+        String userAns2 = (String)this.ans2.getSelectedItem();
+        String userAns3 = (String)this.ans3.getSelectedItem();
+        String userAns4 = (String)this.ans4.getSelectedItem();
+        String userAns5 = (String)this.ans5.getSelectedItem();
 
+        // Check if the user solved the riddle.
+        if(userAns1.equalsIgnoreCase("4") && userAns2.equalsIgnoreCase("1") && userAns3.equalsIgnoreCase("3") && userAns4.equalsIgnoreCase("2") && userAns5.equalsIgnoreCase("5")){
+            this.nextRiddlePanel.showPanel();
+            this.hidePanel();
+        }
+        else{
+            System.out.println("Wrong");
+        }
+    }//GEN-LAST:event_submitButtonActionPerformed
+
+    public void hidePanel(){
+        this.setVisible(false);
+    }
+
+    public void showPanel(){
+        this.setVisible(true);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Q1;
     private javax.swing.JLabel Q2;
@@ -193,6 +234,7 @@ public class RiddleEg1 extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> ans3;
     private javax.swing.JComboBox<String> ans4;
     private javax.swing.JComboBox<String> ans5;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel5;
@@ -204,5 +246,6 @@ public class RiddleEg1 extends javax.swing.JPanel {
     private javax.swing.JLabel photo4;
     private javax.swing.JLabel photo5;
     private javax.swing.JLabel storryteller;
+    private javax.swing.JButton submitButton;
     // End of variables declaration//GEN-END:variables
 }

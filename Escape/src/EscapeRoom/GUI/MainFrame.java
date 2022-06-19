@@ -80,6 +80,7 @@ public class MainFrame extends javax.swing.JFrame {
             e.printStackTrace();
         }
         mainPanel = new javax.swing.JPanel();
+        egyptianRoom1 = new Room.EgyptianRoom();
         tutorialPanel = new EscapeRoom.GUI.TutorialPanel();
         newPlayerPanel = new EscapeRoom.GUI.newPlayerPanel();
         startGamePanel = new EscapeRoom.GUI.StartGamePanel();
@@ -106,8 +107,11 @@ public class MainFrame extends javax.swing.JFrame {
 
             mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+            egyptianRoom1.setVisible(false);
+            mainPanel.add(egyptianRoom1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 950, 650));
+
             tutorialPanel.setVisible(false);
-            mainPanel.add(tutorialPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+            mainPanel.add(tutorialPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 720));
 
             newPlayerPanel.setVisible(false);
             newPlayerPanel.addListenerToButton(new ButtonListener());
@@ -120,10 +124,10 @@ public class MainFrame extends javax.swing.JFrame {
             settingsPanel.setVisible(false);
             settingsPanel.setMainFrame(this);
             settingsPanel.getFeaturePanel().addListener(new ButtonListener());
-            mainPanel.add(settingsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+            mainPanel.add(settingsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 700));
 
             creditsPanel.setVisible(false);
-            mainPanel.add(creditsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 550));
+            mainPanel.add(creditsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 720));
 
             exitPromptPanel.setVisible(false);
             exitPromptPanel.setMainFrame(this);
@@ -134,7 +138,7 @@ public class MainFrame extends javax.swing.JFrame {
 
             tutorialLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/tutorialIcon.png"))); // NOI18N
             tutorialLabel.addMouseListener(new myMouseListener());
-            mainPanel.add(tutorialLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 50, 110, 110));
+            mainPanel.add(tutorialLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 110, 110));
 
             startLabel.setBackground(new java.awt.Color(255, 255, 255));
             startLabel.setFont(new java.awt.Font("DPComic", 0, 52)); // NOI18N
@@ -142,7 +146,7 @@ public class MainFrame extends javax.swing.JFrame {
             startLabel.setText("START");
             startLabel.setEnabled(false);
             startLabel.addMouseListener(new myMouseListener());
-            mainPanel.add(startLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 140, -1));
+            mainPanel.add(startLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, 140, -1));
 
             settingsLabel.setBackground(new java.awt.Color(255, 255, 255));
             settingsLabel.setFont(new java.awt.Font("DPComic", 0, 52)); // NOI18N
@@ -151,7 +155,7 @@ public class MainFrame extends javax.swing.JFrame {
             settingsLabel.setEnabled(false);
             settingsLabel.setFocusable(false);
             settingsLabel.addMouseListener(new myMouseListener());
-            mainPanel.add(settingsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, 200, 60));
+            mainPanel.add(settingsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, 200, 60));
 
             creditsLabel.setBackground(new java.awt.Color(255, 255, 255));
             creditsLabel.setFont(new java.awt.Font("DPComic", 0, 52)); // NOI18N
@@ -159,7 +163,7 @@ public class MainFrame extends javax.swing.JFrame {
             creditsLabel.setText("CREDITS");
             creditsLabel.setEnabled(false);
             creditsLabel.addMouseListener(new myMouseListener());
-            mainPanel.add(creditsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, 180, -1));
+            mainPanel.add(creditsLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 420, 180, -1));
 
             exitLabel.setBackground(new java.awt.Color(255, 255, 255));
             exitLabel.setFont(new java.awt.Font("DPComic", 0, 52)); // NOI18N
@@ -167,10 +171,10 @@ public class MainFrame extends javax.swing.JFrame {
             exitLabel.setText("EXIT");
             exitLabel.setEnabled(false);
             exitLabel.addMouseListener(new myMouseListener());
-            mainPanel.add(exitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 390, 100, -1));
+            mainPanel.add(exitLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 480, 100, -1));
 
             bgImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/mainMenuBg.png"))); // NOI18N
-            mainPanel.add(bgImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
+            mainPanel.add(bgImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 720));
 
             javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
             getContentPane().setLayout(layout);
@@ -284,7 +288,7 @@ public class MainFrame extends javax.swing.JFrame {
         switch (navigationState) {
             case "start":
                 panelState = "startGame";
-                startGamePanel.setVisible(true);
+                this.egyptianRoom1.setVisible(true);
                 break;
             case "settings":
                 panelState = "settings";
@@ -337,7 +341,7 @@ public class MainFrame extends javax.swing.JFrame {
     public void homePanelMouseClicked(MouseEvent e){
         if(e.getSource() == startLabel){
             panelState = "startGame";
-            startGamePanel.setVisible(true);
+            this.egyptianRoom1.setVisible(true);
         }
         if(e.getSource() == settingsLabel){
              panelState = "settings";
@@ -441,9 +445,9 @@ public class MainFrame extends javax.swing.JFrame {
         
         if (e.getSource() == createPlayerButton){
             game.setPlayer(new Player(playerNameField.getText(), 0, 3));
-
-            testFrame tf = new testFrame(this.game);
-            tf.setVisible(rootPaneCheckingEnabled);
+            
+            this.newPlayerPanel.setVisible(false);
+            this.egyptianRoom1.setVisible(true);
             requestFocus();
         }
     }
@@ -545,6 +549,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel bgImage;
     private javax.swing.JLabel creditsLabel;
     private EscapeRoom.GUI.CreditsPanel creditsPanel;
+    private Room.EgyptianRoom egyptianRoom1;
     private javax.swing.JLabel exitLabel;
     private EscapeRoom.GUI.ExitPanel exitPromptPanel;
     private EscapeRoom.GUI.loadGamePanel loadGamePanel;
