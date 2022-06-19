@@ -70,7 +70,7 @@ public class Data {
     }
     //1st type [pictures in order]
     
-    private Row rowGr = new Row();
+    
     private Row rowSk = new Row();
 
     public Row getRowGr() {
