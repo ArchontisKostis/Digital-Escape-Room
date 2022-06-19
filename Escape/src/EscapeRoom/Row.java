@@ -36,25 +36,4 @@ public class Row {
     public int getNumberOfImages() {
         return numberOfImages;
     }
-
-public class Row {
-    
-    private String order;
-    private ArrayList<Image> Images = new ArrayList<Image>();
-
-    public void Row(String order , Image images[]){
-        
-        this.order = order;
-        
-        for(int i=0 ; i<12 ; i++){
-            Images.add(images[i]);
-        }
-    }
-    
-    public String getOrder() {
-        return order;
-    }
-
 }
-}
-    
