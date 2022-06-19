@@ -38,18 +38,9 @@ public class MainFrame extends javax.swing.JFrame {
     // Properties Declaration
     private String navigationState = "none";
     private String panelState = "home";
-    private Game game;
-    
     
     public MainFrame() {
         initComponents();
-        
-        // Create Game Instance
-        this.game = new Game();
-        // Create an Empty Save List
-        this.game.setSavesList(new ArrayList<Game_Saves>());
-        // Create the Room List
-        this.game.fillRoomList();
         
         // Set App Icon
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/EscapeRoom/guiAssets/icon.png")));
@@ -439,19 +430,6 @@ public class MainFrame extends javax.swing.JFrame {
         }
     }
     
-    public void newPlayerPanelActionPerformed(ActionEvent e){
-        JButton createPlayerButton = newPlayerPanel.getCreatePlayerButton();
-        JTextField playerNameField = newPlayerPanel.getPlayerNameField();
-        
-        if (e.getSource() == createPlayerButton){
-            game.setPlayer(new Player(playerNameField.getText(), 0, 3));
-            
-            this.newPlayerPanel.setVisible(false);
-            this.egyptianRoom1.setVisible(true);
-            requestFocus();
-        }
-    }
-    
     public void SettingsPanelActionPerformed(ActionEvent e) {
         FeatureUnavailablePanel featureUnavalablePanel = this.settingsPanel.getFeaturePanel();
         JButton confirmButton = featureUnavalablePanel.getConfirmButton();
@@ -538,7 +516,6 @@ public class MainFrame extends javax.swing.JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             startGamePanelActionPerformed(e);
-            newPlayerPanelActionPerformed(e);
             SettingsPanelActionPerformed(e);
         }
         
