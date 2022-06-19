@@ -42,7 +42,10 @@ public class EgyptianRoom extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        endPanel = new RiddlesFrame.EndPanel();
+        doorExitPanel = new RiddlesFrame.doorExitPanel();
         riddleThreePanel = new RiddlesFrame.RiddleEg3();
+        riddlePrompt1 = new RiddlesFrame.RiddlePrompt();
         riddleOnePanel = new RiddlesFrame.RiddleEg1();
         riddleTwoPanel = new RiddlesFrame.RiddleEg2();
         rockTrigger = new javax.swing.JLabel();
@@ -55,8 +58,17 @@ public class EgyptianRoom extends javax.swing.JPanel {
         setBackground(new java.awt.Color(41, 26, 5));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        endPanel.setVisible(false);
+        endPanel.setRoomToClose(this);
+        add(endPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 700, 300));
+
+        doorExitPanel.hidePanel();
+        doorExitPanel.setEndPanel(this.endPanel);
+        add(doorExitPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 770, 480));
+
         riddleThreePanel.setVisible(false);
         add(riddleThreePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
+        add(riddlePrompt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 820, 370));
 
         riddleOnePanel.hide();
         riddleOnePanel.setNextRiddlePanel(riddleTwoPanel);
@@ -72,6 +84,17 @@ public class EgyptianRoom extends javax.swing.JPanel {
 
         doorImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/gate_a.png"))); // NOI18N
         doorImage.setText("jLabel3");
+        doorImage.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                doorImageMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                doorImageMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                doorImageMouseExited(evt);
+            }
+        });
         add(doorImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 280, 390));
 
         torch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/lampa.png"))); // NOI18N
@@ -85,9 +108,22 @@ public class EgyptianRoom extends javax.swing.JPanel {
         plant1.setText("jLabel4");
         add(plant1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 440, 140, -1));
 
-        backgroundImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/background1_.png"))); // NOI18N
+        backgroundImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/EgBackground.png"))); // NOI18N
         add(backgroundImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, -1));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void doorImageMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_doorImageMouseEntered
+        doorImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/doorLight.png")));
+    }//GEN-LAST:event_doorImageMouseEntered
+
+    private void doorImageMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_doorImageMouseExited
+        doorImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RoomAssets/gate_a.png")));
+    }//GEN-LAST:event_doorImageMouseExited
+
+    private void doorImageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_doorImageMouseClicked
+        this.doorExitPanel.showPanel();
+        this.doorExitPanel.requestFocus();
+    }//GEN-LAST:event_doorImageMouseClicked
     
     
     // --------- WARNING ----------
@@ -169,10 +205,13 @@ public class EgyptianRoom extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel backgroundImage;
+    private RiddlesFrame.doorExitPanel doorExitPanel;
     private javax.swing.JLabel doorImage;
+    private RiddlesFrame.EndPanel endPanel;
     private javax.swing.JLabel plant1;
     private javax.swing.JLabel plantOneImage;
     private RiddlesFrame.RiddleEg1 riddleOnePanel;
+    private RiddlesFrame.RiddlePrompt riddlePrompt1;
     private RiddlesFrame.RiddleEg3 riddleThreePanel;
     private RiddlesFrame.RiddleEg2 riddleTwoPanel;
     private javax.swing.JLabel rockTrigger;

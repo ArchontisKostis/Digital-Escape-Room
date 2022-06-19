@@ -80,7 +80,7 @@ public class SettingsPanel extends javax.swing.JPanel {
         soundToggle.setText("SOUND ON");
         soundToggle.setEnabled(false);
         soundToggle.addMouseListener(new myMouseListener());
-        add(soundToggle, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, 290, -1));
+        add(soundToggle, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 390, 290, -1));
 
         musicToggle.setBackground(new java.awt.Color(255, 255, 255));
         musicToggle.setFont(new java.awt.Font("DPComic", 0, 65)); // NOI18N
@@ -88,10 +88,11 @@ public class SettingsPanel extends javax.swing.JPanel {
         musicToggle.setText("MUSIC ON");
         musicToggle.setEnabled(false);
         musicToggle.addMouseListener(new myMouseListener());
-        add(musicToggle, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 270, -1));
+        add(musicToggle, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 300, 270, -1));
 
         settingsBg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/EscapeRoom/guiAssets/settings.png"))); // NOI18N
-        add(settingsBg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        settingsBg.setPreferredSize(new java.awt.Dimension(1000, 670));
+        add(settingsBg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 700));
     }// </editor-fold>//GEN-END:initComponents
     
     
