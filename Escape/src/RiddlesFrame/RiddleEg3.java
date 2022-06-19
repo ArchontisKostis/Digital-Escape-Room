@@ -72,6 +72,7 @@ public class RiddleEg3 extends javax.swing.JPanel {
         jLabel19 = new javax.swing.JLabel();
         jTextField12 = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(153, 102, 0));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -305,11 +306,15 @@ public class RiddleEg3 extends javax.swing.JPanel {
         jPanel9.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 390, 440, 100));
 
         add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 440, 100));
+
+        jButton1.setText("ΥΠΟΒΟΛΗ");
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 510, 130, 40));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel crossword;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
